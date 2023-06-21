@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bb73034f-8d7d-440a-bb96-79c5c2840613",
+    "firstName": "Antonio",
+    "lastName": "Pavic",
+    "email": "antonioPavic@gmail.com",
+    "password": "$2a$08$RJP.Qa.YXmlaKXGsHIAAmeSLSTjAprsMa4Mh/2L7qaFGyWqsn.R4y",
+    "role": "Doctor",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYjczMDM0Zi04ZDdkLTQ0MGEtYmI5Ni03OWM1YzI4NDA2MTMiLCJ1c2VyUm9sZSI6IkRvY3RvciIsImlhdCI6MTY3OTk5MzA2MywiZXhwIjoxNjgwNTk3ODYzfQ.1kYHjJYLaOJ2PP44Fz67-dg8k3TRqshIMZoHuGmDaXc"
+  },
+  {
+    "id": "2382b8fc-2ef9-4c95-aa1c-211897c9ae46",
+    "firstName": "Kire ",
+    "lastName": "Tasev",
+    "email": "Kire@gmail.com",
+    "password": "$2a$08$FTiIsPzGgA3RbaqWFYt9Ou3oTDBp7kChfvMmeqpajINaE0KH6lxju",
+    "role": "pacient"
+  },
+  {
+    "id": "85b765fd-a749-4565-88f7-0f319a5b1e04",
+    "lastName": "Tasev",
+    "email": "Kir2e@gmail.com",
+    "password": "$2a$08$RJP.Qa.YXmlaKXGsHIAAmeSLSTjAprsMa4Mh/2L7qaFGyWqsn.R4y",
+    "role": "pacient",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4NWI3NjVmZC1hNzQ5LTQ1NjUtODhmNy0wZjMxOWE1YjFlMDQiLCJ1c2VyUm9sZSI6InBhY2llbnQiLCJpYXQiOjE2Nzk5OTMxNTEsImV4cCI6MTY4MDU5Nzk1MX0.PQuVwFTzh5_IHJMiCZDxGak1n6MPPLva1J0MJDER57Y"
+  },
+  {
+    "id": "43f58813-249a-44ea-8c14-ca2475a020e7",
+    "lastName": "Paviv",
+    "email": "Kir222e@gmail.com",
+    "password": "$2a$08$kRCQQ/FLeAF5GYcTH1a4WuBD6w1d.CUm1jblFdIkHYMCmnvNCsZxm",
+    "role": "Doctor"
+  },
+  {
+    "id": "e8f24285-f09f-4e06-b897-5fe48d855892",
+    "lastName": "Paviv",
+    "email": "Kir222sse@gmail.com",
+    "password": "$2a$08$0huf2XWaUTW/22dyi90b8Oa9vMY77r2MwaisWr0fknsvbxkQZw7Rm",
+    "role": "Doctor",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlOGYyNDI4NS1mMDlmLTRlMDYtYjg5Ny01ZmU0OGQ4NTU4OTIiLCJpYXQiOjE2Nzk3NzczMTYsImV4cCI6MTY4MDM4MjExNn0.P3T-hOKB7GBSuENocsNyMUNSBlk2vdwHv3vFic9M-hw"
+  },
+  {
+    "id": "f2cc8a73-3c0a-48ef-931e-c459ba9f1193",
+    "lastName": "Paviv",
+    "email": "Kir22222sse@gmail.com",
+    "password": "$2a$08$RJP.Qa.YXmlaKXGsHIAAmeSLSTjAprsMa4Mh/2L7qaFGyWqsn.R4y",
+    "role": "pacient",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmMmNjOGE3My0zYzBhLTQ4ZWYtOTMxZS1jNDU5YmE5ZjExOTMiLCJpYXQiOjE2Nzk5OTEzODIsImV4cCI6MTY4MDU5NjE4Mn0.m5cLjsN4VjYJL4cWl_BhvQcamkdtox5_sjlhF5S_UfE"
+  },
+  {
+    "id": "9da40e06-0320-42eb-a745-a416b298641c",
+    "lastName": "Pavic",
+    "email": "paicbre@gmail.com",
+    "password": "$2a$08$PDra/ILyceRDjl9OKtpCBuVgBVG./1klt4INTEJBLp7vYPMnJtwb.",
+    "role": "Doctor",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZGE0MGUwNi0wMzIwLTQyZWItYTc0NS1hNDE2YjI5ODY0MWMiLCJ1c2VyUm9sZSI6IkRvY3RvciIsImlhdCI6MTY4NTE3MzEyOSwiZXhwIjoxNjg1Nzc3OTI5fQ._IalRPtkRE2975a8J0nOApOYA2LF6C5ivnJ26xbfeuw"
+  }
+]

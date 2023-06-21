@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <nav>
+    <a href="/Main/index.html" id="beersBar">Beers Bar</a>
+    <a href="/Beers/index.html" id="beerBtn" >Beers</a>
+    <a href="#" id="randomBtn" >Random Beers</a>
+    <form>
+      <input type="text" placeholder="Search" id="searchBar" style="background-color: whitesmoke;"/>
+    </form>
+  </nav>
+
+  <div class="dropdown" style="float: left">
+    <button class="dropbtn">Page Size ↓</button>
+    <div class="dropdown-content" style="left: 0">
+      <a href="#" id="show5">Show 5</a>
+      <a href="#" id="show10"> Show 10</a>
+      <a href="#" id="show20"> Show 20</a>
+    </div>
+  </div>
+
+  <div class="dropdown" style="float: right">
+    <button class="dropbtn">Sort By ↓</button>
+    <div class="dropdown-content">
+      <a href="#" id="nameSort">Name</a>
+      <a href="#" id="alc-abv">%alc abv --- abv prop</a>
+      <a href="#" id="dataSort">first Brewed</a>
+      <a href="#" id="sortBitternes">bitternes --- ibu prop</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="beer_details">
+
+  </div>
+
+<div class="moreDetailsContainer"></div>
+  <script src="setup.js"></script>
+</body>
+
+</html>

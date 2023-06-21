@@ -1,0 +1,77 @@
+body{
+    background-color: #8c7ae6;
+}
+
+#inputTask{
+    margin-top: 100px;
+    margin-left: 600px;
+    width: 400px;
+    font-size: 28px;
+    padding: 6px 12px;
+    background: rgb(31, 32, 35);
+    border: 1px solid rgb(60, 63, 68);
+    border-radius: 4px;
+    font-size: 13px;
+    color: rgb(247, 248, 248);
+    height: 30px;
+    appearance: none;
+    transition: border 0.15s ease 0s;
+   
+
+    
+}
+#inputTask :focus{
+    outline: none;
+    box-shadow: none;
+    border-color: rgb(100, 153, 255);
+}
+#btnSubmit{
+ 
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #3a4149;
+    background: #e7ebee;
+    line-height: 1.15;
+    font-size: 16px;
+    
+
+}
+#btnSubmit:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+#ulTask > li {
+    margin-left: 580px;
+    font-size: 28px;
+    text-decoration: dotted slateblue ;
+}
+
+.deleteBtn{
+    margin-left: 30px;
+}
+
+.list-item {
+  }
+  
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+
+
+#deleteBTN{
+    width: 20px;
+    height: 20px;
+}
+
+    
+
+    

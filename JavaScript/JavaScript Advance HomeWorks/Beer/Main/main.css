@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto&display=swap");
+
+* {
+  font-family: "Noto Sans Mende Kikakui", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #ffa000;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav form {
+  display: flex;
+}
+
+nav input[type="text"] {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 1200px;
+}
+
+.main_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.main_Container h1 {
+  color: #ffa000;
+  font-weight: bold;
+}
+
+.main_Container h3 {
+  color: #757575;
+  margin-top: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.main_Container hr {
+  width: 50%;
+  margin-top: 40px;
+  border: 1px solid #ffa000;
+}
+
+.main_Container img {
+  width: 50%;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+#beersBar {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#beersBar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#beersBar:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#randomBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#randomBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#randomBtn:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#beerBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#beerBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#beerBtn:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}

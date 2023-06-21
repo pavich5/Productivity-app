@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto&display=swap');
+
+*{
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainDiv{
+    width: 1000px;
+    height: 220px;
+    margin-left: 350px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+#noteTaker{
+    width: 400px;
+    height: 30px;
+    border-radius: 8%;
+}
+
+#btnAdd{
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    border-radius: 8%;
+    background-color: beige;
+    
+}
+
+.results{
+    display: inline-block;
+    width: 500px;
+    height: 150px;
+    background-color: transparent;
+    margin-left: 350px;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    
+}
+

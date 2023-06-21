@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto&display=swap");
+
+* {
+  font-family: "Noto Sans Mende Kikakui", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+nav {
+  background-color: #ffa000;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav a {
+  color: #333333;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav form {
+  display: flex;
+  background-color: #ffa000;
+}
+
+nav input[type="text"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffa000;
+  margin-left: 0.5rem;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a,
+  nav form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+#searchBar {
+  margin-left: 1150px;
+  border: solid 1px white;
+  background-color: #ffa000;
+  color: black;
+  border-radius: 7%;
+}
+
+.dropbtn {
+  background-color: #ffa000;
+  color: #333333;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 60px;
+  border-radius: 7%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
+.dropbtn:hover {
+  color: white;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333333;
+  color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #333333;
+  color: white;
+}
+
+.beer_details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 350px;
+}
+
+.bear_one {
+  border: 0.5px solid wheat;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-right: 80spx;
+}
+
+img {
+  max-width: 400px;
+  height: 200px;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.container {
+  margin-right: 265px;
+  margin-bottom: 300px;
+}
+
+.moreDetailsContainer {
+  display: flex;
+  width: 700px;
+  width: 700px;
+  justify-content: center;
+  align-items: stretch;
+  margin-left: 500px;
+  margin-top: 135px;
+}
+
+.moreDetailsContainer > img {
+  width: 1000px;
+  height: 500px;
+}
+
+.all {
+  margin-top: 0px;
+  margin-left: 50px;
+  border: gray solid 0.1px;
+  border-radius: 4%;
+}
+
+.foodPairing {
+  font-size: 30px;
+}
+.moreDetails {
+  height: 30px;
+  background-color: #7f5a58;
+  border-radius: 8%;
+  color: white;
+}
+.bear_Info {
+  padding: 15px;
+}
+
+.bear_Info:hover {
+  transform: scale(1.05);
+}
+
+#beersBar {
+  border-radius: 7%;
+  background-color: transparent;
+  border-radius: 7%;
+  color: #333333;
+}
+
+#beerBtn {
+  border-radius: 7%;
+  width: 60px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 7%;
+  color: #333333;
+}
+
+#randomBtn {
+  border-radius: 7%;
+  background-color: transparent;
+  border-radius: 7%;
+  color: #333333;
+}
+
+.dropbtn {
+  background-color: #ffa000;
+}
+
+#beerBtn:hover {
+  color: #333333;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#beersBar:hover {
+  color: #333333;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#randomBtn:hover {
+  color: #333333;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#beerName {
+  color: #333333;
+}
+
+#beersBar {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#beersBar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#beersBar:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#randomBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#randomBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#randomBtn:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#beerBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#beerBtn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+#beerBtn:hover {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}

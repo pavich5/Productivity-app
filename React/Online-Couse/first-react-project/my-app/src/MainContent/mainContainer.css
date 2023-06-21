@@ -1,0 +1,23 @@
+body{
+    background-color: #2f3640;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 100vh;
+}
+
+.mainDiv > h1 {
+    margin-bottom: 15px;
+    color: white;
+}
+.mainDiv > ul > li{
+    padding: 5px;
+    color: white;
+}
+
+.mainDiv > ul > li::marker{
+    color: #0984e3;
+    font-size: 1.4rem;
+}

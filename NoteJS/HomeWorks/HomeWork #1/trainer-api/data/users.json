@@ -1,0 +1,26 @@
+[
+  {
+    "id": "7800d329-a2bf-46fa-ac71-07d04da52a17",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "$2a$08$xyE.a5mqm9wlghTM8aeRuuFaqVSuuIj.BrdyuL307TLPHZ3OU.3QG",
+    "role": "user"
+  },
+  {
+    "id": "061b0222-8abd-4cad-af03-50815be26ae3",
+    "firstName": "Antonio",
+    "lastName": "Pavic",
+    "email": "pavic@example.com",
+    "password": "$2a$08$LZ5/LUT0qnlMI9riPXvTvOpvoDjhxly8oB4c3el2JFWG9w23sZDry",
+    "role": "GOD"
+  },
+  {
+    "id": "5ecfafb9-6131-4c30-8ea0-bee7926d5d45",
+    "firstName": "Avrage",
+    "lastName": "mate",
+    "email": "mate@example.com",
+    "password": "$2a$08$LZ5/LUT0qnlMI9riPXvTvOpvoDjhxly8oB4c3el2JFWG9w23sZDry",
+    "role": "Admin"
+  }
+]

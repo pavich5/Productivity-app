@@ -1,0 +1,53 @@
+.AboutUs {
+    display: flex;
+  }
+  
+  .AboutUsContent {
+    flex: 1;
+    padding: 30px;
+    max-height: 600px;
+    background-color: #e9e9e9;
+  }
+  
+  .AboutUsContent section {
+    margin-bottom: 40px;
+  }
+  
+  .AboutUsContent h1,
+  .AboutUsContent h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .AboutUsContent p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .AboutUsContent ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .AboutUsContent li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .icon path {
+    fill: #d6d6d6;
+  }
+  

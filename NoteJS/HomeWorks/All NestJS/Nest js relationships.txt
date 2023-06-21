@@ -1,0 +1,78 @@
+one to one:
+1.connect one to one in the both entitys
+@OneToOne(() => Team, team => team.manager)
+team: Team;
+
+@OneToOne(() => Manager, manager => manager.team)
+@JoinColumn()
+manager: Manager;
+
+2.after that we go to the create dto for this ex we go to create team dto
+and add manager id
+@IsNumber()
+@IsOptional()
+managerId: number;
+
+after we take the id we go to the service to make the logic becouse this is just number for now
+for this ex in the manager service we only add relations to be true so when we get manager by id
+we also get the team object
+
+ relations: {  
+ team: true
+},
+
+and we also add relation true to the team site so we can see the manager
+relations: {manager:true},
+and then we add in the create function so we can get that number and find it by manager id 
+manager: {id: data.managerId}
+
+
+...................
+
+one to many:
+1.when we want to create one to many relationship it means that
+for example we want to connect one team to many players thah means
+that one team can have many players and one player can have only one team
+So first we want to choose the owner site of the relationship and we place
+@joincolmn on the owner sitefor ex:OneToMany
+the owner here is the many becouse there are many players for one team
+so in general where is the many there is the owner joincolmn()
+here is the syntah:
+
+player entity:
+@ManyToOne(() => Team, team => team.players)
+@JoinColumn()
+team: Team;
+
+team entity:
+@OneToMany(() => Player, player => player.team)
+players:Player[]
+
+
+Many to many:
+
+here in many to many we need first to choose who will be the owner
+after that at the owner site entity we place @JoinTable or @JoinColumn
+after that we connect them like this example:
+@ManyToMany(() => Team,(team)=> team.matches)
+@JoinTable()
+team:Team[]
+
+@ManyToMany(()=> Matches, match => match.team)
+matches:Matches[];
+
+after we connect them to the entity we need to go to the create dtos and fix them there
+there we add for ex:
+@IsOptional()
+@IsArray()  
+teamsId: number[];
+
+so when match is created we can add teams id witch is number
+and then we take that number and in the service with map we take
+the whole object and print it like this:
+
+team: data.teamsId.map((team) => {
+        return {
+          id:team
+        }
+       })

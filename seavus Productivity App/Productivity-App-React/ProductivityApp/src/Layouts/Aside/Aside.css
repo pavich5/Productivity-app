@@ -1,0 +1,23 @@
+.sidebar {
+  width: 200px;
+  background-color: #087e8b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+
+.sidebar a {
+  display: block;
+  color: #bfd7ea;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  color: #ccc;
+}
+
+.sidebar a.active {
+  color: #9ea2c5;
+}

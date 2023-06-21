@@ -1,0 +1,21 @@
+.PlanetListItem {
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8%;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #d3d3d3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.PlanetListItem:hover {
+  background-color: #3ba3ff;
+  transform: scale(1.05);
+}
+
+.PlanetListItem.selected {
+  background-color: #3ba3ff;
+  color: #fff;
+  transform: scale(1.05);
+}

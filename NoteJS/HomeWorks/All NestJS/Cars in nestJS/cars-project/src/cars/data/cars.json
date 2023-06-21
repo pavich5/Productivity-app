@@ -1,0 +1,38 @@
+[
+  {
+    "Firma": "Jugo",
+    "model": "yz55",
+    "year": 1970,
+    "id": "b0e233bc-51c2-4018-b8eb-a94119497ec2"
+  },
+  {
+    "Firma": "paicova",
+    "model": "ez22",
+    "year": 1270,
+    "id": "6657ed0b-342a-4653-a5d0-8bd9e8eab5c6"
+  },
+  {
+    "Firma": "Golf",
+    "model": "6 tdi",
+    "year": 2010,
+    "id": "b7cde9d3-b7f9-4794-b855-82094670d8db"
+  },
+  {
+    "Firma": "Golf",
+    "model": "5 tdi",
+    "year": 2005,
+    "id": "f520dc04-dc78-47b9-b2de-5521610af3b0"
+  },
+  {
+    "Firma": "Bmw",
+    "model": "320 tdi",
+    "year": 2002,
+    "id": "ca3705e5-f175-4641-baec-3c43b125c4f6"
+  },
+  {
+    "Firma": "Scoda",
+    "model": "octavia tdi",
+    "year": 2009,
+    "id": "45076d49-6746-4b57-9d9d-06a53ccf417a"
+  }
+]

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto&display=swap');
+
+*{
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainWrap{
+    width: 1000px;
+    height: 300px;
+    background-color: grey;
+    margin-left: 350px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+#inputPlace{
+    width: 400px;
+    height: 30px;
+    border-radius: 8%;
+}
+
+#date{
+    padding: 2px;
+    width: 180px;
+    margin-right: 5px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 8%;
+}
+
+#Amount{
+    height: 30px;
+    border-radius: 8%;
+}
+
+#btnAdd{
+    margin-top: 33px;
+    width: 110px;
+    height: 35px;
+    border-radius: 8%;
+    background-color: lightblue;
+}
+
+#all-expenses {
+    font-family: 'Noto Sans Mende Kikakui', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width:56.7%;
+    margin-left: 350px;
+  }
+  
+  #all-expenses th, #all-expenses td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #all-expenses th {
+    background-color: #ddd;
+  }
+  
+  #all-expenses tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

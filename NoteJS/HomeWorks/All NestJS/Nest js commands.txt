@@ -1,0 +1,32 @@
+create project : nest new my-app
+start project : npm run start:dev
+generate new / : nest generate module,controller,service name
+
+1.connect database to the vs code
+2.connect the validation in main.ts(pipe)
+3. Import the TypeOrmModule in app.module and use the .forRoot() method to add the config and connect to the databse
+4. Create your entity files and define the tables or data that you want to use
+5. Add the TypeOrmModule.forFeature() in the child module (products.module.ts) where you want to use the entites you just defined
+6. Go to the service where you want to do database operations and use the @InjectRepository decorator to create a new repository that will handle the operations with the entity data
+7.For using filters create filters interface, place it in the controller and then with filterConfig in service
+8.when you want to use for ex: one service in other controler you need to put export in the service u want to use, and put it as provider in the one u want to use
+9.entity is for how the product will look in the database table
+10. dtos is the contstruction on how the product will look
+11. CRUD in nestJS:{ 
+repository.find({}) = to get all products
+repository.findOneBy({ id })= to find somthing by spesific thing like id,email..
+repository.create(data:createExampleDto) = creates somthing in the database based on the dto how it looks
+repository.save(ex:product)= for ex when we create new product or update and we want to save in the repository 
+repostiory.remove(ex:product(with find by id we find it above))= when we want to remove product by id 
+***** dont forget to use async, await , and this.
+
+12.Use dependency injection (DI) - NestJS provides a powerful DI system which can be used to create modular and testable code. Always try to use DI to inject
+dependencies into your classes.
+13.Use pipes for validation and transformation - Pipes can be used to validate and transform incoming data before it is processed by your controllers and services.
+
+
+TypeOrmModule setup:
+1. Import the TypeOrmModule in app.module and use the .forRoot() method to add the config and connect to the databse
+2. Create your entity files and define the tables or data that you want to use
+3. Add the TypeOrmModule.forFeature() in the child module (products.module.ts) where you want to use the entites you just defined
+4. Go to the service where you want to do database operations and use the @InjectRepository decorator to create a new repository that will handle the operations with the entity data
