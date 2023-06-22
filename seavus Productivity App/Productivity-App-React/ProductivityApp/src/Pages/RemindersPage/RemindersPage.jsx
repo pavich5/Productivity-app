@@ -15,6 +15,18 @@ const RemindersPage = () => {
     { id: 4, title: "Meeting at 10:00 AM" },
     { id: 5, title: "Buy groceries" },
     { id: 6, title: "Call John" },
+    { id: 1, title: "Meeting at 10:00 AM" },
+    { id: 2, title: "Buy groceries" },
+    { id: 3, title: "Call John" },
+    { id: 4, title: "Meeting at 10:00 AM" },
+    { id: 5, title: "Buy groceries" },
+    { id: 6, title: "Call John" },
+    { id: 1, title: "Meeting at 10:00 AM" },
+    { id: 2, title: "Buy groceries" },
+    { id: 3, title: "Call John" },
+    { id: 4, title: "Meeting at 10:00 AM" },
+    { id: 5, title: "Buy groceries" },
+    { id: 6, title: "Call John" },
     // Add more reminder items here...
   ];
 

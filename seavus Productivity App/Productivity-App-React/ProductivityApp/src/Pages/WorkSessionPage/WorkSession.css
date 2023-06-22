@@ -1,0 +1,135 @@
+.WorkSession {
+    display: flex;
+  }
+  
+  .workSessionContent {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 900px;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .add-task-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h3 {
+    margin-top: 0;
+  }
+  
+  .taskList {
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+  }
+  
+  .taskList.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .taskList li {
+    width: 950px;
+    border-bottom: 1px solid #ccc;
+    padding: 13px;
+    position: relative;
+  }
+  
+  .taskList.tasks li:last-child {
+    border-bottom: none;
+  }
+  
+  .taskList.tasks li button.add-task-button {
+    background-color: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .more-details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .more-details::after {
+    margin-right: 0;
+  }
+  
+  .subTaskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subTaskList li {
+    padding: 5px 0;
+  }
+  
+  .subTaskList li::after {
+    content: '';
+    width: 1px;
+    height: calc(100% + 14px);
+    background-color: #ccc;
+    position: absolute;
+    left: -35px;
+    top: -7px;
+  }
+  
+  .subTaskList .subTaskBullet {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .more-details {
+    margin-top: 5px;
+  }
+  
+section h3 svg {
+    margin-right: 10px;
+}
+
+.taskList li .taskBullet svg {
+    margin-right: 10px;
+}
+
+.subTaskList li svg{
+    margin-right: 10px;
+}

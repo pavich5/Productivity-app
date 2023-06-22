@@ -111,14 +111,7 @@
     height: 100vh;
   }
   
-  .Aside {
-    width: 200px;
-    background-color: #f2f2f2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-right: 20px;
-    padding: 20px;
-  }
+
   
   .DatePickingPage {
     display: flex;
@@ -164,3 +157,12 @@
     align-content: center;
   }
 
+  .sidebar {
+    width: 200px;
+    background-color: #087e8b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  

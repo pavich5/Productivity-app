@@ -7,6 +7,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import ContactUs from "./ContactUs/ContactUs";
 import Calendar from "./CalendarPage/Calendar";
 import RemindersPage from "./RemindersPage/RemindersPage";
+import WorkSession from "./WorkSessionPage/WorkSession";
 
 export const Pages = () => {
   return (
@@ -19,6 +20,8 @@ export const Pages = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/reminders" element={<RemindersPage />} />
+      <Route path="/work-session" element={<WorkSession />} />
+
     </Routes>
   );
 };
