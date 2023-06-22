@@ -76,3 +76,72 @@
     transform: scale(1);
   }
 }
+
+@media screen and (min-width: 1920px) and (max-width: 1920px) {
+  .AboutUs {
+    display: flex;
+  }
+
+  .AboutUsContent {
+    flex: 1;
+    padding: 60px 40px;
+    max-height: 1000px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 38px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .pics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+
+  .pics svg {
+    font-size: 43px;
+    color: #ffffff;
+  }
+
+  .content-container {
+    flex: 1;
+  }
+
+  /* Different Icon Colors */
+  .pics .lightbulb-icon {
+    color: #f1c40f;
+  }
+
+  .pics .chart-icon {
+    color: #c4c4c4;
+  }
+
+  .pics .users-icon {
+    color: #2c2828;
+  }
+}
