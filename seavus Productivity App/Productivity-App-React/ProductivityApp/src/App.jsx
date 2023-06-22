@@ -17,7 +17,7 @@ function App() {
     },
     {
       text: 'About',
-      link: '/asd',
+      link: '/about',
     },
     {
       text: 'Contact',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarker, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import './ContactUs.css';
 import Aside from '../../Layouts/Aside/Aside';
 
@@ -8,29 +8,49 @@ const ContactUs = () => {
     <div className="ContactUs">
       <Aside />
       <div className="contact-content">
-        <h1>Contact Us</h1>
+        <h1>Get in Touch</h1>
         <div className="contact-info">
           <div className="contact-item">
-            <FaEnvelope className="contact-icon" />
-            <p>Email: info@example.com</p>
+            <div className="contact-icon">
+              <FaEnvelope />
+            </div>
+            <p className="contact-text">info@example.com</p>
           </div>
           <div className="contact-item">
-            <FaPhone className="contact-icon" />
-            <p>Phone: +1 123-456-7890</p>
+            <div className="contact-icon">
+              <FaPhone />
+            </div>
+            <p className="contact-text">+1 123-456-7890</p>
           </div>
           <div className="contact-item">
-            <FaMapMarker className="contact-icon" />
-            <p>123 Main Street, City, Country</p>
+            <div className="contact-icon">
+              <FaMapMarker />
+            </div>
+            <p className="contact-text">123 Main Street, City, Country</p>
           </div>
         </div>
         <div className="contact-form">
-          <h2>Send us a message</h2>
+          <h2 className="form-title">We would love to hear from you</h2>
           <form>
-            <input type="text" placeholder="Your Name" className='formInput'/>
-            <input type="email" placeholder="Your Email" className='formInput'/>
-            <input type="text" placeholder="Your Message" className='formInput'/>
-            <button type="submit">Send</button>
+            <input type="text" placeholder="Your Name" className="form-input" />
+            <input type="email" placeholder="Your Email" className="form-input" />
+            <textarea placeholder="Your Message" className="form-input" />
+            <button type="submit">Send Message</button>
           </form>
+        </div>
+        <div className="social-media">
+          <h3>Follow us on social media</h3>
+          <div className="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="social-icon" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="social-icon" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="social-icon" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

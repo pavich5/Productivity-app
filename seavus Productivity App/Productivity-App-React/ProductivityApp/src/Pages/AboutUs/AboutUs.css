@@ -1,53 +1,78 @@
 .AboutUs {
-    display: flex;
+  display: flex;
+}
+
+.AboutUsContent {
+  flex: 1;
+  padding: 30px;
+  max-height: 600px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.pics {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+.pics svg {
+  font-size: 43px;
+  color: #ffffff;
+}
+
+.content-container {
+  flex: 1;
+}
+
+/* Different Icon Colors */
+.pics .lightbulb-icon {
+  color: #f1c40f;
+}
+
+.pics .chart-icon {
+  color: #c4c4c4;
+}
+
+.pics .users-icon {
+  color: #2c2828;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  .AboutUsContent {
-    flex: 1;
-    padding: 30px;
-    max-height: 600px;
-    background-color: #e9e9e9;
+  50% {
+    transform: scale(1.1);
   }
-  
-  .AboutUsContent section {
-    margin-bottom: 40px;
+  100% {
+    transform: scale(1);
   }
-  
-  .AboutUsContent h1,
-  .AboutUsContent h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .AboutUsContent p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .AboutUsContent ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  
-  .AboutUsContent li {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .icon {
-    margin-right: 10px;
-    font-size: 18px;
-  }
-  
-  .icon path {
-    fill: #d6d6d6;
-  }
-  
+}
