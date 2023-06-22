@@ -1,8 +1,11 @@
-import { Bar } from "react-chartjs-2";
+import React, { useState } from "react";
+import { Bar, Doughnut } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import "./BarChart.css";
 
 const BarChart = () => {
+  const [chartType, setChartType] = useState("bar"); // State variable to track the chart type
+
   // Dummy data for the chart
   const data = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -26,7 +29,6 @@ const BarChart = () => {
 
   // Chart options
   const options = {
-    // indexAxis: "y", // Set the index axis to 'y' for left-aligned labels
     scales: {
       y: {
         beginAtZero: true,
@@ -39,10 +41,15 @@ const BarChart = () => {
     },
   };
 
+  const handleChartToggle = () => {
+    setChartType((prevChartType) => (prevChartType === "bar" ? "doughnut" : "bar"));
+  };
+
   return (
     <div className="bar-chart">
-      <h2>Bar Chart Example</h2>
-      <Bar data={data} options={options} />
+      <h2>Chart Example</h2>
+      {chartType === "bar" ? <Bar data={data} options={options} /> : <Doughnut data={data} options={options} />}
+      <button onClick={handleChartToggle}>Toggle Chart</button>
     </div>
   );
 };
