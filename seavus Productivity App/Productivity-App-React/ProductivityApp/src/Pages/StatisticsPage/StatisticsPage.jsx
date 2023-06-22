@@ -6,7 +6,9 @@ const StatisticsPage = () => {
   return (
     <div className="StatisticsMain">
       <Aside />
-      <BarChart />
+      <div className="Charts">
+        <BarChart />
+      </div>
     </div>
   );
 };

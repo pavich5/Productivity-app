@@ -16,7 +16,9 @@ const RemindersPage = () => {
   ]);
 
   const handleDeleteReminder = (id) => {
-    setReminderData((prevData) => prevData.filter((reminder) => reminder.id !== id));
+    setReminderData((prevData) =>
+      prevData.filter((reminder) => reminder.id !== id)
+    );
   };
 
   const renderReminders = () => {
@@ -27,7 +29,7 @@ const RemindersPage = () => {
           className="reminder-delete-btn"
           onClick={() => handleDeleteReminder(reminder.id)}
         >
-          Delete
+          Complete
         </button>
       </li>
     ));

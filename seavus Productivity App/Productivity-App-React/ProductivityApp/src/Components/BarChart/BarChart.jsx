@@ -8,7 +8,20 @@ const BarChart = () => {
 
   // Dummy data for the chart
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
     datasets: [
       {
         label: "Sales",
@@ -42,14 +55,22 @@ const BarChart = () => {
   };
 
   const handleChartToggle = () => {
-    setChartType((prevChartType) => (prevChartType === "bar" ? "doughnut" : "bar"));
+    setChartType((prevChartType) =>
+      prevChartType === "bar" ? "doughnut" : "bar"
+    );
   };
 
   return (
     <div className="bar-chart">
       <h2>Chart Example</h2>
-      {chartType === "bar" ? <Bar data={data} options={options} /> : <Doughnut data={data} options={options} />}
-      <button onClick={handleChartToggle}>Toggle Chart</button>
+      {chartType === "bar" ? (
+        <Bar data={data} options={options} />
+      ) : (
+        <Doughnut data={data} options={options} />
+      )}
+      <button className="toggleChartBtn" onClick={handleChartToggle}>
+        Toggle Chart
+      </button>
     </div>
   );
 };
