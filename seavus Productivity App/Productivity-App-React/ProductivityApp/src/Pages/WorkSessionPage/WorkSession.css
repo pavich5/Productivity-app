@@ -1,161 +1,161 @@
 .WorkSession {
-    display: flex;
-  }
-  
-  .workSessionContent {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 900px;
-    align-items: baseline;
-    padding: 40px;
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  .add-task-button {
-    background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
-    padding: 4px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    width: 150px;
-    height: 30px;
-    text-align: center;
-    display: flex;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  section h3 {
-    margin-top: 0;
-  }
-  
-  .taskList {
-    list-style-type: none;
-    padding: 0;
-    flex-direction: column;
-  }
-  
-  .taskList.tasks {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .taskList li {
-    width: 950px;
-    border-bottom: 1px solid #ccc;
-    padding: 5px;
-    position: relative;
-  }
-  
-  .taskList.tasks li:last-child {
-    border-bottom: none;
-  }
-  
-  .taskList.tasks li button.add-task-button {
-    background-color: transparent;
-    color: #28a745;
-    border: 2px solid #28a745;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .more-details {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .more-details::after {
-    margin-right: 0;
-  }
-  
-  .subTaskList {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .subTaskList li {
-    padding: 5px 0;
-  }
-  
-  .subTaskList li::after {
-    content: '';
-    width: 1px;
-    height: calc(100% + 14px);
-    background-color: #ccc;
-    position: absolute;
-    left: -35px;
-    top: -7px;
-  }
-  
-  .subTaskList .subTaskBullet {
-    width: 24px;
-    height: 24px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    background-color: transparent;
-    position: absolute;
-    left: -40px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .more-details {
-    margin-top: 5px;
-  }
-  
-  section h3 svg {
-    margin-right: 10px;
-    fill: rgb(66, 82, 66);
-  }
-  
-  .taskList li .taskBullet svg {
-    margin-right: 10px;
-  }
-  
-  .subTaskList li svg {
-    margin-right: 10px;
-  }
-  
-  .Headings{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
+  display: flex;
+}
 
-  .add-task-button{
-    margin-top: 0;
-  }
+.workSessionContent {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 900px;
+  align-items: baseline;
+  padding: 40px;
+}
 
-  .Headings h3{
-    margin-bottom: 1px;
-  }
+h2 {
+  margin-top: 0;
+}
 
-  .add-task-button:hover{
-    color: white;
-  }
+.add-task-button {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+}
 
-.notfiicationBell svg{
+section {
+  margin-bottom: 20px;
+}
+
+section h3 {
+  margin-top: 0;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+}
+
+.taskList.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.taskList li {
+  width: 950px;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  position: relative;
+}
+
+.taskList.tasks li:last-child {
+  border-bottom: none;
+}
+
+.taskList.tasks li button.add-task-button {
+  background-color: transparent;
+  color: #28a745;
+  border: 2px solid #28a745;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.more-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.more-details::after {
+  margin-right: 0;
+}
+
+.subTaskList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subTaskList li {
+  padding: 5px 0;
+}
+
+.subTaskList li::after {
+  content: "";
+  width: 1px;
+  height: calc(100% + 14px);
+  background-color: #ccc;
+  position: absolute;
+  left: -35px;
+  top: -7px;
+}
+
+.subTaskList .subTaskBullet {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.more-details {
+  margin-top: 5px;
+}
+
+section h3 svg {
+  margin-right: 10px;
+  fill: rgb(66, 82, 66);
+}
+
+.taskList li .taskBullet svg {
+  margin-right: 10px;
+}
+
+.subTaskList li svg {
+  margin-right: 10px;
+}
+
+.Headings {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.add-task-button {
+  margin-top: 0;
+}
+
+.Headings h3 {
+  margin-bottom: 1px;
+}
+
+.add-task-button:hover {
+  color: white;
+}
+
+.notfiicationBell svg {
   height: 40px;
 }
 
-.notfiicationBell{
+.notfiicationBell {
   position: absolute;
   top: 6;
   right: 10%;
@@ -233,15 +233,14 @@ section ul li:hover {
   border-color: #2196f3;
 }
 
-
-.forma{
+.forma {
   padding: 20px;
   width: 400px;
   display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-    flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .notificationBell svg {
@@ -251,21 +250,20 @@ section ul li:hover {
   height: 30px;
 }
 
-.forma > .form-group  > label{
+.forma > .form-group > label {
   padding: 0;
   margin: 0;
   margin: 10px;
-
 }
 
-.forma > .form-group  > input,button{
+/* .forma > .form-group  > input,button{
   padding: 0;
   margin: 0;
   margin: 10px;
+} */
+/* button css needed */
 
-}
-
-.formButtons{
+.formButtons {
   display: flex;
   width: 200px;
 }
