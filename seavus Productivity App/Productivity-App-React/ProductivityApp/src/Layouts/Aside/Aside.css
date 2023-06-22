@@ -4,11 +4,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-  min-height: 100vh;
-=======
   min-height: 95vh;
->>>>>>> Stashed changes
 }
 
 .sidebar a {

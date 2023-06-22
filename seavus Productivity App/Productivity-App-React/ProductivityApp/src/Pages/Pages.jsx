@@ -7,11 +7,8 @@ import AboutUs from "./AboutUs/AboutUs";
 import ContactUs from "./ContactUs/ContactUs";
 import Calendar from "./CalendarPage/Calendar";
 import RemindersPage from "./RemindersPage/RemindersPage";
-<<<<<<< Updated upstream
-import WorkSession from "./WorkSessionPage/WorkSession";
-=======
 import StatisticsPage from "./StatisticsPage/StatisticsPage";
->>>>>>> Stashed changes
+import WorkSession from "./WorkSessionPage/WorkSession";
 
 export const Pages = () => {
   return (
@@ -24,12 +21,10 @@ export const Pages = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/reminders" element={<RemindersPage />} />
-<<<<<<< Updated upstream
-      <Route path="/work-session" element={<WorkSession />} />
+      <Route path="/statistics" element={<StatisticsPage />}/>
+      <Route path="/work-session" element={<WorkSession/>}
+      />
 
-=======
-      <Route path="/statistics" element={<StatisticsPage />} />
->>>>>>> Stashed changes
     </Routes>
   );
 };

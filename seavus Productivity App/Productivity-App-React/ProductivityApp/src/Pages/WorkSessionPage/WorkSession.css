@@ -7,13 +7,8 @@
     flex-direction: column;
     padding: 20px;
     width: 900px;
-  }
-  
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    align-items: baseline;
+    padding: 40px;
   }
   
   h2 {
@@ -24,11 +19,14 @@
     background-color: transparent;
     color: #007bff;
     border: 2px solid #007bff;
-    padding: 5px 10px;
+    padding: 4px 8px;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
-    width: 100px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    display: flex;
   }
   
   section {
@@ -54,7 +52,7 @@
   .taskList li {
     width: 950px;
     border-bottom: 1px solid #ccc;
-    padding: 13px;
+    padding: 5px;
     position: relative;
   }
   
@@ -122,14 +120,64 @@
     margin-top: 5px;
   }
   
-section h3 svg {
+  section h3 svg {
     margin-right: 10px;
+    fill: rgb(66, 82, 66);
+  }
+  
+  .taskList li .taskBullet svg {
+    margin-right: 10px;
+  }
+  
+  .subTaskList li svg {
+    margin-right: 10px;
+  }
+  
+  .Headings{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .add-task-button{
+    margin-top: 0;
+  }
+
+  .Headings h3{
+    margin-bottom: 1px;
+  }
+
+  .add-task-button:hover{
+    color: white;
+  }
+
+.notfiicationBell svg{
+  height: 40px;
 }
 
-.taskList li .taskBullet svg {
-    margin-right: 10px;
+.notfiicationBell{
+  position: absolute;
+  top: 6;
+  right: 10%;
 }
 
-.subTaskList li svg{
-    margin-right: 10px;
+section ul li {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+section ul li:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.popupContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }

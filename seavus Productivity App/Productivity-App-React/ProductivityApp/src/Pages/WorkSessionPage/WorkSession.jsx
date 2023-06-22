@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-regular-svg-icons';
+import { faCircle, faBell } from '@fortawesome/free-regular-svg-icons';
 import Aside from '../../Layouts/Aside/Aside';
 import './WorkSession.css';
 
 const WorkSession = () => {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAddTaskClick = () => {
+    setShowForm(true);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Process the form data here
+    // ...
+    setShowForm(false); // Hide the form after submission
+  };
+
   return (
     <div className="WorkSession">
       <Aside />
       <div className="workSessionContent">
-        <h2 style={{ display: 'inline', marginLeft: 32 }}>Work Session</h2>
-        <button className="add-task-button">Add Task +</button>
-
+        <div className="Headings">
+          <h2>Work Session</h2>
+          <button className="add-task-button" onClick={handleAddTaskClick}>
+            + Add Task
+          </button>
+        </div>
+        <div className="notfiicationBell">
+          <FontAwesomeIcon icon={faBell} />
+        </div>
         <section>
           <h3>
             <FontAwesomeIcon icon={faCircle} />
@@ -36,7 +55,9 @@ const WorkSession = () => {
               </span>
               Task 3
             </li>
-            <li className="add-task-li">+ AddTask</li>
+            <li className="add-task-li" onClick={handleAddTaskClick}>
+              + Add Task
+            </li>
           </ul>
           <span className="more-details">...</span>
         </section>
@@ -61,11 +82,13 @@ const WorkSession = () => {
             </li>
             <li>
               <span className="taskBullet">
-                <FontAwesomeIcon icon={faCircle}/>
+                <FontAwesomeIcon icon={faCircle} />
               </span>
               Task 3
             </li>
-            <li className="add-task-li">+AddTask</li>
+            <li className="add-task-li" onClick={handleAddTaskClick}>
+              + Add Task
+            </li>
           </ul>
           <span className="more-details">...</span>
         </section>
@@ -124,11 +147,23 @@ const WorkSession = () => {
                 </li>
               </ul>
             </li>
-            <li className="add-task-li">+AddTask</li>
+            <li className="add-task-li" onClick={handleAddTaskClick}>
+              + Add Task
+            </li>
           </ul>
           <span className="more-details">...</span>
         </section>
       </div>
+
+      {showForm && (
+        <div className="popupContainer">
+          <form onSubmit={handleFormSubmit}>
+            {/* Add your form inputs and submit button here */}
+            {/* ... */}
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      )}
     </div>
   );
 };
