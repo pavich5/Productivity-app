@@ -21,7 +21,7 @@ nav {
   object-fit: contain;
 }
 
-ul {
+.header-ul {
   display: flex;
   list-style-type: none;
   text-decoration: none;
