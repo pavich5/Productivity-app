@@ -47,6 +47,12 @@
   padding: 20px;
   border-radius: 5px;
   background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form form {
+  width: 80%;
 }
 
 .form-title {
@@ -64,9 +70,9 @@
   outline: none;
 }
 
-textarea.form-input {
+/* textarea.form-input {
   resize: vertical;
-}
+} */
 
 .contact-form button {
   padding: 10px 20px;
