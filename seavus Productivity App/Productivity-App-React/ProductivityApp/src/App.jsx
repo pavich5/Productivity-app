@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./Layouts/Header/Header";
 import Footer from "./Layouts/Footer/Footer";
 import { Pages } from "./Pages/Pages";
-
 function App() {
   const navbarLoginData = [
     {
@@ -24,23 +23,23 @@ function App() {
       link: "/login",
     },
   ];
-
   const navbarDashboardData = [
     {
       text: "Logout",
       link: "/",
     },
   ];
-
   return (
     <div className="App">
       <BrowserRouter>
-        <Header navbarLoginData={navbarLoginData} navbarDashboardData={navbarDashboardData} />
+        <Header
+          navbarLoginData={navbarLoginData}
+          navbarDashboardData={navbarDashboardData}
+        />
         <Pages />
         <Footer />
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;

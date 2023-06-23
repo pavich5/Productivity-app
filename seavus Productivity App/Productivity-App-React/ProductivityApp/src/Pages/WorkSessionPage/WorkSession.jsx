@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import Aside from "../../Layouts/Aside/Aside";
@@ -14,7 +14,7 @@ const WorkSession = () => {
   const [sections, setSections] = useState([]);
   const [sectionName, setSectionName] = useState("");
   const [taskName, setTaskName] = useState("");
-  const [subtasks, setSubtasks] = useState([""]);
+  const [subtasks, setSubtasks] = useState(["", ""]);
   const [date, setDate] = useState("");
   const [selectedTask, setSelectedTask] = useState(null);
   const [comment, setComment] = useState("");
@@ -41,9 +41,8 @@ const WorkSession = () => {
 
     setSectionName("");
     setTaskName("");
-    setSubtasks([""]);
+    setSubtasks(["", ""]);
     setDate("");
-    setComment("");
 
     setShowForm(false);
   };
@@ -99,7 +98,11 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Task" className="add-task-button" />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Task"
+            className="add-task-button"
+          />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -110,6 +113,7 @@ const WorkSession = () => {
         ) : (
           sections.map((section, sectionIndex) => (
             <Section
+              className="taskSections"
               key={sectionIndex}
               sectionName={section.sectionName}
               tasks={section.tasks}
@@ -147,9 +151,6 @@ const WorkSession = () => {
             setSelectedTask={setSelectedTask}
             setSections={setSections}
             sections={sections}
-            comment={comment}
-            handleCommentChange={handleCommentChange}
-            textareaRef={textareaRef}
           />
         </div>
       )}
