@@ -29,7 +29,7 @@ function Header(props) {
           </ul>
         </div>
         <div className="icons">
-          <NavLink to={"/contact"}>
+          <NavLink to={"/User-Info"}>
             <div className="icon contact-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

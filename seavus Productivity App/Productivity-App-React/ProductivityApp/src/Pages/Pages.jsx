@@ -9,8 +9,7 @@ import Calendar from "./CalendarPage/Calendar";
 import RemindersPage from "./RemindersPage/RemindersPage";
 import StatisticsPage from "./StatisticsPage/StatisticsPage";
 import WorkSession from "./WorkSessionPage/WorkSession";
-import NotFoundPage from "./NotFoundPage/NotFoundPage";
-
+import UserInfoPage from "./UserPage/UserPage";
 export const Pages = () => {
   return (
     <Routes>
@@ -22,9 +21,9 @@ export const Pages = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/reminders" element={<RemindersPage />} />
-      <Route path="/statistics" element={<StatisticsPage />} />
-      <Route path="/work-session" element={<WorkSession />} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path="/statistics" element={<StatisticsPage />}/>
+      <Route path="/work-session" element={<WorkSession/>}/>
+      <Route path="/User-Info" element={<UserInfoPage/>}/>
     </Routes>
   );
 };
