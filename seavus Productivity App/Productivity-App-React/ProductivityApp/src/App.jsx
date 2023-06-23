@@ -1,44 +1,35 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Header from './Layouts/Header/Header';
-import Footer from './Layouts/Footer/Footer';
-import { Pages } from './Pages/Pages';
+import React from "react";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./Layouts/Header/Header";
+import Footer from "./Layouts/Footer/Footer";
+import { Pages } from "./Pages/Pages";
 
 function App() {
   const navbarLoginData = [
     {
-      text: 'Home',
-      link: '/',
+      text: "How to be Productive",
+      link: "/productive-tips",
     },
     {
-      text: 'Categories',
-      link: '/categories',
+      text: "About",
+      link: "/about",
     },
     {
-      text: 'About',
-      link: '/about',
+      text: "Contact",
+      link: "/contact",
     },
     {
-      text: 'Contact',
-      link: '/contact',
-    },
-    {
-      text: 'Login',
-      link: '/login',
+      text: "Login",
+      link: "/login",
     },
   ];
 
   const navbarDashboardData = [
     {
-      text: 'Home',
-      link: '/productivity',
+      text: "Logout",
+      link: "/",
     },
-    {
-      text: 'Logout',
-      link: '/',
-    },
-   
   ];
 
   return (
