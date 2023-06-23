@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
-import './Landing-Page.css';
-import logo from '../../assets/images/Logo.png';
+import { NavLink } from "react-router-dom";
+import "./Landing-Page.css";
+import logo from "../../assets/images/Logo.png";
 
 const LandingPage = () => {
   return (
@@ -13,10 +13,10 @@ const LandingPage = () => {
         <br />
         <h2 id="motto">Our motto is Programming</h2>
         <div className="Buttons">
-          <NavLink to="/login" id="loginBtn" activeClassName="active">
+          <NavLink to="/login" id="loginBtn" activeclassname="active">
             Login
           </NavLink>
-          <NavLink to="/register" id="registerBtn" activeClassName="active">
+          <NavLink to="/register" id="registerBtn" activeclassname="active">
             Register
           </NavLink>
         </div>

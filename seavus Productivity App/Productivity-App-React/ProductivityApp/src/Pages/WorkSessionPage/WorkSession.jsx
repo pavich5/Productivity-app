@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faBell } from '@fortawesome/free-regular-svg-icons';
-import Aside from '../../Layouts/Aside/Aside';
-import './WorkSession.css';
-import TaskForm from '../../Components/TasksForm/TaskForm';
-import Section from '../../Components/TaskSectionContainer/TaskSectionContainer';
-import ActiveTaskPopUp from '../../Components/ActiveTaskPopUp/ActiveTaskPopUp';
-import Button from '../../Components/Button/Button';
+import React, { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-regular-svg-icons";
+import Aside from "../../Layouts/Aside/Aside";
+import "./WorkSession.css";
+import TaskForm from "../../Components/TasksForm/TaskForm";
+import Section from "../../Components/TaskSectionContainer/TaskSectionContainer";
+import ActiveTaskPopUp from "../../Components/ActiveTaskPopUp/ActiveTaskPopUp";
+import Button from "../../Components/Button/Button";
 const WorkSession = () => {
+  const textareaRef = useRef(null);
+
   const [showForm, setShowForm] = useState(false);
   const [sections, setSections] = useState([]);
-  const [sectionName, setSectionName] = useState('');
-  const [taskName, setTaskName] = useState('');
-  const [subtasks, setSubtasks] = useState(['', '']);
-  const [date, setDate] = useState('');
+  const [sectionName, setSectionName] = useState("");
+  const [taskName, setTaskName] = useState("");
+  const [subtasks, setSubtasks] = useState([""]);
+  const [date, setDate] = useState("");
   const [selectedTask, setSelectedTask] = useState(null);
+  const [comment, setComment] = useState("");
 
   const handleAddTaskClick = () => {
     setShowForm(true);
@@ -36,10 +39,11 @@ const WorkSession = () => {
 
     setSections([...sections, newSection]);
 
-    setSectionName('');
-    setTaskName('');
-    setSubtasks(['', '']);
-    setDate('');
+    setSectionName("");
+    setTaskName("");
+    setSubtasks([""]);
+    setDate("");
+    setComment("");
 
     setShowForm(false);
   };
@@ -50,6 +54,10 @@ const WorkSession = () => {
 
   const handleTaskNameChange = (e) => {
     setTaskName(e.target.value);
+  };
+
+  const handleAddSubtask = () => {
+    setSubtasks([...subtasks, ""]);
   };
 
   const handleSubtaskChange = (index, e) => {
@@ -70,14 +78,28 @@ const WorkSession = () => {
     setSelectedTask(null);
   };
 
+  const handleCommentChange = (e) => {
+    const updatedComment = e.target.value;
+
+    // Update the comment for the selected task
+    const updatedTask = {
+      ...selectedTask,
+      comment: updatedComment,
+    };
+    console.log(updatedComment);
+    console.log(updatedTask);
+    // kako ova da odi vo subtask, ne vo task direktno
+    // kako da se napravi zavrsenite taskovi da odat vo rezultat
+    setSelectedTask(updatedTask);
+  };
+
   return (
     <div className="WorkSession">
       <Aside />
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText='+ Add Task' className='add-task-button'/>
-
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Task" className="add-task-button" />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -111,6 +133,7 @@ const WorkSession = () => {
             date={date}
             handleDateChange={handleDateChange}
             setShowForm={setShowForm}
+            handleAddSubtask={handleAddSubtask}
           />
         </div>
       )}
@@ -118,15 +141,17 @@ const WorkSession = () => {
       {selectedTask && (
         <div className="popupContainer">
           <ActiveTaskPopUp
-         selectedTask={selectedTask}
-         handleClosePopup={handleClosePopup} 
-         subtasks={subtasks}
-         setSelectedTask={setSelectedTask}
-         setSections={setSections}
-         sections={sections}
-         />
+            selectedTask={selectedTask}
+            handleClosePopup={handleClosePopup}
+            subtasks={subtasks}
+            setSelectedTask={setSelectedTask}
+            setSections={setSections}
+            sections={sections}
+            comment={comment}
+            handleCommentChange={handleCommentChange}
+            textareaRef={textareaRef}
+          />
         </div>
-        
       )}
     </div>
   );
