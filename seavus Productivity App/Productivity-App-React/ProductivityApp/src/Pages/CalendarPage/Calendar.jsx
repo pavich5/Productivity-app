@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Calendar.css";
 import Aside from "../../Layouts/Aside/Aside";
+import Button from "../../Components/Button/Button";
 
 const DatePickingPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -46,9 +47,7 @@ const DatePickingPage = () => {
             onChange={(e) => setNewTask(e.target.value)}
             placeholder="Enter a new task"
           />
-          <button className="AddTaskButton" onClick={handleAddTask}>
-            Add Task
-          </button>
+          <Button onBtnClick={handleAddTask} btnText='Add Task' className='AddTaskButton'/>
         </div>
         <div className="TasksContainer">
           {tasks.length === 0 ? (
@@ -58,12 +57,7 @@ const DatePickingPage = () => {
               {tasks.map((task, index) => (
                 <li key={index}>
                   <span>{task}</span>
-                  <button
-                    className="DeleteTaskButton"
-                    onClick={() => handleDeleteTask(index)}
-                  >
-                    X
-                  </button>
+                  <Button onBtnClick={()=> handleDeleteTask(index)} btnText='X' className='DeleteTaskButton'/>
                 </li>
               ))}
             </ul>

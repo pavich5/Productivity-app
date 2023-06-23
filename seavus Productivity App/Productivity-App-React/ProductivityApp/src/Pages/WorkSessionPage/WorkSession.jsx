@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle, faBell } from '@fortawesome/free-regular-svg-icons';
+import {  faBell } from '@fortawesome/free-regular-svg-icons';
 import Aside from '../../Layouts/Aside/Aside';
 import './WorkSession.css';
-
+import TaskForm from '../../Components/TasksForm/TaskForm';
+import Section from '../../Components/TaskSectionContainer/TaskSectionContainer';
+import ActiveTaskPopUp from '../../Components/ActiveTaskPopUp/ActiveTaskPopUp';
+import Button from '../../Components/Button/Button';
 const WorkSession = () => {
   const [showForm, setShowForm] = useState(false);
   const [sections, setSections] = useState([]);
@@ -11,7 +14,7 @@ const WorkSession = () => {
   const [taskName, setTaskName] = useState('');
   const [subtasks, setSubtasks] = useState(['', '']);
   const [date, setDate] = useState('');
-  const [selectedTask, setSelectedTask] = useState(null); // Track the selected task for popup display
+  const [selectedTask, setSelectedTask] = useState(null);
 
   const handleAddTaskClick = () => {
     setShowForm(true);
@@ -33,13 +36,12 @@ const WorkSession = () => {
 
     setSections([...sections, newSection]);
 
-    // Clear form inputs
     setSectionName('');
     setTaskName('');
     setSubtasks(['', '']);
     setDate('');
 
-    setShowForm(false); // Hide the form after submission
+    setShowForm(false);
   };
 
   const handleSectionNameChange = (e) => {
@@ -74,9 +76,8 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <button className="add-task-button" onClick={handleAddTaskClick}>
-            + Add Task
-          </button>
+          <Button onBtnClick={handleAddTaskClick} btnText='+ Add Task' className='add-task-button'/>
+
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -86,146 +87,47 @@ const WorkSession = () => {
           <p>No tasks added. Click the "Add Task" button to get started.</p>
         ) : (
           sections.map((section, sectionIndex) => (
-            <section key={sectionIndex}>
-              <h3>
-                <FontAwesomeIcon icon={faCircle} />
-                {section.sectionName}
-              </h3>
-              <ul className="taskList">
-                {section.tasks.map((task, taskIndex) => (
-                  <li
-                    key={taskIndex}
-                    onClick={() => handleTaskClick(task)}
-                    className={task === selectedTask ? 'selected' : ''}
-                  >
-                    <span className="taskBullet">
-                      <FontAwesomeIcon icon={faCircle} />
-                    </span>
-                    {task.taskName}
-                    {task.subtasks.length > 0 && (
-                      <ul className="subTaskList">
-                        {task.subtasks.map((subtask, subtaskIndex) => (
-                          <li key={subtaskIndex}>
-                            <FontAwesomeIcon icon={faCircle} />
-                            {subtask}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-                <li className="add-task-li" onClick={handleAddTaskClick}>
-                  + Add Task
-                </li>
-              </ul>
-              <span className="more-details">...</span>
-            </section>
+            <Section
+              key={sectionIndex}
+              sectionName={section.sectionName}
+              tasks={section.tasks}
+              selectedTask={selectedTask}
+              handleTaskClick={handleTaskClick}
+            />
           ))
         )}
       </div>
 
       {showForm && (
         <div className="popupContainer">
-          <form onSubmit={handleFormSubmit} className="forma">
-            <div className="form-group">
-              <label htmlFor="sectionName">Section Name:</label>
-              <input
-                type="text"
-                id="sectionName"
-                value={sectionName}
-                onChange={handleSectionNameChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="taskName">Task Name:</label>
-              <input
-                type="text"
-                id="taskName"
-                value={taskName}
-                onChange={handleTaskNameChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Subtasks:</label>
-              {subtasks.map((subtask, index) => (
-                <input
-                  key={index}
-                  type="text"
-                  value={subtask}
-                  onChange={(e) => handleSubtaskChange(index, e)}
-                  required
-                />
-              ))}
-            </div>
-            <div className="form-group">
-              <label htmlFor="date">Date:</label>
-              <input
-                type="date"
-                id="date"
-                value={date}
-                onChange={handleDateChange}
-                required
-              />
-            </div>
-            <div className="formButtons">
-            <button type="submit">Submit</button>
-            <button onClick={()=> {setShowForm(false)}}>Close</button>
-
-            </div>
-
-          </form>
+          <TaskForm
+            handleFormSubmit={handleFormSubmit}
+            sectionName={sectionName}
+            handleSectionNameChange={handleSectionNameChange}
+            taskName={taskName}
+            handleTaskNameChange={handleTaskNameChange}
+            subtasks={subtasks}
+            handleSubtaskChange={handleSubtaskChange}
+            date={date}
+            handleDateChange={handleDateChange}
+            setShowForm={setShowForm}
+          />
         </div>
       )}
 
-{selectedTask && (
-  <div className="popupContainer">
-    <div className="popupContent">
-      <h3>{selectedTask.taskName}</h3>
-      <p>Date: {selectedTask.date}</p>
-      {selectedTask.subtasks.length > 0 && (
-        <div>
-          <h4>Subtasks:</h4>
-          <ul>
-            {selectedTask.subtasks.map((subtask, index) => (
-              <li key={index}>
-                {subtask}
-                <button
-                  onClick={() => {
-                    const updatedSubtasks = selectedTask.subtasks.filter(
-                      (_, i) => i !== index
-                    );
-                    const updatedTask = { ...selectedTask, subtasks: updatedSubtasks };
-                    setSelectedTask(updatedTask);
-
-                    // Check if all subtasks are finished
-                    if (updatedSubtasks.length === 0) {
-                      const updatedSections = sections.map((section) => {
-                        const updatedTasks = section.tasks.filter(
-                          (task) => task.taskName !== selectedTask.taskName
-                        );
-                        return { ...section, tasks: updatedTasks };
-                      });
-                      setSections(updatedSections);
-                      setSelectedTask(null);
-                    }
-                  }}
-                  
-                >
-                  Finish
-                </button>
-              </li>
-            ))}
-          </ul>
+      {selectedTask && (
+        <div className="popupContainer">
+          <ActiveTaskPopUp
+         selectedTask={selectedTask}
+         handleClosePopup={handleClosePopup} 
+         subtasks={subtasks}
+         setSelectedTask={setSelectedTask}
+         setSections={setSections}
+         sections={sections}
+         />
         </div>
+        
       )}
-    </div>
-  </div>
-)}
-
-
-
     </div>
   );
 };

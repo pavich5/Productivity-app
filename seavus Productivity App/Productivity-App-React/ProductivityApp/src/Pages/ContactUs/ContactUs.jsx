@@ -2,6 +2,7 @@ import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarker, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import './ContactUs.css';
 import Aside from '../../Layouts/Aside/Aside';
+import Button from '../../Components/Button/Button';
 
 const ContactUs = () => {
   return (
@@ -35,7 +36,7 @@ const ContactUs = () => {
             <input type="text" placeholder="Your Name" className="form-input" />
             <input type="email" placeholder="Your Email" className="form-input" />
             <textarea placeholder="Your Message" className="form-input" />
-            <button type="submit">Send Message</button>
+            <Button btnText='Send Message' type='submit'/>
           </form>
         </div>
         <div className="social-media">

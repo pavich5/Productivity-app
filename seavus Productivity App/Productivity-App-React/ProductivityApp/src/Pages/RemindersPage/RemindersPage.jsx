@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Aside from "../../Layouts/Aside/Aside";
 import "./RemindersPage.css";
+import Button from "../../Components/Button/Button";
 
 const RemindersPage = () => {
   const [reminderData, setReminderData] = useState([
@@ -25,12 +26,8 @@ const RemindersPage = () => {
     return reminderData.map((reminder) => (
       <li key={reminder.id} className="reminder-card">
         <span className="reminder-title">{reminder.title}</span>
-        <button
-          className="reminder-delete-btn"
-          onClick={() => handleDeleteReminder(reminder.id)}
-        >
-          Complete
-        </button>
+        <Button onBtnClick={()=>{handleDeleteReminder(reminder.id)}} btnText='Complete' className='reminder-delete-btn'/>
+
       </li>
     ));
   };

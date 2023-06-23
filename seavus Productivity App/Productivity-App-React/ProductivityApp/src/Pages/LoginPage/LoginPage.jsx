@@ -22,7 +22,7 @@ const LoginComponent = () => {
             <label htmlFor="chk" aria-hidden="true">Login</label>
             <input type="email" name="email" placeholder="Email" required />
             <input type="password" name="password" placeholder="Password" required />
-            <button id="loginButton"><NavLink to="/productivity">Login</NavLink></button>
+            <button id="loginButton"><NavLink to="/work-session">Login</NavLink></button>
           </form>
         </div>
       </div>
