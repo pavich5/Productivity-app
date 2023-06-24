@@ -152,6 +152,8 @@ const WorkSession = () => {
             setSelectedTask={setSelectedTask}
             setSections={setSections}
             sections={sections}
+            comment={comment}
+            handleCommentChange={handleCommentChange}
             textareaRef={textareaRef}
           />
         </div>
