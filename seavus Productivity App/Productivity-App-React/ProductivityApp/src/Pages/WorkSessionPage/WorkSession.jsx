@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import Aside from "../../Layouts/Aside/Aside";
@@ -14,7 +14,7 @@ const WorkSession = () => {
   const [sections, setSections] = useState([]);
   const [sectionName, setSectionName] = useState("");
   const [taskName, setTaskName] = useState("");
-  const [subtasks, setSubtasks] = useState(["", ""]);
+  const [subtasks, setSubtasks] = useState([""]);
   const [date, setDate] = useState("");
   const [selectedTask, setSelectedTask] = useState(null);
   const [comment, setComment] = useState("");
@@ -41,7 +41,7 @@ const WorkSession = () => {
 
     setSectionName("");
     setTaskName("");
-    setSubtasks(["", ""]);
+    setSubtasks([""]);
     setDate("");
 
     setShowForm(false);
@@ -152,6 +152,7 @@ const WorkSession = () => {
             setSelectedTask={setSelectedTask}
             setSections={setSections}
             sections={sections}
+            textareaRef={textareaRef}
           />
         </div>
       )}
