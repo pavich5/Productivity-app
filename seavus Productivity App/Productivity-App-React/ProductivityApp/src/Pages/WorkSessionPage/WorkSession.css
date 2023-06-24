@@ -19,12 +19,12 @@ h2 {
   background-color: transparent;
   color: #007bff;
   border: 2px solid #007bff;
-  padding: 4px 8px;
+  padding-block: 10px;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 30px;
   width: 150px;
-  height: 30px;
+  min-height: 55px;
   text-align: center;
   display: flex;
 }
@@ -266,4 +266,25 @@ section ul li:hover {
 .formButtons {
   display: flex;
   width: 200px;
+}
+
+.form-group {
+  width: 80%;
+}
+
+.subtask-input-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.remove-subtask-button {
+  flex: 1;
+  margin-left: 10px;
+}
+.input-subtask {
+  flex: 6;
+}
+
+.add-subtask-button {
+  width: 100%;
 }

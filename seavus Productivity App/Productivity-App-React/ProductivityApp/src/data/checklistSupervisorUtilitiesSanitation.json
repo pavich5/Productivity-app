@@ -1,0 +1,275 @@
+[
+  {
+    "section": "Kitchen",
+    "items": [
+      {
+        "item": "Stoves: Are they working and clean?"
+      },
+      {
+        "item": "Ovens: Are they working and clean?"
+      },
+      {
+        "item": "Ventilation hoods: Are they clean?"
+      },
+      {
+        "item": "Exterior of cupboards: Are they clean?"
+      },
+      {
+        "item": "Interior of cupboards: Are they clean?"
+      },
+      {
+        "item": "Flour/rice containers: Are they in order and clean?"
+      },
+      {
+        "item": "Daily refrigerator: Is it working and clean? Is FEFO/FIFO respected?"
+      },
+      {
+        "item": "Garbage containers: Are they closed and clean?"
+      },
+      {
+        "item": "Cooking pots/pans: Are there sufficient numbers and are they clean?"
+      },
+      {
+        "item": "Dishwasher: Is it in impeccable condition and working?"
+      },
+      {
+        "item": "Prepared food: Is it kept above 65°C or below 4°C?"
+      },
+      {
+        "item": "Defrosting operations: Are they done in the refrigerator between 0°C and 4°C?"
+      },
+      {
+        "item": "Hand washing sinks: Do they have cold/hot water and are they stocked with paper/towels/soap dispenser?"
+      },
+      {
+        "item": "Sinks: Do they drain properly? Are floor drains in good working order and cleaned routinely?"
+      },
+      {
+        "item": "Colored cutting boards: Are they available and correctly used?"
+      },
+      {
+        "item": "Hazardous substances: Are they properly labeled and stored away from products?"
+      },
+      {
+        "item": "Cleaning equipment and soiled linens: Are they properly stored?"
+      },
+      {
+        "item": "Damaged or unlabeled food products: Are they properly stored for disposal or returned to the supplier?"
+      }
+    ]
+  },
+  {
+    "section": "Kitchen Tools",
+    "items": [
+      {
+        "item": "Baking mixer machine: Is it working and clean?"
+      },
+      {
+        "item": "Slicing machine: Is it working and clean?"
+      },
+      {
+        "item": "Mixer: Is it working and clean?"
+      },
+      {
+        "item": "Kitchen scale: Is it working and clean?"
+      },
+      {
+        "item": "Tin opener: Is it working and clean?"
+      },
+      {
+        "item": "Meat/cheese/bread grinder: Is it working and clean?"
+      },
+      {
+        "item": "Electrical frying pan: Is it working and clean?"
+      },
+      {
+        "item": "Bonesaw: Is it working and clean?"
+      }
+    ]
+  },
+  {
+    "section": "Refrigerator Rooms (0°C/4°C)",
+    "items": [
+      {
+        "item": "Availability of at least 2 refrigerator rooms (0°C/4°C)?"
+      },
+      {
+        "item": "Easy retrievability of temperature?"
+      },
+      {
+        "item": "Temperature below 4°C?"
+      },
+      {
+        "item": "Presence of a temperature log?"
+      },
+      {
+        "item": "Plastic grating: Are they in order and clean?"
+      },
+      {
+        "item": "Prepared food: Are they covered?"
+      },
+      {
+        "item": "Shelves: Are they in order and clean?"
+      },
+      {
+        "item": "Refrigerator gasket: Is it in order?"
+      },
+      {
+        "item": "Door handle: Is it clean?"
+      },
+      {
+        "item": "Fans: Are they clean and dust-free?"
+      },
+      {
+        "item": "FEFO/FIFO respected?"
+      },
+      {
+        "item": "Expiry date report of items stored in the refrigerator room?"
+      },
+      {
+        "item": "Fresh fruits and vegetables: Are they properly stocked?"
+      },
+      {
+        "item": "Foodstuff delivered in appropriate packaging?"
+      },
+      {
+        "item": "Items stored in the correct refrigerator room and with a cover?"
+      },
+      {
+        "item": "Light: Is it working?"
+      }
+    ]
+  },
+  {
+    "section": "Freezer Rooms",
+    "items": [
+      {
+        "item": "Availability of at least 2 freezer rooms?"
+      },
+      {
+        "item": "Easy retrievability of temperature?"
+      },
+      {
+        "item": "Temperature below -18°C?"
+      },
+      {
+        "item": "Presence of a temperature log?"
+      },
+      {
+        "item": "Plastic grating: Are they in order and clean?"
+      },
+      {
+        "item": "Shelves: Are they in order and clean?"
+      },
+      {
+        "item": "Freezer gasket: Is it in order?"
+      },
+      {
+        "item": "Freezer rooms free from ice?"
+      },
+      {
+        "item": "Door handle: Is it clean?"
+      },
+      {
+        "item": "Fans: Are they clean and dust-free?"
+      },
+      {
+        "item": "All items inside original cases?"
+      },
+      {
+        "item": "All cases labeled with product name and expiry date?"
+      },
+      {
+        "item": "Only 1 box/pack opened for each item?"
+      },
+      {
+        "item": "FEFO/FIFO respected?"
+      },
+      {
+        "item": "Expiry date report of items stored in the refrigerator room?"
+      },
+      {
+        "item": "Light: Is it working?"
+      }
+    ]
+  },
+  {
+    "section": "Dry Stores",
+    "items": [
+      {
+        "item": "Shelves: Are they in order and clean?"
+      },
+      {
+        "item": "Floor: Is it clean?"
+      },
+      {
+        "item": "Room temperature between 15°C and 25°C, and the room is ventilated?"
+      },
+      {
+        "item": "FEFO/FIFO respected?"
+      },
+      {
+        "item": "Only 1 box/pack opened for each item?"
+      },
+      {
+        "item": "Food items not stored directly on the floor?"
+      },
+      {
+        "item": "Similar items grouped together?"
+      },
+      {
+        "item": "Flours/pasta/rice/legumes: Are they stored in a proper cupboard?"
+      },
+      {
+        "item": "Expiry date report of items stored in the refrigerator room?"
+      },
+      {
+        "item": "No blown/dented/oxidized tins?"
+      },
+      {
+        "item": "No signs of rodent/insect infestation?"
+      },
+      {
+        "item": "Cleaning supplies stored in a separate area?"
+      },
+      {
+        "item": "Lights: Are they working?"
+      }
+    ]
+  },
+  {
+    "section": "General Sanitation",
+    "items": [
+      {
+        "item": "Sensation of a cleaning and organized place upon entering the kitchen?"
+      },
+      {
+        "item": "Completion and following of daily cleaning schedule?"
+      },
+      {
+        "item": "Followed correct handwashing procedures?"
+      },
+      {
+        "item": "Availability and filling of paper towels and soap dispenser?"
+      },
+      {
+        "item": "Clean floors/walls and work areas?"
+      },
+      {
+        "item": "Clean work tables and drawers?"
+      },
+      {
+        "item": "Employees wearing clean/appropriate uniforms/hair covered?"
+      },
+      {
+        "item": "Avoidance of cross-contamination during preparation?"
+      },
+      {
+        "item": "Cleaning and sanitizing of food contact surfaces after use?"
+      },
+      {
+        "item": "Clean lavatory?"
+      }
+    ]
+  }
+]

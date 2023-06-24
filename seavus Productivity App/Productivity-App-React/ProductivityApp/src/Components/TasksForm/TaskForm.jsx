@@ -13,6 +13,7 @@ const TaskForm = ({
   handleDateChange,
   setShowForm,
   handleAddSubtask,
+  handleRemoveSubtask,
 }) => {
   return (
     <form onSubmit={handleFormSubmit} className="forma">
@@ -20,21 +21,25 @@ const TaskForm = ({
         <label htmlFor="sectionName">Section Name:</label>
         <input type="text" id="sectionName" value={sectionName} onChange={handleSectionNameChange} required />
       </div>
-      {/* <div className="form-group">
+      <div className="form-group">
         <label htmlFor="taskName">Task Name:</label>
         <input type="text" id="taskName" value={taskName} onChange={handleTaskNameChange} required />
-      </div> */}
+      </div>
       <div className="form-group">
         <label>Subtasks:</label>
         {subtasks.map((subtask, index) => (
-          <input key={index} type="text" value={subtask} onChange={(e) => handleSubtaskChange(index, e)} required />
+          <div key={index} className="subtask-input-container">
+            <input type="text" value={subtask} onChange={(e) => handleSubtaskChange(index, e)} className="input-subtask" required />
+            <Button type="button" onBtnClick={() => handleRemoveSubtask(index)} btnText="-" className="remove-subtask-button" />
+          </div>
         ))}
-        <Button type="button" onBtnClick={handleAddSubtask} btnText="+" />
+
+        <Button type="button" onBtnClick={handleAddSubtask} btnText="+" className="add-subtask-button" />
       </div>
-      {/* <div className="form-group">
+      <div className="form-group">
         <label htmlFor="date">Date:</label>
         <input type="date" id="date" value={date} onChange={handleDateChange} required />
-      </div> */}
+      </div>
       <div className="formButtons">
         <Button btnText="Submit" type="submit" />
         <Button onBtnClick={() => setShowForm(false)} btnText="Close" />

@@ -60,6 +60,10 @@ const WorkSession = () => {
     setSubtasks([...subtasks, ""]);
   };
 
+  const handleRemoveSubtask = (index) => {
+    setSubtasks((prevState) => prevState.filter((_, i) => i !== index));
+  };
+
   const handleSubtaskChange = (index, e) => {
     const updatedSubtasks = [...subtasks];
     updatedSubtasks[index] = e.target.value;
@@ -99,7 +103,7 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Task" className="add-task-button" />
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -134,6 +138,7 @@ const WorkSession = () => {
             handleDateChange={handleDateChange}
             setShowForm={setShowForm}
             handleAddSubtask={handleAddSubtask}
+            handleRemoveSubtask={handleRemoveSubtask}
           />
         </div>
       )}

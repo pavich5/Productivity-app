@@ -24,7 +24,6 @@ const ActiveTaskPopUp = (props) => {
     const updatedTask = { ...selectedTask, subtasks: updatedSubtasks };
     setSelectedTask(updatedTask);
     // TODO Logic for subtracting score
-    // Check if all subtasks are finished
     if (updatedSubtasks.length === 0) {
       const updatedSections = sections.map((section) => {
         const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
