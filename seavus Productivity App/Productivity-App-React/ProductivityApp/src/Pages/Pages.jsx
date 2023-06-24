@@ -21,9 +21,9 @@ export const Pages = () => {
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/reminders" element={<RemindersPage />} />
-      <Route path="/statistics" element={<StatisticsPage />}/>
-      <Route path="/work-session" element={<WorkSession/>}/>
-      <Route path="/User-Info" element={<UserInfoPage/>}/>
+      <Route path="/statistics" element={<StatisticsPage />} />
+      <Route path="/work-session" element={<WorkSession />} />
+      <Route path="/User-Info" element={<UserInfoPage />} />
     </Routes>
   );
 };

@@ -47,7 +47,11 @@ const DatePickingPage = () => {
             onChange={(e) => setNewTask(e.target.value)}
             placeholder="Enter a new task"
           />
-          <Button onBtnClick={handleAddTask} btnText='Add Task' className='AddTaskButton'/>
+          <Button
+            onBtnClick={handleAddTask}
+            btnText="Add Task"
+            className="AddTaskButton"
+          />
         </div>
         <div className="TasksContainer">
           {tasks.length === 0 ? (
@@ -57,7 +61,11 @@ const DatePickingPage = () => {
               {tasks.map((task, index) => (
                 <li key={index}>
                   <span>{task}</span>
-                  <Button onBtnClick={()=> handleDeleteTask(index)} btnText='X' className='DeleteTaskButton'/>
+                  <Button
+                    onBtnClick={() => handleDeleteTask(index)}
+                    btnText="X"
+                    className="DeleteTaskButton"
+                  />
                 </li>
               ))}
             </ul>
