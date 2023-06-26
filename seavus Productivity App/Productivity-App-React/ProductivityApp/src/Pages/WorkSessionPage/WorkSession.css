@@ -241,6 +241,8 @@ section ul li:hover {
   padding: 20px;
   align-items: center;
   flex-wrap: nowrap;
+  overflow-y: auto;
+  max-height: 80vh; /* Adjust the value as needed */
 }
 
 .notificationBell svg {
