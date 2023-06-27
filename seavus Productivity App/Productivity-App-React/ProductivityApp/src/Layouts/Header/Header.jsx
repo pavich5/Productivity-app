@@ -16,9 +16,10 @@ function Header(props) {
       <nav>
         <NavLink to="/">
           <div>
-            <img src={logo} alt="" className="image" />
+            <img src={logo} alt="logo" className="image" />
           </div>
         </NavLink>
+        <div className="AppTitle">Productivity App</div>
         <div className="ulContainer">
           <ul className="header-ul">
             {navbarData.map((linkdata, i) => (

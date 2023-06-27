@@ -14,6 +14,7 @@ const RemindersPage = () => {
     { id: 7, title: "Meeting at 10:00 AM" },
     { id: 8, title: "Buy groceries" },
     { id: 9, title: "Call John" },
+    { id: 10, title: "Refactor code" },
   ]);
 
   const handleDeleteReminder = (id) => {
@@ -26,8 +27,13 @@ const RemindersPage = () => {
     return reminderData.map((reminder) => (
       <li key={reminder.id} className="reminder-card">
         <span className="reminder-title">{reminder.title}</span>
-        <Button onBtnClick={()=>{handleDeleteReminder(reminder.id)}} btnText='Complete' className='reminder-delete-btn'/>
-
+        <Button
+          onBtnClick={() => {
+            handleDeleteReminder(reminder.id);
+          }}
+          btnText="Complete"
+          className="reminder-delete-btn"
+        />
       </li>
     ));
   };
