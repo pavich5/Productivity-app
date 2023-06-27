@@ -20,7 +20,7 @@ nav {
   font-size: 36px;
   position: absolute;
   top: 10px;
-  left: 850px;
+  left: 550px;
 }
 
 .image {
@@ -100,4 +100,14 @@ ul a li:hover::after {
 
 header > nav .active {
   color: #2f2f33 !important;
+}
+
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
+  .AppTitle {
+    font-family: "Courgette", cursive;
+    font-size: 36px;
+    position: absolute;
+    top: 10px;
+    left: 850px;
+  }
 }
