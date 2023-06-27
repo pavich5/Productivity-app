@@ -20,7 +20,7 @@ nav {
   font-size: 36px;
   position: absolute;
   top: 10px;
-  left: 550px;
+  left: 40%;
 }
 
 .image {
@@ -108,6 +108,12 @@ header > nav .active {
     font-size: 36px;
     position: absolute;
     top: 10px;
-    left: 850px;
+    left: 45%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .AppTitle {
+    display: none;
   }
 }
