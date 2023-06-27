@@ -22,20 +22,27 @@ const WorkSession = () => {
   const [comment, setComment] = useState("");
   const [result, setResult] = useState(0);
   const [showResultModal, setShowResultModal] = useState(false);
+  const [percentage, setPercentage] = useState(0);
+  const [completedTasks, setCompletedTasks] = useState([]);
+
+  console.log("ShowResultModal", showResultModal); //WHY THIS CANT BE TRUE
+  console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
 
   useEffect(() => {
-    // if ((selectedTask && selectedTask.subtasks.length === 0) === null) {
+    // if (selectedTask && selectedTask.subtasks.length === 0) {
+    const subtasksLength = subtasks.length;
     if ((selectedTask && selectedTask.subtasks.length === undefined) === null) {
       console.log("in useEffect", result);
-      const percentage = (result / subtasks.length) * 100;
+      setPercentage((result / subtasksLength) * 100);
+      // const percentage = (result / subtasks.length) * 100;
       console.log("Result Percentage:", percentage);
       // setShowResultModal(true);
       console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
       console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
       console.log("both", (selectedTask && selectedTask.subtasks.length === undefined) === null); //WHY THIS CANT BE TRUE
-      console.log("ShowResultModal", showResultModal); //WHY THIS CANT BE TRUE
+      console.log("ShowResultModal from useEffect", showResultModal); //WHY THIS CANT BE TRUE
     }
-  }, [selectedTask, selectedTask?.subtasks.length, result]);
+  }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
 
   const handleAddTaskClick = () => {
     setShowForm(true);
@@ -100,6 +107,25 @@ const WorkSession = () => {
 
   const handleTaskClick = (task) => {
     setSelectedTask(task);
+
+    // Check if the task is already completed
+    const isTaskCompleted = completedTasks.includes(task);
+    if (!isTaskCompleted) {
+      const updatedCompletedTasks = [...completedTasks, task];
+      setCompletedTasks(updatedCompletedTasks);
+
+      // Update the section name
+      const updatedSections = sections.map((section) => {
+        if (section.tasks.includes(task)) {
+          return {
+            ...section,
+            sectionName: section.sectionName + "-Completed",
+          };
+        }
+        return section;
+      });
+      setSections(updatedSections);
+    }
   };
 
   const handleClosePopup = () => {
@@ -195,6 +221,7 @@ const WorkSession = () => {
             showResultModal={showResultModal}
             setShowResultModal={setShowResultModal}
             handleResultModalClose={handleResultModalClose}
+            percentage={percentage}
           />
         </div>
       )}

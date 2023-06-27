@@ -16,6 +16,7 @@ const ActiveTaskPopUp = (props) => {
     showResultModal,
     setShowResultModal,
     handleResultModalClose,
+    percentage,
   } = props;
 
   const handleYesButton = (index) => {
@@ -30,6 +31,7 @@ const ActiveTaskPopUp = (props) => {
     if (updatedSubtasks.length === 0) {
       const updatedSections = sections.map((section) => {
         const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
+        setShowResultModal(true);
         return { ...section, tasks: updatedTasks };
       });
       setSections(updatedSections);
@@ -47,6 +49,8 @@ const ActiveTaskPopUp = (props) => {
     if (updatedSubtasks.length === 0) {
       const updatedSections = sections.map((section) => {
         const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
+        setShowResultModal(true);
+
         // console.log(updatedTasks);
         console.log(section.tasks);
         return { ...section, tasks: updatedTasks };
@@ -79,6 +83,10 @@ const ActiveTaskPopUp = (props) => {
                 </li>
               ))}
             </ul>
+            <div>
+              <h3>Result</h3>
+              <p>{result}%</p>
+            </div>
           </div>
         )}
       </div>
@@ -86,7 +94,7 @@ const ActiveTaskPopUp = (props) => {
         <div className="resultModalOverlay">
           <div className="resultModalContent">
             <h3>Result</h3>
-            <p>{result}%</p>
+            <p>{percentage}%</p>
             <Button onBtnClick={handleResultModalClose} btnText="Close" />
           </div>
         </div>
