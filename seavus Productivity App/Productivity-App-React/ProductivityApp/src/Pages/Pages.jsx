@@ -15,7 +15,7 @@ export const Pages = () => {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/Productivity" element={<ProductivityDashBoard />} />
+      <Route path="/productivity" element={<ProductivityDashBoard />} />
       <Route path="/productive-tips" element={<HowToBe />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/contact" element={<ContactUs />} />

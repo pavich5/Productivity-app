@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './LoginPage.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./LoginPage.css";
 
 const LoginComponent = () => {
   return (
@@ -9,20 +9,38 @@ const LoginComponent = () => {
         <input type="checkbox" id="chk" aria-hidden="true" />
         <div className="signup">
           <form>
-            <label htmlFor="chk" aria-hidden="true" id="signUpLabel">Sign up</label>
+            <label htmlFor="chk" aria-hidden="true" id="signUpLabel">
+              Sign up
+            </label>
             <input type="text" name="txt" placeholder="User name" required />
             <input type="email" name="email" placeholder="Email" required />
-            <input type="password" name="pswd" placeholder="Password" required />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required
+            />
             <button>Sign up</button>
           </form>
         </div>
 
         <div className="login">
           <form>
-            <label htmlFor="chk" aria-hidden="true">Login</label>
+            <label htmlFor="chk" aria-hidden="true">
+              Login
+            </label>
             <input type="email" name="email" placeholder="Email" required />
-            <input type="password" name="password" placeholder="Password" required />
-            <button id="loginButton"><NavLink to="/work-session">Login</NavLink></button>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              minLength={8}
+              maxLength={25}
+              required
+            />
+            <button id="loginButton">
+              <NavLink to="/productivity">Login</NavLink>
+            </button>
           </form>
         </div>
       </div>

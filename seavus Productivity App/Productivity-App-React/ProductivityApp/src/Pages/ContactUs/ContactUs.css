@@ -125,7 +125,7 @@
   height: 45px;
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1920px) {
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
   .contact-content {
     display: flex;
     flex-direction: column;

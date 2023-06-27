@@ -165,7 +165,7 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 1680px) and (max-width: 1920px) {
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
   .DatePickingPageContainer {
     display: flex;
     height: 100vh;

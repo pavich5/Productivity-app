@@ -18,7 +18,7 @@ const HowToBe = () => {
         "Take regular breaks to recharge and avoid burnout",
         "Stay organized with to-do lists and productivity tools",
       ],
-      link: "#",
+      link: "https://www.futurelearn.com/info/blog/how-to-be-more-productive",
     },
     {
       title: "Healthy Habits",
@@ -48,7 +48,7 @@ const HowToBe = () => {
 
   const splideOptions = {
     perPage: 1,
-    start: 0,
+    start: 1,
   };
 
   return (
@@ -66,7 +66,7 @@ const HowToBe = () => {
                     <li key={itemIndex}>{item}</li>
                   ))}
                 </ul>
-                <a className="links" href={container.link}>
+                <a className="links" target="_blank" href={container.link}>
                   Read More
                 </a>
               </div>

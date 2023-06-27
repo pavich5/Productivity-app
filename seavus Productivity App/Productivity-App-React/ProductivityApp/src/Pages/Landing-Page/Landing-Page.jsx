@@ -11,7 +11,7 @@ const LandingPage = () => {
       <div className="Information">
         <h1 id="LogoText">App Name</h1>
         <br />
-        <h2 id="motto">Our motto is Programming</h2>
+        <h2 id="motto">Our motto</h2>
         <div className="Buttons">
           <NavLink to="/login" id="loginBtn" activeclassname="active">
             Login

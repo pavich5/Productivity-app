@@ -7,7 +7,7 @@ import { Pages } from "./Pages/Pages";
 function App() {
   const navbarLoginData = [
     {
-      text: "How to be Productive",
+      text: "Tips",
       link: "/productive-tips",
     },
     {
