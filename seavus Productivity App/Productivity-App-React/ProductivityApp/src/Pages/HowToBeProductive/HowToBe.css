@@ -122,3 +122,15 @@
     color: #ccc;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .TipsContent {
+    flex: 1;
+    width: 30%;
+    min-height: auto;
+    margin: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+}

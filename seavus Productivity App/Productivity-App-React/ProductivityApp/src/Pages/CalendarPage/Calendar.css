@@ -325,3 +325,10 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 725px) {
+  .AddTaskContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
