@@ -24,14 +24,19 @@ const WorkSession = () => {
   const [showResultModal, setShowResultModal] = useState(false);
 
   useEffect(() => {
-    if (selectedTask && selectedTask.subtasks.length === 0) {
+    // if ((selectedTask && selectedTask.subtasks.length === 0) === null) {
+    if ((selectedTask && selectedTask.subtasks.length === undefined) === null) {
       console.log("in useEffect", result);
       const percentage = (result / subtasks.length) * 100;
       console.log("Result Percentage:", percentage);
-      setShowResultModal(true);
+      // setShowResultModal(true);
+      console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
+      console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
+      console.log("both", (selectedTask && selectedTask.subtasks.length === undefined) === null); //WHY THIS CANT BE TRUE
+      console.log("ShowResultModal", showResultModal); //WHY THIS CANT BE TRUE
     }
   }, [selectedTask, selectedTask?.subtasks.length, result]);
-  console.log("subtasks", selectedTask?.subtasks.length === 0); //WHY THIS CANT BE TRUE
+
   const handleAddTaskClick = () => {
     setShowForm(true);
   };
@@ -58,6 +63,8 @@ const WorkSession = () => {
     setDate(new Date().toISOString().slice(0, 10));
 
     setShowForm(false);
+    setResult(0);
+    setShowResultModal(false);
   };
 
   const handleSectionNameChange = (e) => {
