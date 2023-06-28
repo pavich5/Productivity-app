@@ -38,7 +38,7 @@ const LoginComponent = () => {
               maxLength={25}
               required
             />
-            <button id="loginButton">
+            <button onClick={(e) => e.preventDefault()} id="loginButton">
               <NavLink to="/productivity">Login</NavLink>
             </button>
           </form>

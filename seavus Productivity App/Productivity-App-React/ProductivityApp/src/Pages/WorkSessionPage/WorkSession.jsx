@@ -8,6 +8,7 @@ import Section from "../../Components/TaskSectionContainer/TaskSectionContainer"
 import ActiveTaskPopUp from "../../Components/ActiveTaskPopUp/ActiveTaskPopUp";
 import Button from "../../Components/Button/Button";
 import checklistData from "../../data/checklistSupervisorUtilitiesSanitation.json";
+import ResultPopUp from "../../Components/ResultPopUp/ResultPopUp";
 
 const WorkSession = () => {
   const textareaRef = useRef(null);
@@ -39,7 +40,10 @@ const WorkSession = () => {
       // setShowResultModal(true);
       console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
       console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
-      console.log("both", (selectedTask && selectedTask.subtasks.length === undefined) === null); //WHY THIS CANT BE TRUE
+      console.log(
+        "both",
+        (selectedTask && selectedTask.subtasks.length === undefined) === null
+      ); //WHY THIS CANT BE TRUE
       console.log("ShowResultModal from useEffect", showResultModal); //WHY THIS CANT BE TRUE
     }
   }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
@@ -160,8 +164,16 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Custom Checklist"
+            className="add-task-button"
+          />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Predefined Checklist"
+            className="add-task-button"
+          />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -224,6 +236,13 @@ const WorkSession = () => {
             percentage={percentage}
           />
         </div>
+      )}
+
+      {showResultModal && (
+        <ResultPopUp
+          handleResultModalClose={handleResultModalClose}
+          percentage={percentage}
+        />
       )}
     </div>
   );
