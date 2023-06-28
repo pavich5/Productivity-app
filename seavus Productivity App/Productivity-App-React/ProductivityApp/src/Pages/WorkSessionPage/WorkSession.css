@@ -11,7 +11,7 @@
   padding: 40px;
 }
 
-h2 {
+.Headings > h2 {
   margin-top: 0;
 }
 
@@ -235,10 +235,11 @@ section ul li:hover {
 
 .forma {
   padding: 20px;
-  width: 400px;
+  min-width: 450px;
+  max-height: 700px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
   flex-wrap: nowrap;
   overflow-y: auto;
@@ -267,7 +268,14 @@ section ul li:hover {
 
 .formButtons {
   display: flex;
-  width: 200px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+}
+
+.formButtons button {
+  margin: 20px;
 }
 
 .form-group {
@@ -316,18 +324,12 @@ section ul li:hover {
   }
 
   .popupContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-  }
-
-  .popupContainer {
     position: fixed;
     top: 67px;
     left: 140px;
     bottom: 0;
+    min-width: 450px;
+    max-height: 700px;
     width: 680px;
     height: 1160px;
     display: flex;

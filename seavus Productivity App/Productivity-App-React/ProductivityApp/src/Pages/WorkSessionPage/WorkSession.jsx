@@ -15,8 +15,8 @@ const WorkSession = () => {
 
   const [showForm, setShowForm] = useState(false);
   const [sections, setSections] = useState([]);
-  const [sectionName, setSectionName] = useState("sectionplaceholder");
-  const [taskName, setTaskName] = useState("tasknameplaceholder");
+  const [sectionName, setSectionName] = useState("Section placeholder");
+  const [taskName, setTaskName] = useState("Task name placeholder");
   const [subtasks, setSubtasks] = useState(["a", "as"]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
@@ -40,7 +40,10 @@ const WorkSession = () => {
       // setShowResultModal(true);
       console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
       console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
-      console.log("both", (selectedTask && selectedTask.subtasks.length === undefined) === null); //WHY THIS CANT BE TRUE
+      console.log(
+        "both",
+        (selectedTask && selectedTask.subtasks.length === undefined) === null
+      ); //WHY THIS CANT BE TRUE
       console.log("ShowResultModal from useEffect", showResultModal); //WHY THIS CANT BE TRUE
     }
   }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
@@ -65,8 +68,8 @@ const WorkSession = () => {
 
     setSections([...sections, newSection]);
 
-    setSectionName("sectionplaceholder");
-    setTaskName("tasknameplaceholder");
+    setSectionName("Section placeholder");
+    setTaskName("Task name placeholder");
     setSubtasks(["a", "as"]);
     setDate(new Date().toISOString().slice(0, 10));
 
@@ -161,8 +164,16 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Custom Checklist"
+            className="add-task-button"
+          />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Predefined Checklist"
+            className="add-task-button"
+          />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -225,7 +236,12 @@ const WorkSession = () => {
         </div>
       )}
 
-      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
+      {showResultModal && (
+        <ResultPopUp
+          handleResultModalClose={handleResultModalClose}
+          percentage={percentage}
+        />
+      )}
     </div>
   );
 };
