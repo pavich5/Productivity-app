@@ -22,29 +22,17 @@ const WorkSession = () => {
   const [selectedTask, setSelectedTask] = useState(null);
   const [comment, setComment] = useState("");
   const [result, setResult] = useState(0);
+  const [devident, setDevident] = useState(0);
   const [showResultModal, setShowResultModal] = useState(false);
   const [percentage, setPercentage] = useState(0);
   const [completedTasks, setCompletedTasks] = useState([]);
 
-  console.log("ShowResultModal", showResultModal); //WHY THIS CANT BE TRUE
-  console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
+  console.log("percentage before calculation", percentage);
 
   useEffect(() => {
     // if (selectedTask && selectedTask.subtasks.length === 0) {
-    const subtasksLength = subtasks.length;
     if ((selectedTask && selectedTask.subtasks.length === undefined) === null) {
-      console.log("in useEffect", result);
-      setPercentage((result / subtasksLength) * 100);
-      // const percentage = (result / subtasks.length) * 100;
-      console.log("Result Percentage:", percentage);
-      // setShowResultModal(true);
-      console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
-      console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
-      console.log(
-        "both",
-        (selectedTask && selectedTask.subtasks.length === undefined) === null
-      ); //WHY THIS CANT BE TRUE
-      console.log("ShowResultModal from useEffect", showResultModal); //WHY THIS CANT BE TRUE
+      setPercentage((result / devident) * 100);
     }
   }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
 
@@ -75,6 +63,7 @@ const WorkSession = () => {
 
     setShowForm(false);
     setResult(0);
+    setDevident(0);
     setShowResultModal(false);
   };
 
@@ -232,6 +221,8 @@ const WorkSession = () => {
             showResultModal={showResultModal}
             setShowResultModal={setShowResultModal}
             checklistData={checklistData}
+            devident={devident}
+            setDevident={setDevident}
           />
         </div>
       )}

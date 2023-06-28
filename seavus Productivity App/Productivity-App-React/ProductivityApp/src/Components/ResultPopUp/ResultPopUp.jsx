@@ -7,7 +7,7 @@ const ResultPopUp = (props) => {
     <div className="resultModalOverlay">
       <div className="resultModalContent">
         <h3>Checklist Result:</h3>
-        <p>{percentage}%</p>
+        <p>{Math.floor(percentage)}%</p>
         <Button onBtnClick={handleResultModalClose} btnText="Close" />
       </div>
     </div>

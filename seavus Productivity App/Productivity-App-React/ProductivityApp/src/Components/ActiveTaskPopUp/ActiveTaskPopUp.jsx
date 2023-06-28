@@ -15,6 +15,8 @@ const ActiveTaskPopUp = (props) => {
     setResult,
     showResultModal,
     setShowResultModal,
+    setDevident,
+    devident,
   } = props;
 
   const handleYesButton = (index) => {
@@ -25,6 +27,8 @@ const ActiveTaskPopUp = (props) => {
     };
     let updatedResult = result + 1;
     console.log(updatedResult);
+    let updatedTasksLength = devident + 1;
+    setDevident(updatedTasksLength);
 
     setSelectedTask(updatedTask);
     setResult(updatedResult);
@@ -46,6 +50,8 @@ const ActiveTaskPopUp = (props) => {
     const updatedSubtasks = selectedTask.subtasks.filter((_, i) => i !== index);
     const updatedTask = { ...selectedTask, subtasks: updatedSubtasks };
     let updatedResult = result + 0;
+    let updatedTasksLength = devident + 1;
+    setDevident(updatedTasksLength);
     setResult(updatedResult);
     setSelectedTask(updatedTask);
 
@@ -65,9 +71,7 @@ const ActiveTaskPopUp = (props) => {
     }
   };
 
-  console.log(result);
-
-  console.log("this console log is from Filip: ", showResultModal);
+  console.log("Popup Result", result);
 
   return (
     <div className="popupOverlay">
