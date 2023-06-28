@@ -75,7 +75,7 @@ const ActiveTaskPopUp = (props) => {
         <h3>{selectedTask.taskName}</h3>
         <p>Date: {selectedTask.date}</p>
         {selectedTask.subtasks.length > 0 && (
-          <div>
+          <div className="popupContentDetails">
             <h4>Subtasks:</h4>
             <ul>
               {selectedTask.subtasks.map((subtask, index) => (
@@ -86,7 +86,7 @@ const ActiveTaskPopUp = (props) => {
                       ref={textareaRef}
                       value={subtask.comment}
                       onChange={handleCommentChange}
-                      placeholder="Enter your comment"
+                      placeholder="Enter your comment(optional)"
                     ></textarea>
                   </div>
                   <div>{textareaRef.current?.value}</div>
