@@ -369,3 +369,9 @@ section ul li:hover {
     font-size: 24px;
   }
 }
+
+@media screen and (max-width: 370px) {
+  .sidebar {
+    width: 15px;
+  }
+}

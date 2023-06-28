@@ -96,3 +96,23 @@
     color: #ccc;
   }
 }
+
+@media screen and (min-width: 620px) and (max-width: 918px) {
+  .reminders-list {
+    /* list-style-type: none;
+    padding: 0; */
+    /* display: grid; */
+    grid-template-columns: repeat(3, 1fr); /* Update the number of columns */
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .reminders-list {
+    /* list-style-type: none;
+    padding: 0; */
+    /* display: grid; */
+    grid-template-columns: repeat(1, 1fr); /* Update the number of columns */
+    grid-gap: 20px;
+  }
+}
