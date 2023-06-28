@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
-const Section = ({ sectionName, tasks, selectedTask, handleTaskClick }) => {
+const Section = ({ sectionName, tasks, selectedTask, handleTaskClick, setShowResultModal }) => {
+  const handleSectionClick = (event) => {
+    if (event.target.tagName === "H3") {
+      setShowResultModal(true);
+    }
+  };
   return (
-    <section>
+    <section onClick={handleSectionClick}>
       <h3>
         <FontAwesomeIcon icon={faCircle} />
         {sectionName}

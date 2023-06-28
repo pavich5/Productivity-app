@@ -40,10 +40,7 @@ const WorkSession = () => {
       // setShowResultModal(true);
       console.log("subtasks", selectedTask?.subtasks.length === undefined); //WHY THIS CANT BE TRUE
       console.log("selectedTask", selectedTask); //WHY THIS CANT BE TRUE
-      console.log(
-        "both",
-        (selectedTask && selectedTask.subtasks.length === undefined) === null
-      ); //WHY THIS CANT BE TRUE
+      console.log("both", (selectedTask && selectedTask.subtasks.length === undefined) === null); //WHY THIS CANT BE TRUE
       console.log("ShowResultModal from useEffect", showResultModal); //WHY THIS CANT BE TRUE
     }
   }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
@@ -164,16 +161,8 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Custom Checklist"
-            className="add-task-button"
-          />
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Predefined Checklist"
-            className="add-task-button"
-          />
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -190,6 +179,7 @@ const WorkSession = () => {
               tasks={section.tasks}
               selectedTask={selectedTask}
               handleTaskClick={handleTaskClick}
+              setShowResultModal={setShowResultModal}
             />
           ))
         )}
@@ -219,31 +209,23 @@ const WorkSession = () => {
         <div className="popupContainer">
           <ActiveTaskPopUp
             selectedTask={selectedTask}
-            handleClosePopup={handleClosePopup}
-            subtasks={subtasks}
             setSelectedTask={setSelectedTask}
-            setSections={setSections}
             sections={sections}
+            setSections={setSections}
             comment={selectedTask.comment}
             handleCommentChange={handleCommentChange}
             textareaRef={textareaRef}
-            checklistData={checklistData}
+            subtasks={subtasks}
             result={result}
             setResult={setResult}
             showResultModal={showResultModal}
             setShowResultModal={setShowResultModal}
-            handleResultModalClose={handleResultModalClose}
-            percentage={percentage}
+            checklistData={checklistData}
           />
         </div>
       )}
 
-      {showResultModal && (
-        <ResultPopUp
-          handleResultModalClose={handleResultModalClose}
-          percentage={percentage}
-        />
-      )}
+      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
     </div>
   );
 };
