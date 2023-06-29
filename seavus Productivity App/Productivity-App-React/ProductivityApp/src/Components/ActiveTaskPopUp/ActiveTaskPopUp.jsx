@@ -17,6 +17,7 @@ const ActiveTaskPopUp = (props) => {
     setShowResultModal,
     setDevident,
     devident,
+    // sectionPercentage,
   } = props;
 
   const handleYesButton = (index) => {
@@ -26,7 +27,6 @@ const ActiveTaskPopUp = (props) => {
       subtasks: updatedSubtasks,
     };
     let updatedResult = result + 1;
-    console.log(updatedResult);
     let updatedTasksLength = devident + 1;
     setDevident(updatedTasksLength);
 
@@ -41,6 +41,7 @@ const ActiveTaskPopUp = (props) => {
         setShowResultModal(true);
         return { ...section, tasks: updatedTasks };
       });
+      // sectionPercentage(updatedSections);
       setSections(updatedSections);
       setSelectedTask(null);
     }
@@ -63,9 +64,10 @@ const ActiveTaskPopUp = (props) => {
         setShowResultModal(true);
 
         // console.log(updatedTasks);
-        console.log(section.tasks);
         return { ...section, tasks: updatedTasks };
       });
+      console.log("From no button", sectionPercentage(updatedSections));
+      // sectionPercentage(updatedSections);
       setSections(updatedSections);
       setSelectedTask(null);
     }

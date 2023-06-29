@@ -27,8 +27,6 @@ const WorkSession = () => {
   const [percentage, setPercentage] = useState(0);
   const [completedTasks, setCompletedTasks] = useState([]);
 
-  console.log("percentage before calculation", percentage);
-
   useEffect(() => {
     // if (selectedTask && selectedTask.subtasks.length === 0) {
     if ((selectedTask && selectedTask.subtasks.length === undefined) === null) {
@@ -39,6 +37,11 @@ const WorkSession = () => {
   const handleAddTaskClick = () => {
     setShowForm(true);
   };
+  // const sectionPercentage = (section) => {
+  //   const sectionWithPercentage = Object.assign(...section, percentage);
+
+  //   return sectionWithPercentage;
+  // };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -50,6 +53,7 @@ const WorkSession = () => {
           taskName,
           subtasks,
           date,
+          // percentage,
         },
       ],
     };
@@ -223,6 +227,7 @@ const WorkSession = () => {
             checklistData={checklistData}
             devident={devident}
             setDevident={setDevident}
+            // sectionPercentage={sectionPercentage}
           />
         </div>
       )}
