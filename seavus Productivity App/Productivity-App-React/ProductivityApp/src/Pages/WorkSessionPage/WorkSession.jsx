@@ -53,8 +53,8 @@ const WorkSession = () => {
           taskName,
           subtasks,
           date,
-          // percentage,
         },
+        percentage,
       ],
     };
 

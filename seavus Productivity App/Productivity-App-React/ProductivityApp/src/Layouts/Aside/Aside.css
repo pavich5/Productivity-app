@@ -21,3 +21,14 @@
 .sidebar a.active {
   color: #9ea2c5;
 }
+
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
+  .sidebar {
+    width: 200px;
+    background-color: #087e8b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 82vh;
+  }
+}

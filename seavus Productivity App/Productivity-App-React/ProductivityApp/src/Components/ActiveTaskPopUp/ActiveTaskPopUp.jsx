@@ -66,7 +66,6 @@ const ActiveTaskPopUp = (props) => {
         // console.log(updatedTasks);
         return { ...section, tasks: updatedTasks };
       });
-      console.log("From no button", sectionPercentage(updatedSections));
       // sectionPercentage(updatedSections);
       setSections(updatedSections);
       setSelectedTask(null);
