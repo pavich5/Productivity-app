@@ -83,6 +83,10 @@
   background-color: #45a049;
 }
 
+.disabled-li {
+  opacity: 0.5;
+}
+
 /* Optional: Center the modal on small screens */
 @media screen and (max-width: 600px) {
   .popupContent {

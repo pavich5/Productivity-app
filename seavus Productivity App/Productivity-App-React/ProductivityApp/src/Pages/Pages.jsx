@@ -10,6 +10,7 @@ import RemindersPage from "./RemindersPage/RemindersPage";
 import StatisticsPage from "./StatisticsPage/StatisticsPage";
 import WorkSession from "./WorkSessionPage/WorkSession";
 import UserInfoPage from "./UserPage/UserPage";
+import BlogArticle from "./Blog/Blog";
 export const Pages = () => {
   return (
     <Routes>
@@ -23,7 +24,11 @@ export const Pages = () => {
       <Route path="/reminders" element={<RemindersPage />} />
       <Route path="/statistics" element={<StatisticsPage />} />
       <Route path="/work-session" element={<WorkSession />} />
-      <Route path="/User-Info" element={<UserInfoPage />} />
+      <Route path="/user-Info" element={<UserInfoPage />} />
+      <Route path="/learn-more-sales" element={<BlogArticle />} />
+      <Route path="/learn-more-efficiency" element={<BlogArticle />} />
+      <Route path="/learn-more-compensation" element={<BlogArticle />} />
+      <Route path="learn-more-loyalty" element={<BlogArticle />} />
     </Routes>
   );
 };
