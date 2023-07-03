@@ -14,27 +14,24 @@ const WorkSession = () => {
   const textareaRef = useRef(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [sections, setSections] = useState([]);
+  // const [sections, setSections] = useState(initialSections);
   const [sectionName, setSectionName] = useState("Section placeholder");
   const [taskName, setTaskName] = useState("Task name placeholder");
-  const [subtasks, setSubtasks] = useState(["a", "as"]);
+  const [subtasks, setSubtasks] = useState(["a", "as", "a", "as", "a", "as", "a", "as", "a", "as"]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
-  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
   const [result, setResult] = useState(0);
   const [devident, setDevident] = useState(0);
   const [showResultModal, setShowResultModal] = useState(false);
   const [percentage, setPercentage] = useState(0);
   const [completedTasks, setCompletedTasks] = useState([]);
 
-  console.log("percentage before calculation", percentage);
+  // Retrieve existing sections from local storage
+  const storedSections = localStorage.getItem("sections");
+  const initialSections = storedSections ? JSON.parse(storedSections) : [];
 
-  useEffect(() => {
-    // if (selectedTask && selectedTask.subtasks.length === 0) {
-    if ((selectedTask && selectedTask.subtasks.length === undefined) === null) {
-      setPercentage((result / devident) * 100);
-    }
-  }, [selectedTask, selectedTask?.subtasks.length, result, percentage]);
+  const [sections, setSections] = useState(initialSections);
 
   const handleAddTaskClick = () => {
     setShowForm(true);
@@ -50,6 +47,7 @@ const WorkSession = () => {
           taskName,
           subtasks,
           date,
+          percentage,
         },
       ],
     };
@@ -62,8 +60,10 @@ const WorkSession = () => {
     setDate(new Date().toISOString().slice(0, 10));
 
     setShowForm(false);
+    setComments("");
     setResult(0);
     setDevident(0);
+    setPercentage(0);
     setShowResultModal(false);
   };
 
@@ -83,11 +83,6 @@ const WorkSession = () => {
     setSubtasks((prevState) => prevState.filter((_, i) => i !== index));
   };
 
-  // const handleRemoveSubtask = (index) => {
-  // setSubtasks((prevState) => {
-  //   const updatedSubtasks = prevState.filter((_, i) => i !== index);
-  //   return updatedSubtasks;
-  // });
   const handleSubtaskChange = (index, e) => {
     const updatedSubtasks = [...subtasks];
     updatedSubtasks[index] = e.target.value;
@@ -100,7 +95,6 @@ const WorkSession = () => {
 
   const handleTaskClick = (task) => {
     setSelectedTask(task);
-
     // Check if the task is already completed
     const isTaskCompleted = completedTasks.includes(task);
     if (!isTaskCompleted) {
@@ -121,48 +115,65 @@ const WorkSession = () => {
     }
   };
 
-  const handleClosePopup = () => {
-    setSelectedTask(null);
+  const handleCommentChange = (index) => (e) => {
+    const updatedComments = [...comments];
+    updatedComments[index] = e.target.value;
+    setComments(updatedComments);
   };
-
-  const handleCommentChange = (e) => {
-    const updatedComment = e.target.value;
-
-    // Update the comment for the selected task
-    const updatedTask = {
-      ...selectedTask,
-      comment: updatedComment,
-    };
-    console.log(updatedComment);
-    console.log(updatedTask);
-    // kako ova da odi vo subtask, ne vo task direktno
-    // kako da se napravi zavrsenite taskovi da odat vo rezultat
-    // da bidat comments Array
-    setComment(updatedComment);
-    setSelectedTask(updatedTask);
-    console.log(comment);
-  };
+  // Curried function - straight from chatGPT. I dont get this one - please explain. I got this solution because when i had this function
+  // const handleCommentChange = (index, e) => {
+  //   const updatedComments = [...comments];
+  //   updatedComments[index] = e.target.value;
+  //   setComments(updatedComments);
+  // };
+  // I had trouble with the e.target in here Uncaught TypeError: Cannot read properties of undefined (reading 'target')
+  // at handleCommentChange (WorkSession.jsx:121:32)
+  // The error message indicates that the 'target' property is undefined when trying to access it in the handleCommentChange function. This typically occurs when the event object being passed to the function is not structured as expected.
 
   const handleResultModalClose = () => {
     setShowResultModal(false);
   };
 
+  const [lastItemPercentage, setLastItemPercentage] = useState(null);
+  const handleSubmit = () => {
+    const sectionPercentage = (result / devident) * 100;
+    const updatedSections = sections.map((section) => {
+      const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
+      return { ...section, tasks: updatedTasks };
+    });
+
+    setPercentage(sectionPercentage);
+    setSections(updatedSections);
+
+    const completedSubtasks = selectedTask.subtasks.map((subtask, index) => {
+      return {
+        subtask,
+        comment: comments[index] || "",
+      };
+    });
+
+    const completedTask = {
+      taskName: selectedTask.taskName,
+      date: selectedTask.date,
+      subtasks: completedSubtasks,
+      percentage: sectionPercentage,
+    };
+
+    const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+    const updatedStoredTasks = [...storedTasks, completedTask];
+    localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
+    setLastItemPercentage(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
+    console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
+  };
+  console.log("lastitem%", lastItemPercentage);
   return (
     <div className="WorkSession">
       <Aside />
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Custom Checklist"
-            className="add-task-button"
-          />
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Predefined Checklist"
-            className="add-task-button"
-          />
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
+          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -180,6 +191,8 @@ const WorkSession = () => {
               selectedTask={selectedTask}
               handleTaskClick={handleTaskClick}
               setShowResultModal={setShowResultModal}
+              percentage={percentage}
+              lastItemPercentage={lastItemPercentage}
             />
           ))
         )}
@@ -212,7 +225,7 @@ const WorkSession = () => {
             setSelectedTask={setSelectedTask}
             sections={sections}
             setSections={setSections}
-            comment={selectedTask.comment}
+            comments={comments}
             handleCommentChange={handleCommentChange}
             textareaRef={textareaRef}
             subtasks={subtasks}
@@ -223,16 +236,14 @@ const WorkSession = () => {
             checklistData={checklistData}
             devident={devident}
             setDevident={setDevident}
+            percentage={percentage}
+            setPercentage={setPercentage}
+            handleSubmit={handleSubmit}
           />
         </div>
       )}
 
-      {showResultModal && (
-        <ResultPopUp
-          handleResultModalClose={handleResultModalClose}
-          percentage={percentage}
-        />
-      )}
+      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
     </div>
   );
 };

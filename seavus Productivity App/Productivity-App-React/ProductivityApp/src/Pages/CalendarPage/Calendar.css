@@ -107,6 +107,7 @@
 
 .DeleteTaskButton {
   width: 50px;
+  margin: 20px auto;
 }
 
 .DatePickingPageContainer {
