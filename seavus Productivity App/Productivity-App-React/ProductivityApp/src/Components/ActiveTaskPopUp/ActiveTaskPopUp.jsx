@@ -14,8 +14,8 @@ const ActiveTaskPopUp = (props) => {
     result,
     setResult,
     setShowResultModal,
-    setDevident,
     devident,
+    setDevident,
     handleSubmit,
   } = props;
 
@@ -59,6 +59,7 @@ const ActiveTaskPopUp = (props) => {
     setIsPopupOpen(false);
   };
   const fullHandleSubmitLogic = () => {
+    console.log(selectedTask);
     handleSubmit(), handleSubmitStates();
   };
 

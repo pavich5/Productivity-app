@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import "./TaskSectionContainer.css";
-const Section = ({ sectionName, tasks, selectedTask, handleTaskClick, setShowResultModal, percentage, lastItemPercentage }) => {
+const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, setShowResultModal, percentage, lastItemPercentage }) => {
   const handleSectionClick = (event) => {
     if (event.target.tagName === "H3") {
       setShowResultModal(true);
@@ -11,7 +11,7 @@ const Section = ({ sectionName, tasks, selectedTask, handleTaskClick, setShowRes
     <section className="TaskSectionContainer" onClick={handleSectionClick}>
       <h3>
         <FontAwesomeIcon icon={faCircle} />
-        {sectionName} - {lastItemPercentage} %
+        {id} {sectionName} - {lastItemPercentage} %
       </h3>
       <ul className="taskList">
         {tasks.map((task, taskIndex) => (
