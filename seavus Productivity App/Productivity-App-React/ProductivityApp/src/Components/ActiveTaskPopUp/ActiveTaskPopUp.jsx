@@ -7,7 +7,6 @@ const ActiveTaskPopUp = (props) => {
     selectedTask,
     setSelectedTask,
     sections,
-    // setSections,
     comments,
     handleCommentChange,
     textareaRef,
@@ -19,9 +18,16 @@ const ActiveTaskPopUp = (props) => {
     handleSubmit,
   } = props;
 
-  const [isPopupOpen, setIsPopupOpen] = useState(true);
   const [currentSubtaskIndex, setCurrentSubtaskIndex] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(true);
   const inputRefs = useRef([]);
+
+  const handleYesButton = (index) => {
+    const updatedSubtasks = selectedTask.subtasks.filter((_, i) => i !== index);
+    const updatedTask = { ...selectedTask, subtasks: updatedSubtasks };
+    let updatedResult = result + 1;
+    console.log(updatedResult);
+  };
 
   useEffect(() => {
     if (isPopupOpen && inputRefs.current.length > 0) {
@@ -31,7 +37,10 @@ const ActiveTaskPopUp = (props) => {
 
   useEffect(() => {
     if (currentSubtaskIndex < inputRefs.current.length) {
-      inputRefs.current[currentSubtaskIndex].scrollIntoView({ behavior: "smooth", block: "nearest" });
+      inputRefs.current[currentSubtaskIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
     }
   }, [currentSubtaskIndex]);
 
@@ -58,60 +67,63 @@ const ActiveTaskPopUp = (props) => {
     setShowResultModal(true);
     setIsPopupOpen(false);
   };
+
   const fullHandleSubmitLogic = () => {
-    handleSubmit(), handleSubmitStates();
+    handleSubmit();
+    handleSubmitStates();
   };
 
   return (
-    <>
-      {isPopupOpen && (
-        <div className="popupOverlay">
-          <div className="popupContent">
-            <h3>{selectedTask.taskName}</h3>
-            <p>Date: {selectedTask.date}</p>
-            {selectedTask.subtasks.length > 0 && (
-              <div className="popupContentDetails">
-                <h4>Subtasks:</h4>
-                <ul>
-                  {selectedTask?.subtasks.map((subtask, index) => (
-                    <li
-                      key={subtask + index}
-                      ref={(ref) => (inputRefs.current[index] = ref)}
-                      className={index !== currentSubtaskIndex ? "disabled-li" : ""}
-                    >
-                      <h4>{subtask}</h4>
-                      <div>
-                        <textarea
-                          ref={textareaRef}
-                          value={comments[index] || ""}
-                          onChange={(e) => handleCommentChange(index, e)}
-                          placeholder="Enter your comment (optional)"
-                        ></textarea>
-                      </div>
-                      <Button
-                        onBtnClick={() => handleAnswerButton(index, "yes")}
-                        disabled={index !== currentSubtaskIndex}
-                        btnStyle={{ backgroundColor: "green" }}
-                        btnText="Yes"
-                      />
-                      <Button
-                        onBtnClick={() => handleAnswerButton(index, "no")}
-                        disabled={index !== currentSubtaskIndex}
-                        btnStyle={{ backgroundColor: "red" }}
-                        btnText="No"
-                      />
-                    </li>
-                  ))}
-                </ul>
-                {currentSubtaskIndex === selectedTask.subtasks.length && (
-                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "blue" }} />
-                )}
-              </div>
-            )}
+    <div className="popupOverlay">
+      <div className="popupContent">
+        <h3>{selectedTask.taskName}</h3>
+        <p>Date: {selectedTask.date}</p>
+        {selectedTask.subtasks.length > 0 && (
+          <div>
+            <h4>Subtasks:</h4>
+            <ul>
+              {selectedTask.subtasks.map((subtask, index) => (
+                <li key={subtask + index}>
+                  <h4>{subtask}</h4>
+                  <div>
+                    <textarea
+                      ref={(el) => (inputRefs.current[index] = el)}
+                      value={subtask.comment}
+                      onChange={handleCommentChange}
+                      placeholder="Enter your comment"
+                    ></textarea>
+                  </div>
+                  <div>{textareaRef.current?.value}</div>
+                  <Button
+                    onBtnClick={() => handleAnswerButton(index, "yes")}
+                    btnText="Yes"
+                    btnStyle={{ backgroundColor: "green" }}
+                  />
+                  <Button
+                    onBtnClick={() => handleAnswerButton(index, "no")}
+                    btnText="No"
+                    btnStyle={{ backgroundColor: "red" }}
+                  />
+                </li>
+              ))}
+            </ul>
+            <div>
+              <h3>Result</h3>
+              <p>{result}%</p>
+            </div>
+          </div>
+        )}
+      </div>
+      {showResultModal && (
+        <div className="resultModalOverlay">
+          <div className="resultModalContent">
+            <h3>Result</h3>
+            <p>{percentage}%</p>
+            <Button onBtnClick={handleResultModalClose} btnText="Close" />
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

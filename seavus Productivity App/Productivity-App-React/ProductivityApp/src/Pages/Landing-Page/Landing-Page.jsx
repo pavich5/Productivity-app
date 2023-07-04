@@ -9,6 +9,7 @@ const LandingPage = () => {
         <img src={logo} alt="Logo" />
       </div> */}
       <div className="Information">
+<<<<<<< Updated upstream
         <h1 id="LogoText" style={{color: '#3d3d3d'}}>Productivity App for the Service Industries</h1>
         <br />
         <h2 id="motto">
@@ -36,6 +37,11 @@ const LandingPage = () => {
             <NavLink to="/learn-more-loyalty">Learn more</NavLink>
           </div>
         </div>
+=======
+        <h1 id="LogoText">Productivity App</h1>
+        <br />
+        <h2 id="motto">Achieve More, Stress Less</h2>
+>>>>>>> Stashed changes
         <div className="Buttons">
           <NavLink to="/login" id="loginBtn">
             Login

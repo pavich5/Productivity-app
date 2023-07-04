@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80.6vh;
     font-family: 'Jost', sans-serif;
     background-color: #BFD7EA;
   }
@@ -18,6 +18,8 @@
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
     margin-bottom: 30px;
+    overflow: 1;
+    
   }
   
   #chk {

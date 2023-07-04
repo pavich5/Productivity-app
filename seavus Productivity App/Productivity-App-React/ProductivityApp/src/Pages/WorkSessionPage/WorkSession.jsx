@@ -241,26 +241,25 @@ const WorkSession = () => {
 
       {selectedTask && (
         <div className="popupContainer">
-          <ActiveTaskPopUp
-            selectedTask={selectedTask}
-            setSelectedTask={setSelectedTask}
-            sections={sections}
-            setSections={setSections}
-            comments={comments}
-            handleCommentChange={handleCommentChange}
-            textareaRef={textareaRef}
-            subtasks={subtasks}
-            result={result}
-            setResult={setResult}
-            showResultModal={showResultModal}
-            setShowResultModal={setShowResultModal}
-            checklistData={checklistData}
-            devident={devident}
-            setDevident={setDevident}
-            percentage={percentage}
-            setPercentage={setPercentage}
-            handleSubmit={handleSubmit}
-          />
+         <ActiveTaskPopUp
+  selectedTask={selectedTask}
+  handleClosePopup={handleClosePopup}
+  subtasks={subtasks}
+  setSelectedTask={setSelectedTask}
+  setSections={setSections}
+  sections={sections}
+  comment={selectedTask.comment}
+  handleCommentChange={handleCommentChange}
+  textareaRef={textareaRef}
+  checklistData={checklistData}
+  result={result}
+  setResult={setResult}
+  showResultModal={showResultModal} // Ensure this prop is passed correctly
+  setShowResultModal={setShowResultModal}
+  handleResultModalClose={handleResultModalClose}
+  percentage={percentage}
+/>
+
         </div>
       )}
 

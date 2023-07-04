@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./Layouts/Header/Header";
 import Footer from "./Layouts/Footer/Footer";
 import { Pages } from "./Pages/Pages";
+import UserIcon from "./Components/UserIcon";
+
 function App() {
   const navbarLoginData = [
     {
@@ -23,18 +25,21 @@ function App() {
       link: "/login",
     },
   ];
+
   const navbarDashboardData = [
     {
       text: "Logout",
       link: "/",
     },
   ];
+
   return (
     <div className="App">
       <BrowserRouter>
         <Header
           navbarLoginData={navbarLoginData}
           navbarDashboardData={navbarDashboardData}
+          userIcon={<UserIcon />}
         />
         <Pages />
         <Footer />
@@ -42,4 +47,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
