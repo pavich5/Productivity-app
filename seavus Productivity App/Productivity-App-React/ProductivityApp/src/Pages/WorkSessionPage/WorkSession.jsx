@@ -16,7 +16,18 @@ const WorkSession = () => {
   const [showForm, setShowForm] = useState(false);
   const [sectionName, setSectionName] = useState("Section placeholder");
   const [taskName, setTaskName] = useState("Task name placeholder");
-  const [subtasks, setSubtasks] = useState(["a", "as", "a", "as", "a", "as", "a", "as", "a", "as"]);
+  const [subtasks, setSubtasks] = useState([
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+  ]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
@@ -132,7 +143,9 @@ const WorkSession = () => {
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
     const updatedSections = sections.map((section) => {
-      const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
+      const updatedTasks = section.tasks.filter(
+        (task) => task.taskName !== selectedTask.taskName
+      );
       return { ...section, tasks: updatedTasks };
     });
     console.log("updated sections from handle Submit", updatedSections);
@@ -157,21 +170,47 @@ const WorkSession = () => {
       id: sections[sections.length - 1].id,
     };
 
-    const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+    const storedTasks =
+      JSON.parse(localStorage.getItem("completedTasks")) || [];
     const updatedStoredTasks = [...storedTasks, completedTask];
     localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-    setLastItemPercentage(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
+    setLastItemPercentage(
+      updatedStoredTasks[updatedStoredTasks.length - 1].percentage
+    );
     console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
   };
   console.log("lastitem%", lastItemPercentage);
+
+  const getSectionPercentageFromLocalStorage = (sectionId) => {
+    const sections = JSON.parse(localStorage.getItem("completedTasks"));
+
+    // Find the section with the specified ID
+    const section = sections.find((s) => s.id === sectionId);
+
+    // Return the percentage property if the section is found
+    if (section) {
+      return section.percentage;
+    }
+
+    // Return a default value (such as 0) if the section is not found
+    return 0;
+  };
   return (
     <div className="WorkSession">
       <Aside />
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Custom Checklist"
+            className="add-task-button"
+          />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Predefined Checklist"
+            className="add-task-button"
+          />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -192,6 +231,9 @@ const WorkSession = () => {
               setShowResultModal={setShowResultModal}
               percentage={section.percentage}
               lastItemPercentage={lastItemPercentage}
+              getSectionPercentageFromLocalStorage={
+                getSectionPercentageFromLocalStorage
+              }
             />
           ))
         )}
@@ -238,7 +280,24 @@ const WorkSession = () => {
         </div>
       )}
 
-      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
+      {showResultModal &&
+        sections.map((section, sectionIndex) => (
+          <div>
+            <ResultPopUp
+              className="resultPopUp"
+              key={sectionIndex}
+              id={section.id}
+              handleResultModalClose={handleResultModalClose}
+              getSectionPercentageFromLocalStorage={
+                getSectionPercentageFromLocalStorage
+              }
+            />
+            {/* // <ResultPopUp
+        //   id={selectedTask.id}
+        //   percentage={percentage}
+        // /> */}
+          </div>
+        ))}
     </div>
   );
 };
