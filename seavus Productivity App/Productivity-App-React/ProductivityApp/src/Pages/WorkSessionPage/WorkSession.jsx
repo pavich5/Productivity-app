@@ -195,6 +195,7 @@ const WorkSession = () => {
     // Return a default value (such as 0) if the section is not found
     return 0;
   };
+
   return (
     <div className="WorkSession">
       <Aside />
@@ -282,21 +283,15 @@ const WorkSession = () => {
 
       {showResultModal &&
         sections.map((section, sectionIndex) => (
-          <div>
-            <ResultPopUp
-              className="resultPopUp"
-              key={sectionIndex}
-              id={section.id}
-              handleResultModalClose={handleResultModalClose}
-              getSectionPercentageFromLocalStorage={
-                getSectionPercentageFromLocalStorage
-              }
-            />
-            {/* // <ResultPopUp
-        //   id={selectedTask.id}
-        //   percentage={percentage}
-        // /> */}
-          </div>
+          <ResultPopUp
+            className="resultPopUp"
+            key={sectionIndex}
+            id={section.id}
+            handleResultModalClose={handleResultModalClose}
+            getSectionPercentageFromLocalStorage={
+              getSectionPercentageFromLocalStorage
+            }
+          />
         ))}
     </div>
   );

@@ -21,11 +21,12 @@ const Section = ({
   return (
     <section
       className="TaskSectionContainer"
-      onClick={(event) => handleSectionClick(event, id)}
+      onClick={(event) => handleSectionClick(event)}
     >
       <h3>
         <FontAwesomeIcon icon={faCircle} />
-        {id} {sectionName} - {getSectionPercentageFromLocalStorage(id)} %
+        {id} {sectionName} -{" "}
+        {Math.floor(getSectionPercentageFromLocalStorage(id))} %
       </h3>
       <ul className="taskList">
         {tasks.map((task, taskIndex) => (
