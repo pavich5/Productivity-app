@@ -66,7 +66,7 @@ const HowToBe = () => {
                     <li key={itemIndex}>{item}</li>
                   ))}
                 </ul>
-                <a className="links" target="_blank" href={container.link}>
+                <a className="links" target="_blank" href={container.link} style={{color: 'white'}}>
                   Read More
                 </a>
               </div>

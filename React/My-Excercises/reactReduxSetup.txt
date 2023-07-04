@@ -1,0 +1,57 @@
+react redux setup:
+
+1: we install the 2 pacgages we need 
+npm install @reduxjs/toolkit,npm install react-redux,
+
+2.then we create file named state and add main store called store.js
+and another file slices where we add all the slices for the store
+
+
+3.we create the store this way:
+import { configureStore } from "@reduxjs/toolkit";
+import { exampleSlice} from "./Slices/exampleSlice";
+
+export default configureStore({
+  reducer: {
+    example: exampleSlice.reducer
+  },
+});
+
+4.then we create the slice like this:
+import { createSlice } from "@reduxjs/toolkit";
+import productsData from "../../data/products.json";
+
+export const ProductsSlice = createSlice({
+  name: "example",
+  initialState: {
+    example: we can put arrays,numbers everything,
+  },
+in reducers we add all the functions we need to work with states,
+reducers use state and actions, the state is the value of what 
+we need to change and we can call ite like state.example to change
+the value of the state and we use actions to define the payload
+witch will be add where the function will be called like this :
+addToCard(selectedProduct)
+  reducers: {
+	 addToCart: (state, action) => {
+             const { selectedProduct } = action.payload;
+             const product = state.products.find((product) => product.id === selectedProduct.id);
+             if (product) {
+             product.inCart = true;
+         },
+
+export const { addToCart} = ProductsSlice.actions;
+export default ProductsSlice.reducer;
+
+5.so if we need to get a value out of the slice we can useSelect like this:
+import { useSelector } from "react-redux";
+const products = useSelector(state => state.products.products);
+
+6. if we need to use function we use dispatch and apply it like this:
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../../state/Slices/ProductsSlice";
+
+const dispatch = useDispatch();
+
+we add it like these where we need to use it 
+dispatch(addToCart(here is action.payload));
