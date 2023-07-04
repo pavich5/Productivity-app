@@ -26,7 +26,16 @@
   aspect-ratio: 1;
   justify-content: space-between;
 }
-
+.reminders-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.reminders-container h1 svg{
+  position: absolute;
+  left: 48.5%;
+  top: 16%;
+  width: 40px;
+}
 .reminder-title {
   margin-bottom: 10px;
 }
@@ -43,10 +52,15 @@
   background-color: #087e8b;
   color: #ccc;
 }
+.polite-message{
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
   .RemindersMain {
     display: flex;
+    min-height: 87vh;
   }
 
   .reminders-container {
@@ -60,10 +74,10 @@
   }
   .reminders-list {
     list-style-type: none;
-    padding: 0 80px;
+    padding: 0 60px;
     display: grid;
-    grid-template-columns: repeat(5, 250px);
-    grid-gap: 50px;
+    grid-template-columns: repeat(5, 235px);
+    grid-gap: 70px;
   }
 
   .reminder-card {
@@ -94,6 +108,12 @@
   .reminder-delete-btn:hover {
     background-color: #087e8b;
     color: #ccc;
+  }
+  .reminders-container h1 svg{
+    position: absolute;
+    left: 48.5%;
+    top: 10.9%;
+    width: 40px;
   }
 }
 

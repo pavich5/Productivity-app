@@ -34,9 +34,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 110px;
-  height: 110px;
-  background-color: #007bff;
+  width: 100px;
+  height: 100px;
+  background-color: #1787ff;
   border-radius: 50%;
   margin-right: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@
 }
 
 .pics svg {
-  font-size: 43px;
+  font-size: 48px;
   color: #ffffff;
 }
 
@@ -54,15 +54,15 @@
 
 /* Different Icon Colors */
 .pics .lightbulb-icon {
-  color: #f1c40f;
+  color: #f6b93b;
 }
 
 .pics .chart-icon {
-  color: #c4c4c4;
+  color: #d2dae2;
 }
 
 .pics .users-icon {
-  color: #2c2828;
+  color: #242424;
 }
 
 @keyframes pulse {
@@ -93,13 +93,13 @@
   }
 
   .title {
-    font-size: 38px;
+    font-size: 40px;
     color: #333333;
     margin-bottom: 10px;
   }
 
   .description {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5;
     color: #666666;
     margin-bottom: 20px;
@@ -116,8 +116,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 180px;
-    height: 180px;
+    width: 154px;
+    height: 154px;
     background-color: #007bff;
     border-radius: 50%;
     margin-right: 30px;
@@ -126,7 +126,7 @@
   }
 
   .pics svg {
-    font-size: 43px;
+    font-size: 50px;
     color: #ffffff;
   }
 
@@ -136,14 +136,14 @@
 
   /* Different Icon Colors */
   .pics .lightbulb-icon {
-    color: #f1c40f;
+    color: #f6b93b;
   }
 
   .pics .chart-icon {
-    color: #c4c4c4;
+    color: #d2dae2;
   }
 
   .pics .users-icon {
-    color: #2c2828;
+    color: #242424;
   }
 }

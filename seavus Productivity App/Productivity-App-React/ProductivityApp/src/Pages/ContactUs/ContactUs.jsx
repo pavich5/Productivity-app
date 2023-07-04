@@ -51,6 +51,7 @@ const ContactUs = () => {
               className="contactUs-btn"
               btnText="Send Message"
               type="submit"
+              btnStyle={{ backgroundColor: "#4a69bd", color: "#ffffff" }}
             />
           </form>
         </div>

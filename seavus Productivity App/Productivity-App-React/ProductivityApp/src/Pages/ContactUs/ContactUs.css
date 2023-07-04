@@ -34,7 +34,7 @@
 .contact-icon {
   font-size: 24px;
   margin-right: 10px;
-  color: #007bff;
+  color: #567da7;
 }
 
 .contact-info p {
@@ -86,7 +86,7 @@
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
 }
 
 .social-media {
@@ -107,7 +107,7 @@
 
 .social-icon {
   font-size: 24px;
-  color: #4c49ff;
+  color: #4a69bd;
   margin-right: 10px;
 }
 
@@ -117,12 +117,14 @@
 
 .social-icons a:hover {
   color: #007bff;
+  opacity: 1;
 }
 
 .btnSubmit {
   width: 100%;
   max-width: 300px;
   height: 45px;
+  
 }
 
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
