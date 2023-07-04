@@ -20,7 +20,7 @@ nav {
   font-size: 36px;
   position: absolute;
   top: 10px;
-  left: 40%;
+  left: 45%;
 }
 
 .image {
@@ -30,7 +30,7 @@ nav {
   width: 70px;
   height: 34px;
   cursor: pointer;
-  filter: brightness(0.5) invert(1);
+  filter: brightness(0.1) invert(1);
   object-fit: contain;
 }
 

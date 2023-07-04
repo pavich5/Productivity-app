@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Aside from "../../Layouts/Aside/Aside";
 import "./RemindersPage.css";
 import Button from "../../Components/Button/Button";
+import { FaClock } from 'react-icons/fa';
+
 
 const RemindersPage = () => {
   const [reminderData, setReminderData] = useState([
@@ -42,9 +44,16 @@ const RemindersPage = () => {
     <div className="RemindersMain">
       <Aside style={{ width: "200px" }} />
       <div className="reminders-container">
-        <h1>Reminders</h1>
+        <h1>
+          <FaClock className="clock-icon" /> Reminders
+        </h1>
+        <p className="polite-message">
+          This is a productivity app to help you stay organized. Below are the reminders for your day:
+        </p>
         {reminderData.length === 0 ? (
-          <p className="no-reminders-message">No reminders available</p>
+          <p className="no-reminders-message">
+            No reminders available at the moment. Take a moment to relax and recharge before tackling your next set of tasks. You got this!
+          </p>
         ) : (
           <ul className="reminders-list">{renderReminders()}</ul>
         )}

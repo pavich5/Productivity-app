@@ -39,7 +39,7 @@ const LoginComponent = () => {
               required
             />
             <button onClick={(e) => e.preventDefault()} id="loginButton">
-              <NavLink to="/productivity">Login</NavLink>
+              <NavLink to="/work-session">Login</NavLink>
             </button>
           </form>
         </div>
