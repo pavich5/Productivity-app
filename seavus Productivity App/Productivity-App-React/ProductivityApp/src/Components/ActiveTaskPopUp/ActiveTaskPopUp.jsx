@@ -13,8 +13,8 @@ const ActiveTaskPopUp = (props) => {
     result,
     setResult,
     setShowResultModal,
-    setDevident,
     devident,
+    setDevident,
     handleSubmit,
   } = props;
 
@@ -69,57 +69,62 @@ const ActiveTaskPopUp = (props) => {
   };
 
   const fullHandleSubmitLogic = () => {
-    handleSubmit();
-    handleSubmitStates();
+    console.log(selectedTask);
+    handleSubmit(), handleSubmitStates();
   };
 
   return (
-    <div className="popupOverlay">
-      <div className="popupContent">
-        <h3>{selectedTask.taskName}</h3>
-        <p>Date: {selectedTask.date}</p>
-        {selectedTask.subtasks.length > 0 && (
-          <div>
-            <h4>Subtasks:</h4>
-            <ul>
-              {selectedTask.subtasks.map((subtask, index) => (
-                <li key={subtask + index}>
-                  <h4>{subtask}</h4>
-                  <div>
-                    <textarea
-                      ref={(el) => (inputRefs.current[index] = el)}
-                      value={subtask.comment}
-                      onChange={handleCommentChange}
-                      placeholder="Enter your comment"
-                    ></textarea>
-                  </div>
-                  <div>{textareaRef.current?.value}</div>
+    <>
+      {isPopupOpen && (
+        <div className="popupOverlay">
+          <div className="popupContent">
+            <h3>{selectedTask.taskName}</h3>
+            <p>Date: {selectedTask.date}</p>
+            {selectedTask.subtasks.length > 0 && (
+              <div className="popupContentDetails">
+                <h4>Subtasks:</h4>
+                <ul>
+                  {selectedTask?.subtasks.map((subtask, index) => (
+                    <li
+                      key={subtask + index}
+                      ref={(ref) => (inputRefs.current[index] = ref)}
+                      className={
+                        index !== currentSubtaskIndex ? "disabled-li" : ""
+                      }
+                    >
+                      <h4>{subtask}</h4>
+                      <div>
+                        <textarea
+                          ref={textareaRef}
+                          value={comments[index] || ""}
+                          onChange={(e) => handleCommentChange(index, e)}
+                          placeholder="Enter your comment (optional)"
+                        ></textarea>
+                      </div>
+                      <Button
+                        onBtnClick={() => handleAnswerButton(index, "yes")}
+                        disabled={index !== currentSubtaskIndex}
+                        btnStyle={{ backgroundColor: "green" }}
+                        btnText="Yes"
+                      />
+                      <Button
+                        onBtnClick={() => handleAnswerButton(index, "no")}
+                        disabled={index !== currentSubtaskIndex}
+                        btnStyle={{ backgroundColor: "red" }}
+                        btnText="No"
+                      />
+                    </li>
+                  ))}
+                </ul>
+                {currentSubtaskIndex === selectedTask.subtasks.length && (
                   <Button
-                    onBtnClick={() => handleAnswerButton(index, "yes")}
-                    btnText="Yes"
-                    btnStyle={{ backgroundColor: "green" }}
+                    onBtnClick={fullHandleSubmitLogic}
+                    btnText="Submit"
+                    btnStyle={{ backgroundColor: "blue" }}
                   />
-                  <Button
-                    onBtnClick={() => handleAnswerButton(index, "no")}
-                    btnText="No"
-                    btnStyle={{ backgroundColor: "red" }}
-                  />
-                </li>
-              ))}
-            </ul>
-            <div>
-              <h3>Result</h3>
-              <p>{result}%</p>
-            </div>
-          </div>
-        )}
-      </div>
-      {showResultModal && (
-        <div className="resultModalOverlay">
-          <div className="resultModalContent">
-            <h3>Result</h3>
-            <p>{percentage}%</p>
-            <Button onBtnClick={handleResultModalClose} btnText="Close" />
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}

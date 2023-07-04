@@ -14,10 +14,20 @@ const WorkSession = () => {
   const textareaRef = useRef(null);
 
   const [showForm, setShowForm] = useState(false);
-  // const [sections, setSections] = useState(initialSections);
   const [sectionName, setSectionName] = useState("Section placeholder");
   const [taskName, setTaskName] = useState("Task name placeholder");
-  const [subtasks, setSubtasks] = useState(["a", "as", "a", "as", "a", "as", "a", "as", "a", "as"]);
+  const [subtasks, setSubtasks] = useState([
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+    "a",
+    "as",
+  ]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
@@ -25,7 +35,6 @@ const WorkSession = () => {
   const [devident, setDevident] = useState(0);
   const [showResultModal, setShowResultModal] = useState(false);
   const [percentage, setPercentage] = useState(0);
-  const [completedTasks, setCompletedTasks] = useState([]);
 
   // Retrieve existing sections from local storage
   const storedSections = localStorage.getItem("sections");
@@ -95,41 +104,28 @@ const WorkSession = () => {
   };
 
   function generateUniqueId() {
-    const timestamp = Date.now().toString(36); // Convert current timestamp to base 36 string
-    const randomNum = Math.random().toString(36).substring(2, 9); // Generate random number and convert to base 36 string
-    const uniqueId = timestamp + randomNum; // Combine timestamp and random number
-
+    const timestamp = Date.now().toString(36);
+    const randomNum = Math.random().toString(36).substring(2, 9);
+    const uniqueId = timestamp + randomNum;
     return uniqueId;
   }
 
   const handleTaskClick = (task) => {
     setSelectedTask(task);
-    const isTaskCompleted = completedTasks.includes(task);
+    // const updatedSections = sections.map((section) => {
+    //   if (section.tasks.includes(task)) {
+    //     const updatedSection = {
+    //       ...section,
+    //       sectionName: section.id + "-" + section.sectionName + " - Completed",
+    //     };
+    //     console.log("updatedSection", updatedSection);
 
-    if (!isTaskCompleted) {
-      const updatedCompletedTasks = [...completedTasks, task];
-      setCompletedTasks(updatedCompletedTasks);
-    }
+    //     return updatedSection;
+    //   }
+    //   return section;
+    // });
 
-    const updatedSections = sections.map((section) => {
-      if (section.tasks.includes(task)) {
-        const updatedSection = {
-          ...section,
-          sectionName: section.sectionName + "-Completed",
-        };
-        console.log("updatedSection", updatedSection);
-
-        if (isTaskCompleted) {
-          updatedSection.id = generateUniqueId(); // Assign a new unique ID to the section
-        }
-        console.log("updatedSection id", updatedSection.id);
-
-        return updatedSection;
-      }
-      return section;
-    });
-
-    setSections(updatedSections);
+    // setSections(updatedSections);
   };
 
   const handleCommentChange = (index, e) => {
@@ -137,26 +133,19 @@ const WorkSession = () => {
     updatedComments[index] = e.target.value;
     setComments(updatedComments);
   };
-  // Curried function - straight from chatGPT. I dont get this one - please explain.
-  // const handleCommentChange = (index)=> (e) => {
-  //   const updatedComments = [...comments];
-  //   updatedComments[index] = e.target.value;
-  //   setComments(updatedComments);
-  // };
-  // I had trouble with the e.target in here Uncaught TypeError: Cannot read properties of undefined (reading 'target')
-  // at handleCommentChange (WorkSession.jsx:121:32)
-  // The error message indicates that the 'target' property is undefined when trying to access it in the handleCommentChange function. This typically occurs when the event object being passed to the function is not structured as expected.
 
   const handleResultModalClose = () => {
     setShowResultModal(false);
   };
 
   const [lastItemPercentage, setLastItemPercentage] = useState(null);
-
+  console.log(selectedTask);
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
     const updatedSections = sections.map((section) => {
-      const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
+      const updatedTasks = section.tasks.filter(
+        (task) => task.taskName !== selectedTask.taskName
+      );
       return { ...section, tasks: updatedTasks };
     });
     console.log("updated sections from handle Submit", updatedSections);
@@ -178,23 +167,51 @@ const WorkSession = () => {
       date: selectedTask.date,
       subtasks: completedSubtasks,
       percentage: sectionPercentage,
+      id: sections[sections.length - 1].id,
     };
 
-    const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+    const storedTasks =
+      JSON.parse(localStorage.getItem("completedTasks")) || [];
     const updatedStoredTasks = [...storedTasks, completedTask];
     localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-    setLastItemPercentage(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
+    setLastItemPercentage(
+      updatedStoredTasks[updatedStoredTasks.length - 1].percentage
+    );
     console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
   };
   console.log("lastitem%", lastItemPercentage);
+
+  const getSectionPercentageFromLocalStorage = (sectionId) => {
+    const sections = JSON.parse(localStorage.getItem("completedTasks"));
+
+    // Find the section with the specified ID
+    const section = sections.find((s) => s.id === sectionId);
+
+    // Return the percentage property if the section is found
+    if (section) {
+      return section.percentage;
+    }
+
+    // Return a default value (such as 0) if the section is not found
+    return 0;
+  };
+
   return (
     <div className="WorkSession">
       <Aside />
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
-          <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Custom Checklist"
+            className="add-task-button"
+          />
+          <Button
+            onBtnClick={handleAddTaskClick}
+            btnText="+ Add Predefined Checklist"
+            className="add-task-button"
+          />
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -207,13 +224,17 @@ const WorkSession = () => {
             <Section
               className="taskSections"
               key={sectionIndex}
+              id={section.id}
               sectionName={section.sectionName}
               tasks={section.tasks}
               selectedTask={selectedTask}
               handleTaskClick={handleTaskClick}
               setShowResultModal={setShowResultModal}
-              percentage={percentage}
+              percentage={section.percentage}
               lastItemPercentage={lastItemPercentage}
+              getSectionPercentageFromLocalStorage={
+                getSectionPercentageFromLocalStorage
+              }
             />
           ))
         )}
@@ -241,29 +262,37 @@ const WorkSession = () => {
 
       {selectedTask && (
         <div className="popupContainer">
-         <ActiveTaskPopUp
-  selectedTask={selectedTask}
-  handleClosePopup={handleClosePopup}
-  subtasks={subtasks}
-  setSelectedTask={setSelectedTask}
-  setSections={setSections}
-  sections={sections}
-  comment={selectedTask.comment}
-  handleCommentChange={handleCommentChange}
-  textareaRef={textareaRef}
-  checklistData={checklistData}
-  result={result}
-  setResult={setResult}
-  showResultModal={showResultModal} // Ensure this prop is passed correctly
-  setShowResultModal={setShowResultModal}
-  handleResultModalClose={handleResultModalClose}
-  percentage={percentage}
-/>
-
+          <ActiveTaskPopUp
+            selectedTask={selectedTask}
+            setSelectedTask={setSelectedTask}
+            sections={sections}
+            setSections={setSections}
+            comments={comments}
+            handleCommentChange={handleCommentChange}
+            textareaRef={textareaRef}
+            result={result}
+            setResult={setResult}
+            setShowResultModal={setShowResultModal}
+            devident={devident}
+            setDevident={setDevident}
+            handleSubmit={handleSubmit}
+            checklistData={checklistData}
+          />
         </div>
       )}
 
-      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
+      {showResultModal &&
+        sections.map((section, sectionIndex) => (
+          <ResultPopUp
+            className="resultPopUp"
+            key={sectionIndex}
+            id={section.id}
+            handleResultModalClose={handleResultModalClose}
+            getSectionPercentageFromLocalStorage={
+              getSectionPercentageFromLocalStorage
+            }
+          />
+        ))}
     </div>
   );
 };
