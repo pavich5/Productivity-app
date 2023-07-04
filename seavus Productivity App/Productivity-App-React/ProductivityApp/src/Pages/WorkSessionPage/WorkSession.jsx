@@ -41,6 +41,7 @@ const WorkSession = () => {
     e.preventDefault();
 
     const newSection = {
+      id: generateUniqueId(),
       sectionName,
       tasks: [
         {
@@ -93,35 +94,51 @@ const WorkSession = () => {
     setDate(e.target.value);
   };
 
+  function generateUniqueId() {
+    const timestamp = Date.now().toString(36); // Convert current timestamp to base 36 string
+    const randomNum = Math.random().toString(36).substring(2, 9); // Generate random number and convert to base 36 string
+    const uniqueId = timestamp + randomNum; // Combine timestamp and random number
+
+    return uniqueId;
+  }
+
   const handleTaskClick = (task) => {
     setSelectedTask(task);
-    // Check if the task is already completed
     const isTaskCompleted = completedTasks.includes(task);
+
     if (!isTaskCompleted) {
       const updatedCompletedTasks = [...completedTasks, task];
       setCompletedTasks(updatedCompletedTasks);
-
-      // Update the section name
-      const updatedSections = sections.map((section) => {
-        if (section.tasks.includes(task)) {
-          return {
-            ...section,
-            sectionName: section.sectionName + "-Completed",
-          };
-        }
-        return section;
-      });
-      setSections(updatedSections);
     }
+
+    const updatedSections = sections.map((section) => {
+      if (section.tasks.includes(task)) {
+        const updatedSection = {
+          ...section,
+          sectionName: section.sectionName + "-Completed",
+        };
+        console.log("updatedSection", updatedSection);
+
+        if (isTaskCompleted) {
+          updatedSection.id = generateUniqueId(); // Assign a new unique ID to the section
+        }
+        console.log("updatedSection id", updatedSection.id);
+
+        return updatedSection;
+      }
+      return section;
+    });
+
+    setSections(updatedSections);
   };
 
-  const handleCommentChange = (index) => (e) => {
+  const handleCommentChange = (index, e) => {
     const updatedComments = [...comments];
     updatedComments[index] = e.target.value;
     setComments(updatedComments);
   };
-  // Curried function - straight from chatGPT. I dont get this one - please explain. I got this solution because when i had this function
-  // const handleCommentChange = (index, e) => {
+  // Curried function - straight from chatGPT. I dont get this one - please explain.
+  // const handleCommentChange = (index)=> (e) => {
   //   const updatedComments = [...comments];
   //   updatedComments[index] = e.target.value;
   //   setComments(updatedComments);
@@ -135,12 +152,16 @@ const WorkSession = () => {
   };
 
   const [lastItemPercentage, setLastItemPercentage] = useState(null);
+
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
     const updatedSections = sections.map((section) => {
       const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
       return { ...section, tasks: updatedTasks };
     });
+    console.log("updated sections from handle Submit", updatedSections);
+    console.log("the final section from handle Submit", sections);
+    console.log("selected task from handle submit", selectedTask);
 
     setPercentage(sectionPercentage);
     setSections(updatedSections);

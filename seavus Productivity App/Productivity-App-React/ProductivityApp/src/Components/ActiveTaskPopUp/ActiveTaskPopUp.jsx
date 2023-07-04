@@ -11,14 +11,11 @@ const ActiveTaskPopUp = (props) => {
     comments,
     handleCommentChange,
     textareaRef,
-    // subtasks,
     result,
     setResult,
     setShowResultModal,
     setDevident,
     devident,
-    // percentage,
-    // setPercentage,
     handleSubmit,
   } = props;
 
@@ -38,9 +35,9 @@ const ActiveTaskPopUp = (props) => {
     }
   }, [currentSubtaskIndex]);
 
-  const handleYesButton = (index) => {
-    let updatedResult = parseInt(result) + 1;
-    let updatedTasksLength = devident + 1;
+  const handleAnswerButton = (index, answer) => {
+    const updatedResult = parseInt(result) + (answer === "yes" ? 1 : 0);
+    const updatedTasksLength = devident + 1;
     setDevident(updatedTasksLength);
     setResult(updatedResult);
 
@@ -52,56 +49,10 @@ const ActiveTaskPopUp = (props) => {
     }
   };
 
-  const handleNoButton = (index) => {
-    let updatedResult = parseInt(result) + 0;
-    let updatedTasksLength = devident + 1;
-    setDevident(updatedTasksLength);
-    setResult(updatedResult);
-
-    const nextIndex = index + 1;
-    setCurrentSubtaskIndex(nextIndex);
-    if (nextIndex < selectedTask.subtasks.length) {
-      inputRefs.current[nextIndex].disabled = true;
-      inputRefs.current[nextIndex].focus();
-    }
-  };
-
-  // const handleSubmit = () => {
-  //   const sectionPercentage = (result / devident) * 100;
-  //   const updatedSections = sections.map((section) => {
-  //     const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
-  //     return { ...section, tasks: updatedTasks };
-  //   });
-
-  //   setPercentage(sectionPercentage);
-  //   setSections(updatedSections);
-  //   // setSelectedTask(null);
-  //   // setShowResultModal(true);
-  //   // setIsPopupOpen(false);
-
-  //   const completedSubtasks = selectedTask.subtasks.map((subtask, index) => {
-  //     return {
-  //       subtask,
-  //       comment: comments[index] || "",
-  //     };
-  //   });
-
-  //   const completedTask = {
-  //     taskName: selectedTask.taskName,
-  //     date: selectedTask.date,
-  //     subtasks: completedSubtasks,
-  //     percentage: sectionPercentage,
-  //   };
-
-  //   const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
-  //   const updatedStoredTasks = [...storedTasks, completedTask];
-  //   localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-  //   console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
-  // };
   console.log(JSON.parse(localStorage.getItem("completedTasks")));
-  console.log("Popup Result", result);
   console.log("initial task", selectedTask.subtasks);
   console.log("initial sections", sections);
+
   const handleSubmitStates = () => {
     setSelectedTask(null);
     setShowResultModal(true);
@@ -133,18 +84,18 @@ const ActiveTaskPopUp = (props) => {
                         <textarea
                           ref={textareaRef}
                           value={comments[index] || ""}
-                          onChange={(e) => handleCommentChange(index)(e)}
+                          onChange={(e) => handleCommentChange(index, e)}
                           placeholder="Enter your comment (optional)"
                         ></textarea>
                       </div>
                       <Button
-                        onBtnClick={() => handleYesButton(index)}
+                        onBtnClick={() => handleAnswerButton(index, "yes")}
                         disabled={index !== currentSubtaskIndex}
                         btnStyle={{ backgroundColor: "green" }}
                         btnText="Yes"
                       />
                       <Button
-                        onBtnClick={() => handleNoButton(index)}
+                        onBtnClick={() => handleAnswerButton(index, "no")}
                         disabled={index !== currentSubtaskIndex}
                         btnStyle={{ backgroundColor: "red" }}
                         btnText="No"
