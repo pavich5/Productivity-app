@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80.6vh;
+    min-height: 81.6vh;
     font-family: 'Jost', sans-serif;
     background-color: #BFD7EA;
   }
@@ -140,5 +140,8 @@
     .main{
       width: 320px;
       height: 470px;
+    }
+    .MainContainer{
+      min-height: 86.7vh;
     }
   }

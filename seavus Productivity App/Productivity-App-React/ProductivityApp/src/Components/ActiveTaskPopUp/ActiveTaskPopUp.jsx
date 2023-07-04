@@ -70,7 +70,8 @@ const ActiveTaskPopUp = (props) => {
 
   const fullHandleSubmitLogic = () => {
     console.log(selectedTask);
-    handleSubmit(), handleSubmitStates();
+    handleSubmit();
+    handleSubmitStates();
   };
 
   return (
@@ -84,7 +85,7 @@ const ActiveTaskPopUp = (props) => {
               <div className="popupContentDetails">
                 <h4>Subtasks:</h4>
                 <ul>
-                  {selectedTask?.subtasks.map((subtask, index) => (
+                  {selectedTask.subtasks.map((subtask, index) => (
                     <li
                       key={subtask + index}
                       ref={(ref) => (inputRefs.current[index] = ref)}
@@ -128,7 +129,7 @@ const ActiveTaskPopUp = (props) => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

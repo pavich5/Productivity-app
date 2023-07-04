@@ -11,7 +11,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* Update the number of columns */
-  grid-gap: 20px;
+  grid-gap: 32px;
 }
 
 .reminder-card {

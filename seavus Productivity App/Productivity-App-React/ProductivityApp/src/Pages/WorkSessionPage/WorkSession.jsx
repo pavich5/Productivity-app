@@ -202,6 +202,7 @@ const WorkSession = () => {
       <div className="workSessionContent">
         <div className="Headings">
           <h2>Work Session</h2>
+          <div className="ButtonsAdd">
           <Button
             onBtnClick={handleAddTaskClick}
             btnText="+ Add Custom Checklist"
@@ -212,6 +213,8 @@ const WorkSession = () => {
             btnText="+ Add Predefined Checklist"
             className="add-task-button"
           />
+          </div>
+         
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />

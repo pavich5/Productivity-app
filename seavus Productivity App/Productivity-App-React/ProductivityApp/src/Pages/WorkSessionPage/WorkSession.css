@@ -19,14 +19,16 @@
   background-color: transparent;
   color: #007bff;
   border: 2px solid #007bff;
-  padding-block: 10px;
+  padding-block: 6px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 30px;
-  width: 150px;
-  min-height: 55px;
+  width: 140px;
+  min-height: 45px;
   text-align: center;
   display: flex;
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 section {
@@ -297,6 +299,9 @@ section ul li:hover {
 
 .add-subtask-button {
   width: 100%;
+}
+.ButtonsAdd{
+  display: flex;
 }
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
   .WorkSession {
