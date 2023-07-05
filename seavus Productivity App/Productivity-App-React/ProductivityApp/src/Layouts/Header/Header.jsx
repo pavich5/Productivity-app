@@ -4,6 +4,7 @@ import "./Header.css";
 import logo from "../../assets/images/Logo.png";
 import UserIcon from "../../Components/UserIcon";
 import { Link } from "react-router-dom";
+
 function Header(props) {
   const location = useLocation();
   const isLoginOrHome = location.pathname === "/" || location.pathname === "/login";
@@ -15,16 +16,18 @@ function Header(props) {
 
   const userIcon = isDashboard ? <UserIcon /> : null;
 
+  const headerClassName = isDashboard ? "header-dashboard" : "header-login";
+
   return (
-    <header>
+    <header className={headerClassName}>
       <nav>
         <NavLink to="/">
           <div>
             <img src={logo} alt="logo" className="image" />
           </div>
         </NavLink>
-        <Link to={'/'}>
-        <div className="AppTitle">FocusHub  </div>
+        <Link to="/">
+          <div className="AppTitle">FocusHub</div>
         </Link>
         <div className="ulContainer">
           <ul className="header-ul">

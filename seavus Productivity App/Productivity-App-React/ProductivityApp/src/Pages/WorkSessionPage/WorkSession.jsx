@@ -109,20 +109,6 @@ const WorkSession = () => {
 
   const handleTaskClick = (task) => {
     setSelectedTask(task);
-    // const updatedSections = sections.map((section) => {
-    //   if (section.tasks.includes(task)) {
-    //     const updatedSection = {
-    //       ...section,
-    //       sectionName: section.id + "-" + section.sectionName + " - Completed",
-    //     };
-    //     console.log("updatedSection", updatedSection);
-
-    //     return updatedSection;
-    //   }
-    //   return section;
-    // });
-
-    // setSections(updatedSections);
   };
 
   const handleCommentChange = (index, e) => {

@@ -20,7 +20,7 @@ nav a .AppTitle {
    font-size: 36px;
   position: absolute;
   top: 10px;
-  left: 40%;
+  left: 6%;
   color: rgb(238, 224, 224);
 }
 
@@ -102,15 +102,19 @@ ul a li:hover::after {
 header > nav .active {
   color: #2f2f33 !important;
 }
+.header-login nav {
+  justify-content: center;
+}
 
 @media screen and (min-width: 1900px) {
-  .AppTitle {
-    font-family: "Courgette", cursive;
-    font-size: 36px;
-    color: aliceblue;
+  nav a .AppTitle {
+    font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+     font-size: 36px;
     position: absolute;
     top: 10px;
-    left: 47%;
+    left: 4.5%;
+    color: rgb(238, 224, 224);
   }
 }
 
