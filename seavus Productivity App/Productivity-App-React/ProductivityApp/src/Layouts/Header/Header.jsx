@@ -23,7 +23,7 @@ function Header(props) {
             <img src={logo} alt="logo" className="image" />
           </div>
         </NavLink>
-        <div className="AppTitle">WorkWise</div>
+        <div className="AppTitle">FocusHub  </div>
         <div className="ulContainer">
           <ul className="header-ul">
             {navbarData.map((linkdata, i) => (
