@@ -77,9 +77,10 @@
   }
 }
 
-@media screen and (min-width: 1900px) and (max-width: 1920px) {
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
   .AboutUs {
     display: flex;
+    max-height: 86.55vh;
   }
 
   .AboutUsContent {
@@ -87,7 +88,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 80px 20px 60px 80px;
-    min-height: 800px;
+    min-height: 71vh;
     background-color: #f8f8f8;
     border-radius: 10px;
   }
