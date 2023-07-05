@@ -69,13 +69,7 @@ const ActiveTaskPopUp = (props) => {
   };
 
   const fullHandleSubmitLogic = () => {
-<<<<<<< Updated upstream
-    console.log(selectedTask);
-    handleSubmit();
-    handleSubmitStates();
-=======
     handleSubmit(), handleSubmitStates();
->>>>>>> Stashed changes
   };
 
   return (
@@ -93,9 +87,7 @@ const ActiveTaskPopUp = (props) => {
                     <li
                       key={subtask + index}
                       ref={(ref) => (inputRefs.current[index] = ref)}
-                      className={
-                        index !== currentSubtaskIndex ? "disabled-li" : ""
-                      }
+                      className={index !== currentSubtaskIndex ? "disabled-li" : ""}
                     >
                       <h4>{subtask}</h4>
                       <div>
@@ -122,11 +114,7 @@ const ActiveTaskPopUp = (props) => {
                   ))}
                 </ul>
                 {currentSubtaskIndex === selectedTask.subtasks.length && (
-                  <Button
-                    onBtnClick={fullHandleSubmitLogic}
-                    btnText="Submit"
-                    btnStyle={{ backgroundColor: "blue" }}
-                  />
+                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "blue" }} />
                 )}
               </div>
             )}

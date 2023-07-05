@@ -2,16 +2,17 @@ function BlogCompensationArticle() {
   return (
     <>
       <div className="blog-header">
-        <h1>Extracting insightful data from audit results with QVALON</h1>
+        <h1>Extracting insightful data from audit results with Productivity App</h1>
       </div>
       <div className="blog-sections">
         <section id="section-0">
           <p>
-            QVALON monitors and evaluates the quality of compliance with operating standards. Its positive impacts on different business industries
-            and segments are detailed in previous articles ( The secret of clean Burger King and Success stories of BILLA). The scope of advantages
-            from these positive impacts depends on how efficiently QVALON is used by employees. Like any other sphere where humans are involved, here
-            also, the objectivity of results is influenced by them. Even if technology is the most innovative, most advanced, as long as it is
-            operated by people, the authenticity of its results or performance is unlikely to be completely free from human influence.
+            Productivity App monitors and evaluates the quality of compliance with operating standards. Its positive impacts on different business
+            industries and segments are detailed in previous articles ( The secret of clean Burger King and Success stories of BILLA). The scope of
+            advantages from these positive impacts depends on how efficiently Productivity App is used by employees. Like any other sphere where
+            humans are involved, here also, the objectivity of results is influenced by them. Even if technology is the most innovative, most
+            advanced, as long as it is operated by people, the authenticity of its results or performance is unlikely to be completely free from human
+            influence.
           </p>
           <h2>Why reports differ from actual scenarios</h2>
           <p>
@@ -28,8 +29,8 @@ function BlogCompensationArticle() {
           <p>
             At times there are no obvious reasons for disagreement between reports and the actual situation. In such conditions, a whole investigation
             is needed to determine the possible causes that led to the information mismatch. A business does not necessarily have to employ an army of
-            detectives or auditors to solve the case. In most cases, information disagreement is down to inadequate use of QVALON due to lack of
-            knowledge.
+            detectives or auditors to solve the case. In most cases, information disagreement is down to inadequate use of Productivity App due to
+            lack of knowledge.
           </p>
           <p>The following checklist is helpful to verify if everything is done right.</p>
           <ul>
@@ -48,9 +49,10 @@ function BlogCompensationArticle() {
             description, it is clear to everyone what needs to be done when cleaning the showcase.
           </p>
           <p>
-            QVALON goes one step ahead and has the ability to set even more precise criteria by attaching a reference photo of a clean showcase. Now,
-            complicated and long questions with their explanations are not a must. Audit participants have a visual representation of the benchmarks
-            against which their work will be measured. Hence there is no room for confusion and it helps with achieving uniform common goals.
+            Productivity App goes one step ahead and has the ability to set even more precise criteria by attaching a reference photo of a clean
+            showcase. Now, complicated and long questions with their explanations are not a must. Audit participants have a visual representation of
+            the benchmarks against which their work will be measured. Hence there is no room for confusion and it helps with achieving uniform common
+            goals.
           </p>
           <ul>
             <li>
@@ -58,8 +60,8 @@ function BlogCompensationArticle() {
             </li>
           </ul>
           <p>
-            There are two types of questions that can be asked in QVALON. The first type accepts "yes" or "no" answers only. The second accepts
-            intermediate values (1, 2, 3, 4, and 5) too. Each has its own pros and cons.
+            There are two types of questions that can be asked in Productivity App. The first type accepts "yes" or "no" answers only. The second
+            accepts intermediate values (1, 2, 3, 4, and 5) too. Each has its own pros and cons.
           </p>
           <p>
             The first type of questions are completely clear and allow subsequent result analysis in similar terms, i.e. good or bad. There is no
@@ -75,14 +77,14 @@ function BlogCompensationArticle() {
           </p>
           <ul>
             <li>
-              <p>Use advanced QVALON features</p>
+              <p>Use advanced Productivity App features</p>
             </li>
           </ul>
           <p>
-            QVALON has several tools for increasing the objectivity of data monitoring. The first is a photo report or reference photo which has been
-            mentioned in the first point above. For example, in addition to the merchandising standard, it is enough for the auditor to also attach a
-            photo of the ideal product presentation. This leaves no room for any confusion. If something could not be understood by reading the
-            standard, then it can be easily grasped through reference photographs.
+            Productivity App has several tools for increasing the objectivity of data monitoring. The first is a photo report or reference photo which
+            has been mentioned in the first point above. For example, in addition to the merchandising standard, it is enough for the auditor to also
+            attach a photo of the ideal product presentation. This leaves no room for any confusion. If something could not be understood by reading
+            the standard, then it can be easily grasped through reference photographs.
           </p>
           <p>
             The second tool is geolocation, which determines the true location of the participants during the audit. The system checks the employee's
@@ -103,8 +105,8 @@ function BlogCompensationArticle() {
             other store managers.
           </p>
           <p>
-            QVALON implements two types of reports to analyze the audit results for any time period: tabular reports and visual BI reports. Another
-            convenient tool is the Audit calendar. It helps users develop a regular approach to the audits. Hence audit schedules will not be
+            Productivity App implements two types of reports to analyze the audit results for any time period: tabular reports and visual BI reports.
+            Another convenient tool is the Audit calendar. It helps users develop a regular approach to the audits. Hence audit schedules will not be
             forgotten when a store is visited.
           </p>
         </section>
@@ -156,52 +158,52 @@ function BlogCompensationArticle() {
           </p>
         </section>
         <section id="section-2">
-          <h2>Extracting intelligence from the QVALON data</h2>
+          <h2>Extracting intelligence from the Productivity App data</h2>
           <p>
-            QVALON provides its users with different tools to analyze the accumulated audit data. These reports are designed to help companies
-            identify areas of improvement, monitor trends, and make data-driven decisions. Some of the key features for extracting intelligence from
-            QVALON data include:
+            Productivity App provides its users with different tools to analyze the accumulated audit data. These reports are designed to help
+            companies identify areas of improvement, monitor trends, and make data-driven decisions. Some of the key features for extracting
+            intelligence from Productivity App data include:
           </p>
           <ul>
             <li>
               <p>
-                <b>Tabular reports:</b> QVALON allows users to generate customized tabular reports based on their specific requirements. These reports
-                can be filtered, sorted, and grouped to extract relevant insights from the data. Users can select the desired metrics, time period,
-                and other parameters to analyze the audit results in detail.
+                <b>Tabular reports:</b> Productivity App allows users to generate customized tabular reports based on their specific requirements.
+                These reports can be filtered, sorted, and grouped to extract relevant insights from the data. Users can select the desired metrics,
+                time period, and other parameters to analyze the audit results in detail.
               </p>
             </li>
             <li>
               <p>
-                <b>Visual BI reports:</b> QVALON offers visual Business Intelligence (BI) reports that provide a graphical representation of the audit
-                data. These reports include various charts, graphs, and dashboards to present the information in a visually appealing and
+                <b>Visual BI reports:</b> Productivity App offers visual Business Intelligence (BI) reports that provide a graphical representation of
+                the audit data. These reports include various charts, graphs, and dashboards to present the information in a visually appealing and
                 easy-to-understand manner. Users can visualize trends, patterns, and anomalies in the data, enabling them to make informed decisions.
               </p>
             </li>
             <li>
               <p>
-                <b>Data analytics:</b> QVALON incorporates data analytics capabilities to perform advanced analysis on the audit data. Users can apply
-                statistical methods, predictive modeling, and other analytical techniques to gain deeper insights into the performance of their
-                business processes. This helps in identifying root causes, predicting future outcomes, and optimizing operations.
+                <b>Data analytics:</b> Productivity App incorporates data analytics capabilities to perform advanced analysis on the audit data. Users
+                can apply statistical methods, predictive modeling, and other analytical techniques to gain deeper insights into the performance of
+                their business processes. This helps in identifying root causes, predicting future outcomes, and optimizing operations.
               </p>
             </li>
             <li>
               <p>
-                <b>Benchmarking:</b> QVALON allows users to compare their audit results against industry benchmarks or internal standards. This helps
-                in evaluating the performance of different locations, teams, or individuals within the organization. Users can identify top
+                <b>Benchmarking:</b> Productivity App allows users to compare their audit results against industry benchmarks or internal standards.
+                This helps in evaluating the performance of different locations, teams, or individuals within the organization. Users can identify top
                 performers, areas of improvement, and best practices to drive continuous improvement.
               </p>
             </li>
             <li>
               <p>
-                <b>Integration with other systems:</b> QVALON can be integrated with other systems, such as ERP (Enterprise Resource Planning) or CRM
-                (Customer Relationship Management), to combine and analyze data from multiple sources. This provides a holistic view of the
-                organization's performance and enables cross-functional analysis for better decision-making.
+                <b>Integration with other systems:</b> Productivity App can be integrated with other systems, such as ERP (Enterprise Resource
+                Planning) or CRM (Customer Relationship Management), to combine and analyze data from multiple sources. This provides a holistic view
+                of the organization's performance and enables cross-functional analysis for better decision-making.
               </p>
             </li>
           </ul>
           <p>
-            By leveraging these features, businesses can gain valuable insights from the QVALON data and take proactive measures to enhance their
-            operations, improve compliance, and drive overall performance.
+            By leveraging these features, businesses can gain valuable insights from the Productivity App data and take proactive measures to enhance
+            their operations, improve compliance, and drive overall performance.
           </p>
         </section>
       </div>

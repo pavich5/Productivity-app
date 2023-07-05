@@ -16,18 +16,7 @@ const WorkSession = () => {
   const [showForm, setShowForm] = useState(false);
   const [sectionName, setSectionName] = useState("Section placeholder");
   const [taskName, setTaskName] = useState("Task name placeholder");
-  const [subtasks, setSubtasks] = useState([
-    "a",
-    "as",
-    "a",
-    "as",
-    "a",
-    "as",
-    "a",
-    "as",
-    "a",
-    "as",
-  ]);
+  const [subtasks, setSubtasks] = useState(["a", "as", "a", "as", "a", "as", "a", "as", "a", "as"]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
@@ -142,13 +131,6 @@ const WorkSession = () => {
   const [lastItemPercentage, setLastItemPercentage] = useState(null);
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
-<<<<<<< Updated upstream
-    const updatedSections = sections.map((section) => {
-      const updatedTasks = section.tasks.filter(
-        (task) => task.taskName !== selectedTask.taskName
-      );
-      return { ...section, tasks: updatedTasks };
-=======
 
     setSections((prevSections) => {
       const updatedSections = prevSections.map((section) => {
@@ -171,7 +153,6 @@ const WorkSession = () => {
       }
       console.log(updatedSections);
       return updatedSections;
->>>>>>> Stashed changes
     });
 
     console.log("the final section from handle Submit", sections);
@@ -192,43 +173,16 @@ const WorkSession = () => {
       id: selectedTask.taskId,
     };
 
-<<<<<<< Updated upstream
-    const storedTasks =
-      JSON.parse(localStorage.getItem("completedTasks")) || [];
-=======
     const { percentage } = completedTask; // Extracting the percentage value from completedTask
 
     setPercentage(percentage);
 
     const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
->>>>>>> Stashed changes
     const updatedStoredTasks = [...storedTasks, completedTask];
     localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-    setLastItemPercentage(
-      updatedStoredTasks[updatedStoredTasks.length - 1].percentage
-    );
+    setLastItemPercentage(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
     console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
   };
-<<<<<<< Updated upstream
-  console.log("lastitem%", lastItemPercentage);
-
-  const getSectionPercentageFromLocalStorage = (sectionId) => {
-    const sections = JSON.parse(localStorage.getItem("completedTasks"));
-
-    // Find the section with the specified ID
-    const section = sections.find((s) => s.id === sectionId);
-
-    // Return the percentage property if the section is found
-    if (section) {
-      return section.percentage;
-    }
-
-    // Return a default value (such as 0) if the section is not found
-    return 0;
-  };
-
-=======
->>>>>>> Stashed changes
   return (
     <div className="WorkSession">
       <Aside />
@@ -236,18 +190,9 @@ const WorkSession = () => {
         <div className="Headings">
           <h2>Work Session</h2>
           <div className="ButtonsAdd">
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Custom Checklist"
-            className="add-task-button"
-          />
-          <Button
-            onBtnClick={handleAddTaskClick}
-            btnText="+ Add Predefined Checklist"
-            className="add-task-button"
-          />
+            <Button onBtnClick={handleAddTaskClick} btnText="+ Add Custom Checklist" className="add-task-button" />
+            <Button onBtnClick={handleAddTaskClick} btnText="+ Add Predefined Checklist" className="add-task-button" />
           </div>
-         
         </div>
         <div className="notificationBell">
           <FontAwesomeIcon icon={faBell} />
@@ -267,13 +212,6 @@ const WorkSession = () => {
               handleTaskClick={handleTaskClick}
               setShowResultModal={setShowResultModal}
               percentage={section.percentage}
-<<<<<<< Updated upstream
-              lastItemPercentage={lastItemPercentage}
-              getSectionPercentageFromLocalStorage={
-                getSectionPercentageFromLocalStorage
-              }
-=======
->>>>>>> Stashed changes
             />
           ))
         )}
@@ -319,23 +257,7 @@ const WorkSession = () => {
           />
         </div>
       )}
-<<<<<<< Updated upstream
-
-      {showResultModal &&
-        sections.map((section, sectionIndex) => (
-          <ResultPopUp
-            className="resultPopUp"
-            key={sectionIndex}
-            id={section.id}
-            handleResultModalClose={handleResultModalClose}
-            getSectionPercentageFromLocalStorage={
-              getSectionPercentageFromLocalStorage
-            }
-          />
-        ))}
-=======
       {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
->>>>>>> Stashed changes
     </div>
   );
 };
