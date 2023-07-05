@@ -14,13 +14,14 @@ nav {
   justify-content: flex-end;
 }
 
-.AppTitle {
+nav a .AppTitle {
   font-family: 'Poppins', sans-serif;
     font-weight: 500;
    font-size: 36px;
   position: absolute;
   top: 10px;
   left: 40%;
+  color: rgb(238, 224, 224);
 }
 
 .image {

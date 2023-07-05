@@ -14,9 +14,16 @@ const WorkSession = () => {
   const textareaRef = useRef(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [sectionName, setSectionName] = useState("Section placeholder");
-  const [taskName, setTaskName] = useState("Task name placeholder");
-  const [subtasks, setSubtasks] = useState(["a", "as", "a", "as", "a", "as", "a", "as", "a", "as"]);
+  const [sectionName, setSectionName] = useState("Bartender Close");
+  const [taskName, setTaskName] = useState("BartenderClose");
+  const [subtasks, setSubtasks] = useState(["Shall we turn off the bar equipment?",
+   "Is the bar counter clean, without streaks, and washed?", 
+   "Has the juicer been cleaned, is the body clean, and is it clean underneath?", 
+   "Is the ice maker clean and without streaks?", 
+   "Can you check the stickers on all open packages and on the preserves in the refrigerator?", 
+   "Is the microwave clean and without streaks?", 
+   "Are the shelves in the refrigerator clean and without streaks?", 
+]);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
@@ -54,9 +61,9 @@ const WorkSession = () => {
     };
 
     setSections([...sections, newSection]);
-    setSectionName("Section placeholder");
-    setTaskName("Task name placeholder");
-    setSubtasks(["a", "as"]);
+    setSectionName("Bartender Open");
+    setTaskName("Bartender Open");
+    setSubtasks(["Is the bartender present at their workplace and appearing according to standards?", "Is the coffee machine clean and decorated according to the standard?"]);
     setDate(new Date().toISOString().slice(0, 10));
 
     setShowForm(false);

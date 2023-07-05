@@ -11,3 +11,9 @@
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
+
+.selectedText{
+  position: absolute;
+  color: white;
+  z-index: -1;
+}

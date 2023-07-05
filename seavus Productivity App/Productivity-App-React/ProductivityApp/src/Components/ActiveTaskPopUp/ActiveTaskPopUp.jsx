@@ -98,6 +98,7 @@ const ActiveTaskPopUp = (props) => {
                           placeholder="Enter your comment (optional)"
                         ></textarea>
                       </div>
+                      <div className="ButtonsPopUp">
                       <Button
                         onBtnClick={() => handleAnswerButton(index, "yes")}
                         disabled={index !== currentSubtaskIndex}
@@ -110,6 +111,8 @@ const ActiveTaskPopUp = (props) => {
                         btnStyle={{ backgroundColor: "red" }}
                         btnText="No"
                       />
+                      </div>
+                     
                     </li>
                   ))}
                 </ul>

@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/images/Logo.png";
 import UserIcon from "../../Components/UserIcon";
-
+import { Link } from "react-router-dom";
 function Header(props) {
   const location = useLocation();
   const isLoginOrHome = location.pathname === "/" || location.pathname === "/login";
@@ -23,7 +23,9 @@ function Header(props) {
             <img src={logo} alt="logo" className="image" />
           </div>
         </NavLink>
+        <Link to={'/'}>
         <div className="AppTitle">FocusHub  </div>
+        </Link>
         <div className="ulContainer">
           <ul className="header-ul">
             {navbarData.map((linkdata, i) => (

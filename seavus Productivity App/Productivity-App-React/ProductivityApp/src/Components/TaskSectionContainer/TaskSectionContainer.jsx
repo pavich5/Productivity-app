@@ -6,7 +6,7 @@ import { useState } from "react";
 const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, setShowResultModal, percentage, handleResultModalClose }) => {
   const [smallResultModal, setSmallResultModal] = useState(false);
   const handleSectionClick = (event) => {
-    if (event.target.tagName === "H3" && event.target.innerText.slice(0, 15) === id) {
+    if (event.target.tagName === "H3"  && event.target.innerText.slice(0, 15) === id) {
       setSmallResultModal(true);
     }
   };
@@ -17,7 +17,7 @@ const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, setSho
     <section className="TaskSectionContainer" onClick={handleSectionClick}>
       <h3>
         <FontAwesomeIcon icon={faCircle} />
-        {id} {sectionName} - {percentage} %
+         <span className="selectedText">{id} </span> {sectionName} - {isNaN(percentage) ? 0 : Math.floor(percentage)} %
       </h3>
       <ul className="taskList">
         {tasks.map((task, taskIndex) => (

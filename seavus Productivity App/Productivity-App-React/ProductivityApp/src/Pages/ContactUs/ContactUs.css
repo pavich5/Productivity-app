@@ -14,6 +14,7 @@
   font-size: 32px;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
 .contact-info {
@@ -47,12 +48,10 @@
   padding: 20px;
   border-radius: 5px;
   background-color: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+
 .contact-form form {
-  width: 80%;
+  width: 100%;
 }
 
 .form-title {
@@ -68,14 +67,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
+  margin-bottom: 15px;
 }
 
-/* textarea.form-input {
-  resize: vertical;
-} */
-
 .contact-form button {
-  padding: 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 45px;
   background-color: #057eff;
   color: #fff;
   border: none;
@@ -118,13 +116,6 @@
 .social-icons a:hover {
   color: #007bff;
   opacity: 1;
-}
-
-.btnSubmit {
-  width: 100%;
-  max-width: 300px;
-  height: 45px;
-  
 }
 
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
