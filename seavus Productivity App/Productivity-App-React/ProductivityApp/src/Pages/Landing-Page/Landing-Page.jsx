@@ -9,10 +9,12 @@ const LandingPage = () => {
         <img src={logo} alt="Logo" />
       </div> */}
       <div className="Information">
-        <h1 id="LogoText" style={{color: '#3d3d3d'}}>Productivity App for the Service Industries</h1>
+        <h1 id="LogoText" style={{ color: "#3d3d3d" }}>
+          Productivity App for the Service Industries
+        </h1>
         <br />
         <h2 id="motto">
-          <i>Keep it simple and stay productive</i>
+          <i>Unleash your productivity potential !</i>
         </h2>
         <div className="Metrics">
           <div className="Metric">

@@ -9,7 +9,7 @@ import UserIcon from "./Components/UserIcon";
 function App() {
   const navbarLoginData = [
     {
-      text: "Tips",
+      text: "Tips&Tricks",
       link: "/productive-tips",
     },
     {
