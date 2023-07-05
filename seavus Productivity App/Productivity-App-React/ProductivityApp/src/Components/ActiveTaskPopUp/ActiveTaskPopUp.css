@@ -71,7 +71,6 @@
 }
 
 .popupContent button {
-  background-color: #4caf50;
   color: #fff;
   width: 130px;
   padding: 5px 10px;
@@ -80,20 +79,12 @@
   cursor: pointer;
   margin-right: 20px;
   margin-left: 20px;
-  transition: background-color 0.3s ease;
-}
 
-.popupContent button:hover {
-  background-color: #939993;
 }
-
 .ButtonsPopUp{
   display: flex;
 }
 
-.popupContent button:hover {
-  background-color: #45a049;
-}
 
 .disabled-li {
   opacity: 0.5;

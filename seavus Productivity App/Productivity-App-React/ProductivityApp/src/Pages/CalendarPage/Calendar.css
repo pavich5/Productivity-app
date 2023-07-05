@@ -1,6 +1,6 @@
 .DatePickingPageContainer {
   display: flex;
-  height: 100vh;
+  height: 101vh;
 }
 
 .DatePickingPage {
@@ -169,7 +169,8 @@
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
   .DatePickingPageContainer {
     display: flex;
-    height: 100vh;
+    max-height: 86.55vh;
+
   }
 
   .DatePickingPage {

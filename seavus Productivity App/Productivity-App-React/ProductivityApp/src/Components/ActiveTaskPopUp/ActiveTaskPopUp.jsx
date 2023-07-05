@@ -22,13 +22,6 @@ const ActiveTaskPopUp = (props) => {
   const [isPopupOpen, setIsPopupOpen] = useState(true);
   const inputRefs = useRef([]);
 
-  const handleYesButton = (index) => {
-    const updatedSubtasks = selectedTask.subtasks.filter((_, i) => i !== index);
-    const updatedTask = { ...selectedTask, subtasks: updatedSubtasks };
-    let updatedResult = result + 1;
-    console.log(updatedResult);
-  };
-
   useEffect(() => {
     if (isPopupOpen && inputRefs.current.length > 0) {
       inputRefs.current[0].focus();
@@ -117,7 +110,7 @@ const ActiveTaskPopUp = (props) => {
                   ))}
                 </ul>
                 {currentSubtaskIndex === selectedTask.subtasks.length && (
-                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "blue" }} />
+                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "#0B3954;" }} />
                 )}
               </div>
             )}
