@@ -2,7 +2,7 @@ function BlogSalesArticle() {
   return (
     <>
       <div className="blog-header">
-        <h1>Productivity App does increase your revenues</h1>
+        <h1>FocusHub does increase your revenues</h1>
       </div>
       <div className="blog-sections">
         <section id="section-0">
@@ -16,12 +16,12 @@ function BlogSalesArticle() {
             In comparison, the advantages of innovative technology can be noticed quickly and are more significant than the rest.
           </p>
           <p>
-            The same is true for Productivity App. Quick improvement in financial performance is observed in businesses that integrated their
-            operational activities with Productivity App. For instance, Burger King fast-food restaurants reduced their cleaning costs by 9%. Through
-            insights, they were also able to include specific clauses in cleaning contracts that interlinked payouts with performances. This allowed
-            for optimum use of investments made in cleaning and hygiene with the best possible results.
+            The same is true for FocusHub. Quick improvement in financial performance is observed in businesses that integrated their operational
+            activities with FocusHub. For instance, Burger King fast-food restaurants reduced their cleaning costs by 9%. Through insights, they were
+            also able to include specific clauses in cleaning contracts that interlinked payouts with performances. This allowed for optimum use of
+            investments made in cleaning and hygiene with the best possible results.
           </p>
-          <p>Your business stands to achieve similar or better results through systematic and structural integration of Productivity App.</p>
+          <p>Your business stands to achieve similar or better results through systematic and structural integration of FocusHub.</p>
           <h2>Direct and indirect impact</h2>
           <p>
             As explained above, the positive impact can be direct or indirect, depending upon the approach and the change. To understand better, let
@@ -83,13 +83,13 @@ function BlogSalesArticle() {
           </table>
         </section>
         <section id="section-1">
-          <h2>How to verify the results of using Productivity App</h2>
-          <p>To measure Productivity App’s impact on financial performance, the following approach is recommended.</p>
+          <h2>How to verify the results of using FocusHub</h2>
+          <p>To measure FocusHub’s impact on financial performance, the following approach is recommended.</p>
           <h3>Step 1</h3>
           <p>
             Identify the key KPI (or set of KPIs) and metrics that you want to track over a specific period. Set benchmarks before starting with
-            Productivity App, against which future performances will be measured or compared. It is suggested to start with one or two KPIs and then
-            expand it to cover all facets of the business.
+            FocusHub, against which future performances will be measured or compared. It is suggested to start with one or two KPIs and then expand it
+            to cover all facets of the business.
           </p>
           <h3>Step 2</h3>
           <p>
@@ -154,27 +154,25 @@ function BlogSalesArticle() {
           </p>
           <h3>Step 5</h3>
           <p>
-            After the set period, compare the results of the selected KPI in both groups before and after using Productivity App. The difference in
-            indicators is the result of Productivity App’s performance. To maintain the authenticity of the test period, it is recommended to not
-            inform store managers about their involvement in the trial.
+            After the set period, compare the results of the selected KPI in both groups before and after using FocusHub. The difference in indicators
+            is the result of FocusHub’s performance. To maintain the authenticity of the test period, it is recommended to not inform store managers
+            about their involvement in the trial.
           </p>
         </section>
         <section id="section-2">
           <h2>If you are looking for guarantees</h2>
           <p>
-            Businesses are curious to know what kind of guarantees a technological innovation like Productivity App can provide. This curiosity can be
+            Businesses are curious to know what kind of guarantees a technological innovation like FocusHub can provide. This curiosity can be
             answered with an example. The manufacturer of a hammer cannot guarantee that you will make more money with it. It is up to you to learn
-            how to nail quickly and accurately, and you can do your job quicker, and therefore earn more money. So Productivity App can reflect a
-            business’s shortcomings and even recommend possible solutions, but whether to implement them or not promptly is entirely the business’s
-            prerogative.
+            how to nail quickly and accurately, and you can do your job quicker, and therefore earn more money. So FocusHub can reflect a business’s
+            shortcomings and even recommend possible solutions, but whether to implement them or not promptly is entirely the business’s prerogative.
           </p>
           <p>
-            As a technological tool, Productivity App is convenient, efficient, and multi-functional. But it is still a tool that is managed by
-            people, so financial results will depend on how effectively it is used by the workforce. On Productivity App’s part, there is consistency
-            in the execution of operational standards across the entire organizational network. It maximizes business efficiency, resource
-            utilization, and compliance requirements to increase profitability. It also provides leadership with analytics-based intelligence and
-            workforce development tools that drive results. At Productivity App, our team delivers a personalized, simple, and cost-effective approach
-            to growing your business.
+            As a technological tool, FocusHub is convenient, efficient, and multi-functional. But it is still a tool that is managed by people, so
+            financial results will depend on how effectively it is used by the workforce. On FocusHub’s part, there is consistency in the execution of
+            operational standards across the entire organizational network. It maximizes business efficiency, resource utilization, and compliance
+            requirements to increase profitability. It also provides leadership with analytics-based intelligence and workforce development tools that
+            drive results. At FocusHub, our team delivers a personalized, simple, and cost-effective approach to growing your business.
           </p>
         </section>
       </div>

@@ -1,29 +1,23 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
+import "./WorkSession.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import Aside from "../../Layouts/Aside/Aside";
-import "./WorkSession.css";
 import TaskForm from "../../Components/TasksForm/TaskForm";
 import Section from "../../Components/TaskSectionContainer/TaskSectionContainer";
 import ActiveTaskPopUp from "../../Components/ActiveTaskPopUp/ActiveTaskPopUp";
 import Button from "../../Components/Button/Button";
-import checklistData from "../../data/checklistSupervisorUtilitiesSanitation.json";
+import subtasksInitialStateData from "../../data/checklistBartenderClose.json";
+import subtasksRestartInitialStateData from "../../data/checklistBartenderOpen.json";
 import ResultPopUp from "../../Components/ResultPopUp/ResultPopUp";
 
 const WorkSession = () => {
   const textareaRef = useRef(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [sectionName, setSectionName] = useState("Bartender Close");
-  const [taskName, setTaskName] = useState("BartenderClose");
-  const [subtasks, setSubtasks] = useState(["Shall we turn off the bar equipment?",
-   "Is the bar counter clean, without streaks, and washed?", 
-   "Has the juicer been cleaned, is the body clean, and is it clean underneath?", 
-   "Is the ice maker clean and without streaks?", 
-   "Can you check the stickers on all open packages and on the preserves in the refrigerator?", 
-   "Is the microwave clean and without streaks?", 
-   "Are the shelves in the refrigerator clean and without streaks?", 
-]);
+  const [sectionName, setSectionName] = useState(subtasksInitialStateData.clName);
+  const [taskName, setTaskName] = useState(subtasksInitialStateData.clName);
+  const [subtasks, setSubtasks] = useState(subtasksInitialStateData.items);
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
@@ -61,9 +55,9 @@ const WorkSession = () => {
     };
 
     setSections([...sections, newSection]);
-    setSectionName("Bartender Open");
-    setTaskName("Bartender Open");
-    setSubtasks(["Is the bartender present at their workplace and appearing according to standards?", "Is the coffee machine clean and decorated according to the standard?"]);
+    setSectionName(subtasksRestartInitialStateData.clName);
+    setTaskName(subtasksRestartInitialStateData.clName);
+    setSubtasks(subtasksRestartInitialStateData.items);
     setDate(new Date().toISOString().slice(0, 10));
 
     setShowForm(false);
@@ -121,7 +115,6 @@ const WorkSession = () => {
     setShowResultModal(false);
   };
 
-  const [lastItemPercentage, setLastItemPercentage] = useState(null);
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
 
@@ -173,7 +166,6 @@ const WorkSession = () => {
     const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
     const updatedStoredTasks = [...storedTasks, completedTask];
     localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-    setLastItemPercentage(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
     console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
   };
   return (
@@ -203,7 +195,6 @@ const WorkSession = () => {
               tasks={section.tasks}
               selectedTask={selectedTask}
               handleTaskClick={handleTaskClick}
-              setShowResultModal={setShowResultModal}
               percentage={section.percentage}
             />
           ))
@@ -225,7 +216,6 @@ const WorkSession = () => {
             setShowForm={setShowForm}
             handleAddSubtask={handleAddSubtask}
             handleRemoveSubtask={handleRemoveSubtask}
-            checklistData={checklistData}
           />
         </div>
       )}
@@ -236,7 +226,6 @@ const WorkSession = () => {
             selectedTask={selectedTask}
             setSelectedTask={setSelectedTask}
             sections={sections}
-            setSections={setSections}
             comments={comments}
             handleCommentChange={handleCommentChange}
             textareaRef={textareaRef}
@@ -246,7 +235,6 @@ const WorkSession = () => {
             devident={devident}
             setDevident={setDevident}
             handleSubmit={handleSubmit}
-            checklistData={checklistData}
           />
         </div>
       )}

@@ -4,7 +4,7 @@ function BlogEfficencyArticle() {
   return (
     <>
       <div className="blog-header">
-        <h1>Improve staff motivation with Productivity App</h1>
+        <h1>Improve staff motivation with FocusHub</h1>
       </div>
       <div className="blog-sections">
         <section id="section-0">
@@ -15,8 +15,8 @@ function BlogEfficencyArticle() {
             a poor test score suggested you as the opposite.
           </p>
           <p>
-            For this reason, Productivity App is often misunderstood as a tool to control employees through error detections and subsequent penalties,
-            though its scope for managing staff motivation is much wider.
+            For this reason, FocusHub is often misunderstood as a tool to control employees through error detections and subsequent penalties, though
+            its scope for managing staff motivation is much wider.
           </p>
           <h2>Incorrect understanding leads to demotivation</h2>
           <p>
@@ -27,10 +27,8 @@ function BlogEfficencyArticle() {
           </p>
         </section>
         <section id="section-1">
-          <h2>List of motivation tools available with Productivity App</h2>
-          <p>
-            Productivity App provides advanced features to improve staff motivation which are relevant in current business dynamics and challenges.
-          </p>
+          <h2>List of motivation tools available with FocusHub</h2>
+          <p>FocusHub provides advanced features to improve staff motivation which are relevant in current business dynamics and challenges.</p>
           <ul>
             <li>
               <p>
@@ -39,9 +37,9 @@ function BlogEfficencyArticle() {
             </li>
           </ul>
           <p>
-            Productivity App allows you to objectively assess the staff’s work quality. The most obvious way to motivate your employees is to make the
-            bonus amount based on the scores obtained during the audit through Productivity App. However, there are certain aspects. It is common for
-            an employee to be offered a bonus for 100% compliance with corporate standards, in addition to their basic salary.
+            FocusHub allows you to objectively assess the staff’s work quality. The most obvious way to motivate your employees is to make the bonus
+            amount based on the scores obtained during the audit through FocusHub. However, there are certain aspects. It is common for an employee to
+            be offered a bonus for 100% compliance with corporate standards, in addition to their basic salary.
           </p>
           <p>
             This is wrong. Corporate quality standards are a mandatory work condition. If an employee does not comply with them, then they do not work
@@ -62,9 +60,9 @@ function BlogEfficencyArticle() {
             work badly, you will not see any more effort from them.
           </p>
           <p>
-            Productivity App will not only help set up employee monitoring to detect errors but also to identify those who perform better than others.
-            With a report on all the stores for a certain period of time, you will spot the managers working at high efficiency and you will be able
-            to reward them.
+            FocusHub will not only help set up employee monitoring to detect errors but also to identify those who perform better than others. With a
+            report on all the stores for a certain period of time, you will spot the managers working at high efficiency and you will be able to
+            reward them.
           </p>
           <p>
             You can also use the task setting function to manage staff motivation. For example, all the managers of the chain stores are tasked with
@@ -86,9 +84,9 @@ function BlogEfficencyArticle() {
             actual performances.
           </p>
           <p>
-            With Productivity App, you can objectively create an internal talent pool. We recommend double-checking audit results. First by the store
-            manager and then by the regional manager. If these assessments agree with each other over a period of time, then this indicates a high
-            work quality of the store manager. This means they can be included in the internal talent pool.
+            With FocusHub, you can objectively create an internal talent pool. We recommend double-checking audit results. First by the store manager
+            and then by the regional manager. If these assessments agree with each other over a period of time, then this indicates a high work
+            quality of the store manager. This means they can be included in the internal talent pool.
           </p>
           <p>
             This verification method can also be used to motivate staff. If store managers know that they have a fair chance to get promoted, then
@@ -102,9 +100,9 @@ function BlogEfficencyArticle() {
             </li>
           </ul>
           <p>
-            Working with Productivity App means deep knowledge of corporate quality standards. Only by understanding how to do their job, employees
-            will be able to answer checklists' questions correctly. Consequently, staff will be motivated to keep their knowledge up to date. This
-            applies to all the people involved in the audit process:
+            Working with FocusHub means deep knowledge of corporate quality standards. Only by understanding how to do their job, employees will be
+            able to answer checklists' questions correctly. Consequently, staff will be motivated to keep their knowledge up to date. This applies to
+            all the people involved in the audit process:
           </p>
           <ol>
             <li>
@@ -123,7 +121,7 @@ function BlogEfficencyArticle() {
           </ul>
           <p>
             It is possible to increase staff motivation by introducing a gaming methodology into the work. The main concern in organizing such
-            contests is the objectivity of evaluation. You can provide that with Productivity App.&nbsp;
+            contests is the objectivity of evaluation. You can provide that with FocusHub.&nbsp;
           </p>
           <p>
             For example, the company holds a new marketing campaign. You create a separate checklist that comprehensively assesses its performance and
@@ -135,9 +133,9 @@ function BlogEfficencyArticle() {
           <h2>Combine employee management with motivation process&nbsp;</h2>
           <p>
             The main thing in this process is to set the right goals and help employees understand why they need control over their work. It will be
-            more difficult to do that without appropriate technological support. Productivity App helps businesses educate their staff on updated
-            processes, reward high performers, assist those who need additional support, and maintain a work culture of positive competition and
-            motivation. Connect with us for a personalized, simple, and cost-effective approach towards your business.
+            more difficult to do that without appropriate technological support. FocusHub helps businesses educate their staff on updated processes,
+            reward high performers, assist those who need additional support, and maintain a work culture of positive competition and motivation.
+            Connect with us for a personalized, simple, and cost-effective approach towards your business.
           </p>
         </section>
       </div>

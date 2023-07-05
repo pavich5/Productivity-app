@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { FaCheckCircle, FaStar, FaHeart } from "react-icons/fa";
 import { AiOutlineInfoCircle, AiOutlineDownload } from "react-icons/ai";
 import { RiQuestionnaireFill, RiArrowDownSFill } from "react-icons/ri";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "./Blog.css";
 import BlogSalesArticle from "./BlogSalesArticle";
@@ -17,7 +17,7 @@ const BlogArticle = () => {
   const isLearnMoreComp = location.pathname === "/learn-more-compensation";
   const isLearnMoreLoyalty = location.pathname === "/learn-more-loyalty";
 
-  const [activeSlide, setActiveSlide] = React.useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const handleSlideChange = (splide) => {
     setActiveSlide(splide.index);
@@ -97,7 +97,7 @@ const BlogArticle = () => {
 
   return (
     <div className="blog-article-content__content">
-      <p className="check-out-text" style={{fontSize: '22px', }}>
+      <p className="check-out-text" style={{ fontSize: "22px" }}>
         Don't believe us? Check out for yourself!
       </p>
 
@@ -121,6 +121,7 @@ const BlogArticle = () => {
         >
           {renderSlides()}
         </Splide>
+        <NavLink to="/">Back</NavLink>
       </div>
     </div>
   );

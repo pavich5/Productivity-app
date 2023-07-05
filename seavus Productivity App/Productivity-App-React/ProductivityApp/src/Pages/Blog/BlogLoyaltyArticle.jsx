@@ -15,8 +15,8 @@ function BlogLoyaltyArticle() {
             But usually, there is one major hindrance that such audits take a long time to complete and generate reports.
           </p>
           <p>
-            The restaurant chains faced similar challenges with their internal audits. Until they associated with Productivity App, and in just three
-            months, they achieved higher efficiency of the entire team with only half the time spent on audits.
+            The restaurant chains faced similar challenges with their internal audits. Until they associated with FocusHub, and in just three months,
+            they achieved higher efficiency of the entire team with only half the time spent on audits.
           </p>
           <h2>Why internal audits are necessary?</h2>
           <p>
@@ -105,17 +105,14 @@ function BlogLoyaltyArticle() {
                 <b>The store opening checklist has been converted to electronic format.</b>
                 <br />
                 <br />
-                Thanks to the convenience available with Productivity App, multiple review points can be added. For example, to verify a successful
-                task completion, a photo can be attached as a response. Moreover, the app allows the photo to be taken at the time of verification
-                only, and not uploaded from the gallery (this ensures that a real photo is attached, and employees cannot trick the system by using
-                old photos).&nbsp;
+                Thanks to the convenience available with FocusHub, multiple review points can be added. For example, to verify a successful task
+                completion, a photo can be attached as a response. Moreover, the app allows the photo to be taken at the time of verification only,
+                and not uploaded from the gallery (this ensures that a real photo is attached, and employees cannot trick the system by using old
+                photos).&nbsp;
                 <br />
                 <br />
               </p>
             </li>
-            <p>
-              <i>Pic. "Checks" and "Tasks" sections interface in Productivity App.</i>
-            </p>
             <li>
               <p>
                 <b>Digitized checklists for the manager and chef.</b>
@@ -159,7 +156,7 @@ function BlogLoyaltyArticle() {
         </section>
         <section id="section-4">
           <h2>What were the results?</h2>
-          <p>After the first three months of using Productivity App, this restaurant chain received the following results:</p>
+          <p>After the first three months of using FocusHub, this restaurant chain received the following results:</p>
           <ul>
             <li>
               <p>Time taken for conducting quality&nbsp;inspections was reduced by half, from four hours to two.</p>
@@ -169,11 +166,11 @@ function BlogLoyaltyArticle() {
             </li>
           </ul>
           <p>
-            With Productivity App, inspections became more efficient and faster. It became possible to quickly add new questions and to provide faster
+            With FocusHub, inspections became more efficient and faster. It became possible to quickly add new questions and to provide faster
             feedback. As a result, the entire staff was able to fulfill their work responsibilities with higher quality.&nbsp;
           </p>
           <p>
-            The improvements accomplished by this restaurant chain could also be done by your business with Productivity App. Connect with us for a
+            The improvements accomplished by this restaurant chain could also be done by your business with FocusHub. Connect with us for a
             personalized, simple, and cost-effective approach to overcome your challenges and grow.
           </p>
           <br />

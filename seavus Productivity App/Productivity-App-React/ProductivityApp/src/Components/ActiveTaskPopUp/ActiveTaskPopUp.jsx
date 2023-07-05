@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Button from "../Button/Button";
 import "./ActiveTaskPopUp.css";
 
@@ -88,29 +88,29 @@ const ActiveTaskPopUp = (props) => {
                           ref={textareaRef}
                           value={comments[index] || ""}
                           onChange={(e) => handleCommentChange(index, e)}
+                          disabled={index !== currentSubtaskIndex}
                           placeholder="Enter your comment (optional)"
                         ></textarea>
                       </div>
                       <div className="ButtonsPopUp">
-                      <Button
-                        onBtnClick={() => handleAnswerButton(index, "yes")}
-                        disabled={index !== currentSubtaskIndex}
-                        btnStyle={{ backgroundColor: "green" }}
-                        btnText="Yes"
-                      />
-                      <Button
-                        onBtnClick={() => handleAnswerButton(index, "no")}
-                        disabled={index !== currentSubtaskIndex}
-                        btnStyle={{ backgroundColor: "red" }}
-                        btnText="No"
-                      />
+                        <Button
+                          onBtnClick={() => handleAnswerButton(index, "yes")}
+                          disabled={index !== currentSubtaskIndex}
+                          btnStyle={{ backgroundColor: "green" }}
+                          btnText="Yes"
+                        />
+                        <Button
+                          onBtnClick={() => handleAnswerButton(index, "no")}
+                          disabled={index !== currentSubtaskIndex}
+                          btnStyle={{ backgroundColor: "red" }}
+                          btnText="No"
+                        />
                       </div>
-                     
                     </li>
                   ))}
                 </ul>
                 {currentSubtaskIndex === selectedTask.subtasks.length && (
-                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "#0B3954;" }} />
+                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "#0B3954" }} />
                 )}
               </div>
             )}
