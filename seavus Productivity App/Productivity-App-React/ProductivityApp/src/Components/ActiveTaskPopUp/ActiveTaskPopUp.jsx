@@ -69,9 +69,13 @@ const ActiveTaskPopUp = (props) => {
   };
 
   const fullHandleSubmitLogic = () => {
+<<<<<<< Updated upstream
     console.log(selectedTask);
     handleSubmit();
     handleSubmitStates();
+=======
+    handleSubmit(), handleSubmitStates();
+>>>>>>> Stashed changes
   };
 
   return (
