@@ -14,7 +14,7 @@ const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, setSho
     setSmallResultModal(false);
   };
   return (
-    <section className="TaskSectionContainer" onClick={(event) => handleSectionClick(event)}>
+    <section className="TaskSectionContainer" onClick={handleSectionClick}>
       <h3>
         <FontAwesomeIcon icon={faCircle} />
         {id} {sectionName} - {percentage} %

@@ -1,17 +1,13 @@
 import "./ResultPopUp.css";
 import Button from "../Button/Button";
 
-const ResultPopUp = ({
-  handleResultModalClose,
-  getSectionPercentageFromLocalStorage,
-  id,
-}) => {
+const ResultPopUp = (props) => {
+  const { handleResultModalClose, percentage } = props;
   return (
     <div className="resultModalOverlay">
       <div className="resultModalContent">
         <h3>Checklist Result:</h3>
-        {/* <p>{Math.floor(percentage)}%</p> */}
-        <p>{Math.floor(getSectionPercentageFromLocalStorage(id))}%</p>
+        <p>{Math.floor(percentage)}%</p>
         <Button onBtnClick={handleResultModalClose} btnText="Close" />
       </div>
     </div>
