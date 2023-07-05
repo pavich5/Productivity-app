@@ -118,17 +118,22 @@
   opacity: 1;
 }
 
-@media screen and (min-width: 1900px) and (max-width: 1920px) {
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .ContactUs {
+    background-color: #f2f2f2;
+  }
+
   .contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     flex: 1;
-    padding: 30px;
+    padding: 10px;
     width: 800px;
     margin: 0 auto;
     box-sizing: border-box;
+    max-height: fit-content;
   }
 
   .contact-content h1 {
@@ -140,11 +145,13 @@
   .contact-form {
     width: 600px;
     height: 300px;
+    background-color: #f2f2f2;
   }
 
   .contact-item {
     display: flex;
     justify-content: center;
+    background-color: #f2f2f2;
   }
   .contactUs-btn {
     width: 180px;
