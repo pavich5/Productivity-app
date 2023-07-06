@@ -6,7 +6,7 @@ const SmallResultPopUp = ({ handleResultModalClose, percentage }) => {
     <div className="smallResultModalOverlay">
       <div className="smallResultModalContent">
         <h3>Checklist Result:</h3>
-        <p>{Math.floor(percentage)}%</p>
+        <p>{isNaN(percentage) ? 0 : Math.floor(percentage)}%</p>
         <Button onBtnClick={handleResultModalClose} btnText="Close" />
       </div>
     </div>
