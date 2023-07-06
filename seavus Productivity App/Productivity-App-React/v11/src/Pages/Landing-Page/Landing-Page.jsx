@@ -20,22 +20,22 @@ const LandingPage = () => {
           <div className="Metric">
             <h3 className="plusNumbers">+5%</h3>
             <h3>Increase in Sales</h3>
-            <NavLink to="/learn-more-sales">Learn more</NavLink>
+            <NavLink to="/blog/learn-more-sales">Learn more</NavLink>
           </div>
           <div className="Metric">
             <h3 className="plusNumbers">+20%</h3>
             <h3>Increase in Staff Efficiency</h3>
-            <NavLink to="/learn-more-efficiency">Learn more</NavLink>
+            <NavLink to="/blog/learn-more-efficiency">Learn more</NavLink>
           </div>
           <div className="Metric">
             <h3 className="plusNumbers">to 20%</h3>
             <h3>Savings in Compensation</h3>
-            <NavLink to="/learn-more-compensation">Learn more</NavLink>
+            <NavLink to="/blog/learn-more-compensation">Learn more</NavLink>
           </div>
           <div className="Metric">
             <h3 className="plusNumbers">+25%</h3>
             <h3>Increase in Customer Loyalty</h3>
-            <NavLink to="/learn-more-loyalty">Learn more</NavLink>
+            <NavLink to="/blog/learn-more-loyalty">Learn more</NavLink>
           </div>
         </div>
         <div className="Buttons">

@@ -7,12 +7,10 @@ import { Link } from "react-router-dom";
 
 function Header(props) {
   const location = useLocation();
-  const isLoginOrHome = location.pathname === "/" || location.pathname === "/login";
+  const isLoginOrHome = location.pathname === "/" || location.pathname === "/login" || location.pathname.startsWith("/blog");
   const isDashboard = !isLoginOrHome;
 
-  const navbarData = isLoginOrHome
-    ? props.navbarLoginData
-    : props.navbarDashboardData;
+  const navbarData = isLoginOrHome ? props.navbarLoginData : props.navbarDashboardData;
 
   const userIcon = isDashboard ? <UserIcon /> : null;
 

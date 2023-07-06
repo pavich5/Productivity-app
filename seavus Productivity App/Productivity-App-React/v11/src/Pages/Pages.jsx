@@ -24,10 +24,10 @@ export const Pages = () => {
       <Route path="/about" element={<AboutUs />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/user-info" element={<UserInfoPage />} />
-      <Route path="/learn-more-sales" element={<BlogArticle />} />
-      <Route path="/learn-more-efficiency" element={<BlogArticle />} />
-      <Route path="/learn-more-compensation" element={<BlogArticle />} />
-      <Route path="learn-more-loyalty" element={<BlogArticle />} />
+      <Route path="/blog/learn-more-sales" element={<BlogArticle />} />
+      <Route path="/blog/learn-more-efficiency" element={<BlogArticle />} />
+      <Route path="/blog/learn-more-compensation" element={<BlogArticle />} />
+      <Route path="/blog/learn-more-loyalty" element={<BlogArticle />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
