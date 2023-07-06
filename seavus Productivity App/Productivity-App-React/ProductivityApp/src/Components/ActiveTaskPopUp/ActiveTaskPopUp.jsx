@@ -80,9 +80,7 @@ const ActiveTaskPopUp = (props) => {
                     <li
                       key={subtask + index}
                       ref={(ref) => (inputRefs.current[index] = ref)}
-                      className={
-                        index !== currentSubtaskIndex ? "disabled-li" : ""
-                      }
+                      className={index !== currentSubtaskIndex ? "disabled-li" : ""}
                     >
                       <h4>{subtask}</h4>
                       <div>
@@ -112,15 +110,7 @@ const ActiveTaskPopUp = (props) => {
                   ))}
                 </ul>
                 {currentSubtaskIndex === selectedTask.subtasks.length && (
-<<<<<<< HEAD
                   <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "#0B3954" }} />
-=======
-                  <Button
-                    onBtnClick={fullHandleSubmitLogic}
-                    btnText="Submit"
-                    btnStyle={{ backgroundColor: "#0B3954" }}
-                  />
->>>>>>> 28d29c57edb7a80f1c017c06a0fff7e440cb9f7e
                 )}
               </div>
             )}
