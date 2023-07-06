@@ -27,11 +27,12 @@
   justify-content: space-between;
 }
 .reminders-container h1 {
-  text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.reminders-container h1 svg{
-  position: absolute;
+.reminders-container h1 svg {
   left: 48.5%;
   top: 16%;
   width: 40px;
@@ -42,7 +43,6 @@
 
 .reminder-delete-btn {
   background-color: #087e8b;
-  /* color: #ffffff; */
   border: none;
   padding: 5px 10px;
   cursor: pointer;
@@ -52,7 +52,7 @@
   background-color: #087e8b;
   color: #ccc;
 }
-.polite-message{
+.polite-message {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -71,7 +71,11 @@
   }
   .reminders-container h1 {
     margin: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .reminders-list {
     list-style-type: none;
     padding: 0 60px;
@@ -109,8 +113,7 @@
     background-color: #087e8b;
     color: #ccc;
   }
-  .reminders-container h1 svg{
-    position: absolute;
+  .reminders-container h1 svg {
     left: 48.5%;
     top: 10.9%;
     width: 40px;
@@ -119,20 +122,14 @@
 
 @media screen and (min-width: 620px) and (max-width: 918px) {
   .reminders-list {
-    /* list-style-type: none;
-    padding: 0; */
-    /* display: grid; */
-    grid-template-columns: repeat(3, 1fr); /* Update the number of columns */
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
   }
 }
 
 @media screen and (max-width: 620px) {
   .reminders-list {
-    /* list-style-type: none;
-    padding: 0; */
-    /* display: grid; */
-    grid-template-columns: repeat(1, 1fr); /* Update the number of columns */
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
   }
 }
