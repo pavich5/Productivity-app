@@ -26,7 +26,7 @@ const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, percen
   return (
     <section className="TaskSectionContainer" onClick={handleSectionClick}>
       <h3>
-        <span className="selectedText">{id} </span> {sectionName} - {isNaN(percentage) ? 0 : Math.floor(percentage)} - {getDateFromTasks()}%
+        <span className="selectedText">{id} </span> {sectionName} - {isNaN(percentage) ? 0 : Math.floor(percentage)} % - {getDateFromTasks()}
       </h3>
       <ul className="taskList">
         {tasks.map((task, taskIndex) => (
