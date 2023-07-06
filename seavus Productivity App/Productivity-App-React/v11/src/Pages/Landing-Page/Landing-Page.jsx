@@ -1,13 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Landing-Page.css";
-// import logo from "../../assets/images/Logo.png";
 
 const LandingPage = () => {
   return (
     <div className="LandingPage">
-      {/* <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div> */}
       <div className="Information">
         <h1 id="LogoText" style={{ color: "#3d3d3d" }}>
           Productivity App for the Service Industries
