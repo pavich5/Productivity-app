@@ -166,6 +166,21 @@
   flex-direction: column;
 }
 
+.input-alert {
+  border: 2px solid black; /* Add a red border to indicate an error */
+}
+
+.alert-bubble {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
   .DatePickingPageContainer {
     display: flex;

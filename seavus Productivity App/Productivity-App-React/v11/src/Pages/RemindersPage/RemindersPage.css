@@ -46,6 +46,7 @@
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+  min-width: fit-content;
 }
 
 .reminder-delete-btn:hover {
