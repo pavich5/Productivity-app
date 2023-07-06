@@ -52,6 +52,8 @@ label {
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  border-bottom: 2px solid #0b3954;
+  border-radius: 60% / 30%;
 }
 
 input {
