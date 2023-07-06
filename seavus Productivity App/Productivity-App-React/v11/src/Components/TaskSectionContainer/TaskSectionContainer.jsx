@@ -16,11 +16,17 @@ const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, percen
   const handleSMallResultModalClose = () => {
     setSmallResultModal(false);
   };
+  const getDateFromTasks = () => {
+    if (tasks.length > 0 && tasks[0].date) {
+      return tasks[0].date;
+    }
+    return "Completed";
+  };
 
   return (
     <section className="TaskSectionContainer" onClick={handleSectionClick}>
       <h3>
-        <span className="selectedText">{id} </span> {sectionName} - {isNaN(percentage) ? 0 : Math.floor(percentage)}%
+        <span className="selectedText">{id} </span> {sectionName} - {isNaN(percentage) ? 0 : Math.floor(percentage)} - {getDateFromTasks()}%
       </h3>
       <ul className="taskList">
         {tasks.map((task, taskIndex) => (
@@ -29,9 +35,7 @@ const Section = ({ id, sectionName, tasks, selectedTask, handleTaskClick, percen
             {task.subtasks?.length > 0 && (
               <ul className="subTaskList">
                 {task.subtasks.map((subtask, subtaskIndex) => (
-                  <li key={subtaskIndex}>
-                    {subtask}
-                  </li>
+                  <li key={subtaskIndex}>{subtask}</li>
                 ))}
               </ul>
             )}

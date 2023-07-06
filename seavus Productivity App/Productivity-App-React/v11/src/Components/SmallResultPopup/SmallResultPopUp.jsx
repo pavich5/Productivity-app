@@ -1,8 +1,7 @@
 import "./SmallResultPopUp.css";
 import Button from "../Button/Button";
 
-const SmallResultPopUp = (props) => {
-  const { handleResultModalClose, percentage } = props;
+const SmallResultPopUp = ({ handleResultModalClose, percentage }) => {
   return (
     <div className="smallResultModalOverlay">
       <div className="smallResultModalContent">
