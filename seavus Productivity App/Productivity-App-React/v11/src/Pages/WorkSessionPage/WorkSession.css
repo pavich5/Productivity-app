@@ -219,7 +219,13 @@ section ul li:hover {
 }
 
 .popupContainer input[type="text"],
-.popupContainer input[type="date"],
+.popupContainer input[type="date"] {
+  width: 97.5%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .popupContainer select {
   width: 100%;
   padding: 8px;

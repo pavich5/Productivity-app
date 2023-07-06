@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import Button from "../Button/Button";
 import "./ActiveTaskPopUp.css";
+import { Colors } from "chart.js";
 
-const ActiveTaskPopUp = props => {
+const ActiveTaskPopUp = (props) => {
   const {
     selectedTask,
     setSelectedTask,
@@ -60,6 +61,10 @@ const ActiveTaskPopUp = props => {
     setShowResultModal(true);
     setIsPopupOpen(false);
   };
+  const handleClosePopUp = () => {
+    setSelectedTask(null);
+    setIsPopupOpen(false);
+  };
 
   const fullHandleSubmitLogic = () => {
     handleSubmit(), handleSubmitStates();
@@ -70,6 +75,9 @@ const ActiveTaskPopUp = props => {
       {isPopupOpen && (
         <div className="popupOverlay">
           <div className="popupContent">
+            <span className="closeBtn">
+              <Button className="popupCloseBtn" onBtnClick={handleClosePopUp} btnText="x" btnStyle={{ color: "grey", margin: 0, padding: 0 }} />
+            </span>
             <h3>{selectedTask.taskName}</h3>
             <p>Date: {selectedTask.date}</p>
             {selectedTask.subtasks.length > 0 && (
@@ -79,17 +87,15 @@ const ActiveTaskPopUp = props => {
                   {selectedTask.subtasks.map((subtask, index) => (
                     <li
                       key={subtask + index}
-                      ref={ref => (inputRefs.current[index] = ref)}
-                      className={
-                        index !== currentSubtaskIndex ? "disabled-li" : ""
-                      }
+                      ref={(ref) => (inputRefs.current[index] = ref)}
+                      className={index !== currentSubtaskIndex ? "disabled-li" : ""}
                     >
                       <h4>{subtask}</h4>
                       <div>
                         <textarea
                           ref={textareaRef}
                           value={comments[index] || ""}
-                          onChange={e => handleCommentChange(index, e)}
+                          onChange={(e) => handleCommentChange(index, e)}
                           disabled={index !== currentSubtaskIndex}
                           placeholder="Enter your comment (optional)"
                         ></textarea>
@@ -112,11 +118,7 @@ const ActiveTaskPopUp = props => {
                   ))}
                 </ul>
                 {currentSubtaskIndex === selectedTask.subtasks.length && (
-                  <Button
-                    onBtnClick={fullHandleSubmitLogic}
-                    btnText="Submit"
-                    btnStyle={{ backgroundColor: "#0B3954" }}
-                  />
+                  <Button onBtnClick={fullHandleSubmitLogic} btnText="Submit" btnStyle={{ backgroundColor: "#0B3954" }} />
                 )}
               </div>
             )}
