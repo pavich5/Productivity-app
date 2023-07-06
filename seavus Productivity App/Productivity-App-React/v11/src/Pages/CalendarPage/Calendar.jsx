@@ -14,12 +14,12 @@ const DatePickingPage = () => {
     console.log(dateTasks[selectedDate]);
   }, [selectedDate]);
 
-  const handleDateChange = date => {
+  const handleDateChange = (date) => {
     setSelectedDate(date.toDateString());
   };
 
   const handleAddTask = () => {
-    setDateTasks(prevData => {
+    setDateTasks((prevData) => {
       const prevTasks = prevData[selectedDate] ? prevData[selectedDate] : [];
 
       const newTasks = [...prevTasks, newTask];
@@ -30,10 +30,12 @@ const DatePickingPage = () => {
     console.log(dateTasks);
   };
 
-  const handleDeleteTask = index => {
-    const updatedTasks = [...tasks];
-    updatedTasks.splice(index, 1);
-    setTasks(updatedTasks);
+  const handleDeleteTask = (index) => {
+    setDateTasks((prevData) => {
+      const updatedTasks = [...prevData[selectedDate]];
+      updatedTasks.splice(index, 1);
+      return { ...prevData, [selectedDate]: updatedTasks };
+    });
   };
 
   return (
@@ -50,28 +52,15 @@ const DatePickingPage = () => {
         </div>
         <h2 style={{ margin: 0 }}>Tasks for {selectedDate}</h2>
         <div className="AddTaskContainer">
-          <input
-            type="text"
-            value={newTask}
-            onChange={e => setNewTask(e.target.value)}
-            placeholder="Enter a new task"
-          />
-          <Button
-            onBtnClick={handleAddTask}
-            btnText="Add Task"
-            className="AddTaskButton"
-          />
+          <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Enter a new task" />
+          <Button onBtnClick={handleAddTask} btnText="Add Task" className="AddTaskButton" />
         </div>
         <div className="TasksContainer">
           <ul>
             {dateTasks[selectedDate]?.map((task, index) => (
               <li key={index}>
                 <span>{task}</span>
-                <Button
-                  onBtnClick={() => handleDeleteTask(index)}
-                  btnText="X"
-                  className="DeleteTaskButton"
-                />
+                <Button onBtnClick={() => handleDeleteTask(index)} btnText="X" className="DeleteTaskButton" />
               </li>
             ))}
           </ul>
