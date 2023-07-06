@@ -1,7 +1,7 @@
 {
   "predefinedLists": {
     "bartenderClose": {
-      "clName": "BartenderClose",
+      "clName": "Bartender Close",
       "items": [
         "Shall we turn off the bar equipment?",
         "Is the bar counter clean, without streaks, and washed?",
@@ -17,7 +17,7 @@
       ]
     },
     "bartenderOpen": {
-      "clName": "BartenderOpen",
+      "clName": "Bartender Open",
       "items": [
         "Is the bartender present at their workplace and appearing according to standards?",
         "Is the coffee machine clean and decorated according to the standard?",
@@ -41,7 +41,7 @@
       ]
     },
     "managerClose": {
-      "clName": "ManagerClose",
+      "clName": "Manager Close",
       "items": [
         "Does the stand display from the outside?",
         "Is the stand clean and undamaged?",
@@ -92,7 +92,7 @@
       ]
     },
     "managerDailyChecklist": {
-      "clName": "ManagerDailyChecklist",
+      "clName": "Manager Daily Checklist",
       "items": [
         "Tables Ok",
         "Table tents (line up) Ok",
@@ -132,7 +132,7 @@
       ]
     },
     "managerDailyKitchen": {
-      "clName": "ManagerDailyKitchenClosing",
+      "clName": "Manager Daily Kitchen Closing",
       "items": [
         "Store ingredients still within holding time",
         "Remove ingredients from rail area of Refrigerated Salad Prep Table",
@@ -155,7 +155,7 @@
       ]
     },
     "managerWaiter": {
-      "clName": "ManagerWaiter",
+      "clName": "Manager Waiter",
       "items": [
         "Do the waiter's uniforms meet the standards?",
         "Is the badge available and in satisfactory condition, attached on the right?",
@@ -171,7 +171,7 @@
       ]
     },
     "managerWeeklyChecklist": {
-      "clName": "ManagerWeeklyChecklist",
+      "clName": "Manager Weekly Checklist",
       "items": [
         "Has the surrounding area been cleared of garbage (and snow in winter)?",
         "Do the garbage container (on the street) stand in place, not on the roadway?",
@@ -226,7 +226,7 @@
       ]
     },
     "supervisorClose": {
-      "clName": "SupervisorClose",
+      "clName": "Supervisor Close",
       "items": [
         "Verify that eRQA was completed",
         "Give section leaders copies of closing checklists",
@@ -253,7 +253,7 @@
       ]
     },
     "supervisorUtilities": {
-      "clName": "SupervisorUtilitiesSanitation",
+      "clName": "Supervisor Utilities Sanitation",
       "items": [
         "Stoves: Are they working and clean?",
         "Ovens: Are they working and clean?",
@@ -339,7 +339,7 @@
       ]
     },
     "supervisorWeekly": {
-      "clName": "SupervisorWeeklyChecklist",
+      "clName": "Supervisor Weekly Checklist",
       "items": [
         "Has the surrounding area been cleared of garbage (and snow in winter)?",
         "Do the garbage containers (on the street) stand in place, not on the roadway?",
