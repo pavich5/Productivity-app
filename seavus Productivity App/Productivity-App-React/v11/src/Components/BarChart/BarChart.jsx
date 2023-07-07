@@ -1,7 +1,7 @@
+import "./BarChart.css";
 import { useState } from "react";
 import { Bar, Doughnut } from "react-chartjs-2";
 import Chart from "chart.js/auto";
-import "./BarChart.css";
 import Button from "../Button/Button";
 
 const BarChart = () => {
@@ -57,7 +57,7 @@ const BarChart = () => {
 
   return (
     <div className="bar-chart">
-      <h2>Chart Example</h2>
+      <h2>Basic Performance Chart</h2>
       {chartType === "bar" ? <Bar data={data} options={options} /> : <Doughnut data={data} options={options} />}
       <Button onBtnClick={handleChartToggle} btnText="Toggle Chart" className="toggleChartBtn" />
     </div>
