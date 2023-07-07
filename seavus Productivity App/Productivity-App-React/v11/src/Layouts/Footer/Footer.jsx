@@ -1,11 +1,11 @@
-import './Footer.css'
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
-      <p>© 2023 Productivity App. All rights reserved.</p>
+      <p>© 2023 Focus Hub | All rights reserved </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

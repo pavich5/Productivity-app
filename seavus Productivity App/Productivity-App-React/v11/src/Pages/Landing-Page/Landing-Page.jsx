@@ -6,11 +6,11 @@ const LandingPage = () => {
     <div className="LandingPage">
       <div className="Information">
         <h1 id="LogoText" style={{ color: "#3d3d3d" }}>
-          Productivity App for the Service Industries
+          Empower your team, amplify productivity !
         </h1>
         <br />
         <h2 id="motto">
-          <i>Empower your team, amplify productivity !</i>
+          <i>Productivity App for the Service Industries</i>
         </h2>
         <div className="Metrics">
           <div className="Metric">
