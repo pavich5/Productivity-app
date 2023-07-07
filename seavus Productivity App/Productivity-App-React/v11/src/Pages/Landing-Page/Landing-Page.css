@@ -18,12 +18,13 @@
 
 #motto,
 #LogoText {
+  color: #3d3d3d;
   margin: 0;
   padding: 0;
 }
 
 #LogoText {
-  color: #087e8b;
+  margin-bottom: 30px;
 }
 
 #loginBtn,
@@ -61,10 +62,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .Metric {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
   background-color: #0b3954;
   border-radius: 8px;
   padding: 20px;
@@ -77,16 +81,19 @@
 .Metric h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #b7d7ea;
+  /* color: #b7d7ea; */
+  color: #f0f6f9;
+  /* color: rgb(238, 224, 224); */
 }
 
 .Metric a {
-  color: #007bff;
+  color: #3999ff;
   text-decoration: none;
+  padding-top: 20px;
 }
 
 .Metric a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1900px) and (max-width: 1920px) {
@@ -108,7 +115,7 @@
     padding: 0;
   }
 
-  #motto {
+  /* #motto {
     font-size: 26px;
     margin: 0;
     padding: 0;
@@ -118,6 +125,19 @@
     margin: 0;
     padding: 0;
     color: #000000;
+    font-size: 38px;
+  } */
+
+  #motto,
+  #LogoText {
+    font-size: 26px;
+    color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+  }
+
+  #LogoText {
+    margin-bottom: 30px;
     font-size: 38px;
   }
 

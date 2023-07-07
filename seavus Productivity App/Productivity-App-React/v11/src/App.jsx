@@ -8,7 +8,7 @@ import { Pages } from "./Pages/Pages";
 function App() {
   const navbarLoginData = [
     {
-      text: "Tips&Tricks",
+      text: "Tips & Tricks",
       link: "/productive-tips",
     },
     {

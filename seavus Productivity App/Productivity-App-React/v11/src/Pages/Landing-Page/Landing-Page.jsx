@@ -10,12 +10,12 @@ const LandingPage = () => {
         </h1>
         <br />
         <h2 id="motto">
-          <i>Unleash your productivity potential !</i>
+          <i>Empower your team, amplify productivity !</i>
         </h2>
         <div className="Metrics">
           <div className="Metric">
-            <h3 className="plusNumbers">+5%</h3>
-            <h3>Increase in Sales</h3>
+            <h3 className="plusNumbers">+10%</h3>
+            <h3>Increase in Sales and Revenue</h3>
             <NavLink to="/blog/learn-more-sales">Learn more</NavLink>
           </div>
           <div className="Metric">
@@ -24,7 +24,7 @@ const LandingPage = () => {
             <NavLink to="/blog/learn-more-efficiency">Learn more</NavLink>
           </div>
           <div className="Metric">
-            <h3 className="plusNumbers">to 20%</h3>
+            <h3 className="plusNumbers">up to 20%</h3>
             <h3>Savings in Compensation</h3>
             <NavLink to="/blog/learn-more-compensation">Learn more</NavLink>
           </div>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Kanit&family=Pacifico&family=Satisfy&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Poppins:wght@400;500;600;700;800&family=Ysabeau+SC:wght@500;600;700;800;900&display=swap');header {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Poppins:wght@400;500;600;700;800&family=Ysabeau+SC:wght@500;600;700;800;900&display=swap");
+header {
   background-color: #0b3954;
   color: #b7d7ea;
   padding: 20px;
@@ -15,9 +16,9 @@ nav {
 }
 
 nav a .AppTitle {
-  font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-   font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
   position: absolute;
   top: 10px;
   left: 6%;
@@ -51,7 +52,8 @@ li {
 
 ul a li {
   text-decoration: none;
-  color: #b7d7ea;
+  /* color: #b7d7ea; */
+  color: #f0f6f9;
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease; /* Added transition property */
@@ -108,9 +110,9 @@ header > nav .active {
 
 @media screen and (min-width: 1900px) {
   nav a .AppTitle {
-    font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-     font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
     position: absolute;
     top: 10px;
     left: 4.5%;
