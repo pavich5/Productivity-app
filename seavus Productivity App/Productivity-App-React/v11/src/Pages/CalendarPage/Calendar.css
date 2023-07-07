@@ -36,6 +36,7 @@
   max-width: 500px;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .TasksContainer h2 {
@@ -173,6 +174,7 @@
 .alert-bubble {
   border: 1px solid black;
   position: absolute;
+  top: 270px;
   z-index: 1;
   background-color: rgb(255, 255, 255);
   color: black;

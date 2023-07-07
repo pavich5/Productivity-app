@@ -1,10 +1,6 @@
-.ProductivityTips {
-  display: flex;
-}
-
 .blog-article-content__content {
   flex: 1;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 30px;
   padding: 20px;
   background-color: #fff;
@@ -22,10 +18,10 @@
   margin-bottom: 30px;
 }
 
-.icon{
+.icon {
   fill: rgba(0, 104, 165, 0.877);
 }
-.icon-container{
+.icon-container {
   display: flex;
   flex-direction: row;
   margin-left: 500px;
@@ -38,7 +34,6 @@
   color: #272727;
   margin-bottom: 20px;
 }
-
 
 .blog-article-content__content ul {
   list-style-type: disc;
@@ -73,16 +68,19 @@
   left: 0;
   width: 100%;
 }
-.check-out-text{
+.check-out-text {
   text-align: center;
   color: black;
   font-weight: 900;
 }
-@media screen and (min-width: 1900px) and (max-width: 1920px) {
-  .ProductivityTips {
-    display: flex;
-  }
+td {
+  border: 1px solid black;
+}
+td > p:not(:last-child) {
+  border-bottom: 1px solid black;
+}
 
+@media screen and (min-width: 1900px) and (max-width: 1920px) {
   .blog-article-content__content {
     flex: 1;
     min-width: 1600px;
@@ -92,7 +90,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
-  .icon-container{
+  .icon-container {
     display: flex;
     flex-direction: row;
     margin-left: 690px;
@@ -153,7 +151,7 @@
   }
 }
 
-.splide__arrows {
+.blog-article-content__content .splide__arrows {
   display: flex;
   position: relative;
   align-items: center;
@@ -171,11 +169,19 @@ button.splide__pagination__page {
 @media screen and (max-width: 980px) {
   .blog-article-content__content {
     flex: 1;
-    width: 30%;
     min-height: auto;
     margin: 5px;
+    margin-left: 50px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 30px;
+    margin-bottom: 20px;
   }
 }

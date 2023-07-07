@@ -1,26 +1,18 @@
-import { useState, useRef } from "react";
 import "./WorkSession.css";
+import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import Aside from "../../Layouts/Aside/Aside";
+import Button from "../../Components/Button/Button";
 import TaskForm from "../../Components/TasksForm/TaskForm";
 import Section from "../../Components/TaskSectionContainer/TaskSectionContainer";
 import ActiveTaskPopUp from "../../Components/ActiveTaskPopUp/ActiveTaskPopUp";
-import Button from "../../Components/Button/Button";
-import subtasksInitialStateData from "../../data/checklistBartenderClose.json";
-import subtasksRestartInitialStateData from "../../data/checklistBartenderOpen.json";
 import ResultPopUp from "../../Components/ResultPopUp/ResultPopUp";
 
 const WorkSession = () => {
   const textareaRef = useRef(null);
 
   const [showForm, setShowForm] = useState(false);
-  const [sectionName, setSectionName] = useState(
-    subtasksInitialStateData.clName
-  );
-  const [taskName, setTaskName] = useState(subtasksInitialStateData.clName);
-  const [subtasks, setSubtasks] = useState(subtasksInitialStateData.items);
-  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [selectedTask, setSelectedTask] = useState(null);
   const [comments, setComments] = useState([]);
   const [result, setResult] = useState(0);
@@ -36,7 +28,7 @@ const WorkSession = () => {
 
   const [isCustom, setIsCustom] = useState(false);
 
-  const onChecklistAdd = type => {
+  const onChecklistAdd = (type) => {
     if (type === "CUSTOM") setIsCustom(true);
     if (type === "PREDEFINED") setIsCustom(false);
 
@@ -60,10 +52,6 @@ const WorkSession = () => {
     };
 
     setSections([...sections, newSection]);
-    setSectionName(subtasksRestartInitialStateData.clName);
-    setTaskName(subtasksRestartInitialStateData.clName);
-    setSubtasks(subtasksRestartInitialStateData.items);
-    setDate(new Date().toISOString().slice(0, 10));
 
     setShowForm(false);
     setComments("");
@@ -73,15 +61,7 @@ const WorkSession = () => {
     setShowResultModal(false);
   };
 
-  const handleSectionNameChange = e => {
-    setSectionName(e.target.value);
-  };
-
-  const handleTaskNameChange = e => {
-    setTaskName(e.target.value);
-  };
-
-  const handleDateChange = e => {
+  const handleDateChange = (e) => {
     setDate(e.target.value);
   };
 
@@ -92,7 +72,7 @@ const WorkSession = () => {
     return uniqueId;
   }
 
-  const handleTaskClick = task => {
+  const handleTaskClick = (task) => {
     setSelectedTask(task);
   };
 
@@ -109,19 +89,14 @@ const WorkSession = () => {
   const handleSubmit = () => {
     const sectionPercentage = (result / devident) * 100;
 
-    setSections(prevSections => {
-      const updatedSections = prevSections.map(section => {
-        const updatedTasks = section.tasks.filter(
-          task => task.taskName !== selectedTask.taskName
-        );
+    setSections((prevSections) => {
+      const updatedSections = prevSections.map((section) => {
+        const updatedTasks = section.tasks.filter((task) => task.taskName !== selectedTask.taskName);
         return { ...section, tasks: updatedTasks };
       });
 
       // Find the section that contains the selected task
-      const selectedSection = updatedSections.find(section => {
-        console.log("sectionID", section.id);
-        console.log("seltaskID", selectedTask.taskId);
-        console.log(section.id === selectedTask.taskId);
+      const selectedSection = updatedSections.find((section) => {
         return section.id === selectedTask.taskId;
       });
       console.log("selected section", selectedSection);
@@ -156,11 +131,9 @@ const WorkSession = () => {
 
     setPercentage(percentage);
 
-    const storedTasks =
-      JSON.parse(localStorage.getItem("completedTasks")) || [];
+    const storedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
     const updatedStoredTasks = [...storedTasks, completedTask];
     localStorage.setItem("completedTasks", JSON.stringify(updatedStoredTasks));
-    console.log(updatedStoredTasks[updatedStoredTasks.length - 1].percentage);
   };
   return (
     <div className="WorkSession">
@@ -169,16 +142,8 @@ const WorkSession = () => {
         <div className="Headings">
           <h2>Work Session</h2>
           <div className="ButtonsAdd">
-            <Button
-              onBtnClick={() => onChecklistAdd("CUSTOM")}
-              btnText="+ Add Custom Checklist"
-              className="add-task-button"
-            />
-            <Button
-              onBtnClick={() => onChecklistAdd("PREDEFINED")}
-              btnText="+ Add Predefined Checklist"
-              className="add-task-button"
-            />
+            <Button onBtnClick={() => onChecklistAdd("CUSTOM")} btnText="+ Add Custom Checklist" className="add-task-button" />
+            <Button onBtnClick={() => onChecklistAdd("PREDEFINED")} btnText="+ Add Predefined Checklist" className="add-task-button" />
           </div>
         </div>
         <div className="notificationBell">
@@ -205,15 +170,7 @@ const WorkSession = () => {
 
       {showForm && (
         <div className="popupContainer">
-          <TaskForm
-            isCustom={isCustom}
-            handleFormSubmit={handleFormSubmit}
-            handleSectionNameChange={handleSectionNameChange}
-            handleTaskNameChange={handleTaskNameChange}
-            date={date}
-            handleDateChange={handleDateChange}
-            setShowForm={setShowForm}
-          />
+          <TaskForm isCustom={isCustom} handleFormSubmit={handleFormSubmit} setShowForm={setShowForm} />
         </div>
       )}
 
@@ -235,12 +192,7 @@ const WorkSession = () => {
           />
         </div>
       )}
-      {showResultModal && (
-        <ResultPopUp
-          handleResultModalClose={handleResultModalClose}
-          percentage={percentage}
-        />
-      )}
+      {showResultModal && <ResultPopUp handleResultModalClose={handleResultModalClose} percentage={percentage} />}
     </div>
   );
 };

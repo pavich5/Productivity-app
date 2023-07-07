@@ -1,10 +1,10 @@
+import "./Blog.css";
 import { useState } from "react";
 import { FaCheckCircle, FaStar, FaHeart } from "react-icons/fa";
 import { AiOutlineInfoCircle, AiOutlineDownload } from "react-icons/ai";
 import { RiQuestionnaireFill, RiArrowDownSFill } from "react-icons/ri";
 import { NavLink, useLocation } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "./Blog.css";
 import BlogSalesArticle from "./BlogSalesArticle";
 import BlogEfficencyArticle from "./BlogEfficencyArticle";
 import BlogCompensationArticle from "./BlogCompensationArticle";

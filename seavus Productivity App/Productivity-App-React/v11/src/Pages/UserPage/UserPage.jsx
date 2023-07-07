@@ -22,19 +22,16 @@ const UserInfoPage = () => {
             <div className="profile-info">
               <h2>John Doe</h2>
               <p>Age: 30</p>
-              <p>Location: New York</p>
-              <p>Email: johndoe@example.com</p>
-              <p>Phone: 123-456-7890</p>
+              <p>Location: Skopje</p>
+              <p>Email: johndoe@serviceindustry.com</p>
+              <p>Phone: +389-70-111-222</p>
             </div>
           </div>
         </div>
 
         <div className="additional-info-section">
           <h2>Additional Information</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan nisl eget erat volutpat. Proin venenatis eros a augue accumsan,
-            eget lobortis erat finibus. Sed et odio turpis.
-          </p>
+          <p>Head of Sales Department in a large multinational Company based in Skopje.</p>
         </div>
         <div className="social-icons">
           <FontAwesomeIcon icon={faTwitter} className="social-icon" />

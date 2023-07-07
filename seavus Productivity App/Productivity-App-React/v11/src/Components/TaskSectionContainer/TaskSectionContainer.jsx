@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import "./TaskSectionContainer.css";
 import SmallResultPopUp from "../SmallResultPopup/SmallResultPopUp";
 import { useState } from "react";
