@@ -1,7 +1,7 @@
+import "./BarChart.css";
 import { useState } from "react";
 import { Bar, Doughnut } from "react-chartjs-2";
 import Chart from "chart.js/auto";
-import "./BarChart.css";
 import Button from "../Button/Button";
 
 const BarChart = () => {
