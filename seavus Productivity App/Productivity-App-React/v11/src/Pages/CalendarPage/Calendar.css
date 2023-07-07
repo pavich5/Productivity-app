@@ -41,7 +41,7 @@
 }
 
 .TasksContainer h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
@@ -82,6 +82,7 @@
   border: 0.5px solid #ccc;
   border-radius: 5px 0 0 5px;
   margin-top: 19px;
+  color: #4b4848;
 }
 
 .AddTaskButton {
@@ -184,7 +185,13 @@
   font-size: 12px;
 }
 
-@media screen and (min-width: 1900px) and (max-width: 1920px) {
+#addTasksTitle {
+  font-size: 28px;
+  margin: 25px 0 0 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
   .DatePickingPageContainer {
     display: flex;
     max-height: 86.55vh;
@@ -202,12 +209,15 @@
     border-radius: 10px;
   }
   .react-datepicker__input-container {
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
     width: 200px;
   }
   .react-datepicker__input-container input {
     display: flex;
     justify-content: center;
+    border: 0.5px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    color: #4b4848;
   }
   .react-datepicker__input-container :hover {
     cursor: pointer;
@@ -244,6 +254,7 @@
   .TasksContainer h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 500;
   }
 
   .TasksContainer p {
