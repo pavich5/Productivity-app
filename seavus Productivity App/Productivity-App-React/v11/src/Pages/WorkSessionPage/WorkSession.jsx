@@ -140,15 +140,15 @@ const WorkSession = () => {
       <Aside />
       <div className="workSessionContent">
         <div className="Headings">
-          <h2>Work Session</h2>
+          <h2>
+            Work Session <FontAwesomeIcon icon={faBell} />
+          </h2>
           <div className="ButtonsAdd">
             <Button onBtnClick={() => onChecklistAdd("CUSTOM")} btnText="+ Add Custom Checklist" className="add-task-button" />
             <Button onBtnClick={() => onChecklistAdd("PREDEFINED")} btnText="+ Add Predefined Checklist" className="add-task-button" />
           </div>
         </div>
-        <div className="notificationBell">
-          <FontAwesomeIcon icon={faBell} />
-        </div>
+        <div className="notificationBell">{/* <FontAwesomeIcon icon={faBell} /> */}</div>
 
         {sections.length === 0 ? (
           <p>No tasks added. Click the "Add Task" button to get started.</p>

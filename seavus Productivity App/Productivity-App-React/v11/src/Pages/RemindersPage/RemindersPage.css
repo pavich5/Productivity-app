@@ -15,6 +15,8 @@
 }
 
 .reminder-card {
+  min-height: 100px;
+  min-width: 80px;
   background-color: #0b3954;
   color: #b7d7ea;
   font-weight: 400;
@@ -48,6 +50,7 @@
   padding: 5px 10px;
   cursor: pointer;
   min-width: fit-content;
+  min-height: fit-content;
 }
 
 .reminder-delete-btn:hover {
