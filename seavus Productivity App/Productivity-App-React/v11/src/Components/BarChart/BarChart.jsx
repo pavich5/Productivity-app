@@ -57,7 +57,7 @@ const BarChart = () => {
 
   return (
     <div className="bar-chart">
-      <h2>Chart Example</h2>
+      <h2>Success Rate Metrics:</h2>
       {chartType === "bar" ? <Bar data={data} options={options} /> : <Doughnut data={data} options={options} />}
       <Button onBtnClick={handleChartToggle} btnText="Toggle Chart" className="toggleChartBtn" />
     </div>

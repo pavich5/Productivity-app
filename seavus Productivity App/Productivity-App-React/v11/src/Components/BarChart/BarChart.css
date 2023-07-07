@@ -53,8 +53,9 @@
 
   .bar-chart h2 {
     font-size: 36px;
-    margin: 0 0 0 160px;
+    margin: 0 0 20px 160px;
     padding: 0px 0 40px 0;
+    font-weight: 500;
   }
 
   .toggleChartBtn {
