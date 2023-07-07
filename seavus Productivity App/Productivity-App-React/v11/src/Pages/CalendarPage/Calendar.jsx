@@ -50,6 +50,7 @@ const DatePickingPage = () => {
     <div className="DatePickingPageContainer">
       <Aside />
       <div className="DatePickingPage">
+        <h2 id="addTasksTitle">Coordinate Team Tasks:</h2>
         <div className="DatePickerContainer">
           <DatePicker
             selected={new Date(selectedDate)}
@@ -58,13 +59,13 @@ const DatePickingPage = () => {
             dayClassName={() => "custom-day"}
           />
         </div>
-        <h2 style={{ margin: 0 }}>Tasks for {selectedDate}</h2>
         <div className="AddTaskContainer">
           <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} placeholder="Enter a new task" />
           <Button onBtnClick={handleAddTask} btnText="Add Task" className="AddTaskButton" />
         </div>
         {showAlert && <div className="alert-bubble">Task must be at least 4 characters long. Please try scheduling a task again.</div>}
         <div className="TasksContainer">
+          <h2 style={{ margin: 0 }}>Task Overview for : {selectedDate}</h2>
           <ul>
             {dateTasks[selectedDate]?.map((task, index) => (
               <li key={index}>
