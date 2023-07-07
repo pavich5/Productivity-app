@@ -1,6 +1,7 @@
 .StatisticsMain {
   display: flex;
-  background-color: #f0f7ff;
+  background-color: #f2f2f2;
+  color: #4b4848;
 }
 
 @media screen and (min-width: 1600px) and (max-width: 1920px) {

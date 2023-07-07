@@ -8,7 +8,7 @@ const ContactUs = () => {
     <div className="ContactUs">
       <Aside />
       <div className="contact-content">
-        <h1>Get in Touch</h1>
+        <h1>Contact us</h1>
         <div className="contact-info">
           <div className="contact-item">
             <div className="contact-icon">

@@ -4,6 +4,7 @@
 }
 
 .DatePickingPage {
+  color: #4b4848;
   display: flex;
   flex: 1;
   flex-direction: column;
